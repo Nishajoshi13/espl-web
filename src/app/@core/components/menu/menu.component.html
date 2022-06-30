@@ -1,0 +1,143 @@
+<mat-nav-list
+  [class.expanded]="isExpanded"
+  [class.collapsed]="!isExpanded"
+  id="sidebar-nav-list"
+>
+  <div id="sidebar-header">
+    <div class="sidebar-logo box-shadow">
+      <div>
+        <img
+          class="cru-icon"
+          src="/assets/images/general/cru-icon.svg"
+          alt="Cru World Wine"
+        />
+        <div class="live-market-img">
+          <img
+            src="/assets/images/general/cru-live-market-dark.svg"
+            alt="live market text"
+          />
+          <div>Beta</div>
+        </div>
+      </div>
+      <mat-icon (click)="toggleMenu()" class="mobile">close</mat-icon>
+    </div>
+    <div class="user-account box-shadow">
+      <ng-container *ngIf="isLoggedIn; else notLoggedIn">
+        <div class="mobile-portfolio mobile">
+          Portfolio Overview: <span (click)="openDialog()">Details</span>
+        </div>
+        <div class="balance-text-outer">
+          <span class="balance-text">Acc. Balance:</span>
+          <span class="account-balance">{{ accountBalance }}</span>
+        </div>
+        <div class="add-funds">Add Funds</div>
+        <button
+          mat-raised-button
+          class="button btn-red sidebar-btn"
+          (click)="openAccountCredit()"
+        >
+          <mat-icon>add</mat-icon>
+          <span>Add Funds</span>
+        </button>
+      </ng-container>
+      <ng-template #notLoggedIn>
+        <button
+          mat-raised-button
+          class="button btn-red sidebar-btn"
+          (click)="openLoginModal()"
+        >
+          <mat-icon class="login-icon">login</mat-icon>
+          <span>Sign In</span>
+        </button>
+      </ng-template>
+    </div>
+  </div>
+
+  <mat-icon class="expand-btn" id="header-toggle" (click)="toggleMenu()"
+    >arrow_right</mat-icon
+  >
+
+  <div class="sidebar-items">
+    <div class="main-nav-links">
+      <ng-container *ngFor="let item of mainSidebarItems; let i = index">
+        <a
+          *ngIf="!item.subMenu"
+          mat-list-item
+          [routerLink]="['./' + item.link]"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <mat-icon class="sidebar-icon">{{ item.icon }}</mat-icon>
+          <h3 mat-line>
+            {{ item.title }}
+            <span *ngIf="item.title == 'Dashboard' || item.title == 'Learn'"
+              >Coming Soon</span
+            >
+          </h3>
+        </a>
+        <div
+          *ngIf="item.subMenu"
+          class="main-submenu"
+          [routerLinkActive]="'active'"
+        >
+          <a mat-list-item (click)="showSubmenu[i] = !showSubmenu[i]">
+            <mat-icon class="sidebar-icon">{{ item.icon }}</mat-icon>
+            <h3 mat-line>
+              {{ item.title }}
+            </h3>
+            <mat-icon class="arrow-icon">{{
+              showSubmenu[i] ? "keyboard_arrow_up" : "keyboard_arrow_down"
+            }}</mat-icon>
+          </a>
+          <div
+            class="submenu-outer box-shadow"
+            [class.show-submenu]="showSubmenu[i]"
+          >
+            <a
+              mat-list-item
+              *ngFor="let subItem of item.subMenu"
+              class="submenu"
+              [routerLink]="subItem.link"
+              [routerLinkActive]="'active'"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <div></div>
+              <h4 mat-line>
+                {{ subItem.title }}
+              </h4>
+            </a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="other-sidebar-items">
+      <ng-container *ngFor="let item of otherSidebarItems">
+        <a
+          mat-list-item
+          [routerLink]="item.link"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="box-shadow"
+        >
+          <mat-icon class="sidebar-icon">{{ item.icon }}</mat-icon>
+          <h4 mat-line>
+            {{ item.title }}
+          </h4>
+        </a>
+      </ng-container>
+      <a mat-list-item class="red-color" *ngIf="isLoggedIn" (click)="logout()">
+        <mat-icon class="logout-icon">logout</mat-icon>
+        <h4 mat-line>Logout</h4>
+      </a>
+      <a
+        mat-list-item
+        class="red-color"
+        *ngIf="!isLoggedIn"
+        (click)="openLoginModal()"
+      >
+        <mat-icon class="login-icon">login</mat-icon>
+        <h4 mat-line>Sign In / Create Account</h4>
+      </a>
+    </div>
+  </div>
+</mat-nav-list>

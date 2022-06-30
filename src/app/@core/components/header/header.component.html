@@ -1,0 +1,121 @@
+<header [class.sticky]="stickyHeader">
+  <div class="header-left-outer" [class.hide-topheader]="hideTopHeader">
+    <div class="header-logo">
+      <a class="header-logo-nav">
+        <img
+          src="https://uk.cruworldwine.com/skin/frontend/cru/default/images/cru-logo.png"
+          alt="Cru World Wine"
+        />
+        <img
+          class="live-market-img"
+          src="/assets/images/sidebar/live-market-text.svg"
+          alt="live market text"
+        />
+      </a>
+    </div>
+    <div class="header-portfolio" *ngIf="isLoggedIn">
+      <span>Protfolio Overview:</span>
+      <div class="header-left">
+        <div>Account Credit Balance</div>
+        <div>{{ accountCreditBalance }}</div>
+      </div>
+      <mat-icon>add</mat-icon>
+      <div class="header-left">
+        <div>Portfolio Cost</div>
+        <div>{{ portfolioCost }}</div>
+      </div>
+      <mat-icon>add</mat-icon>
+      <div class="header-left">
+        <div>Profit / Loss</div>
+        <div>{{ profitLoss }} ({{ profitLossPercent }}%)</div>
+      </div>
+      <mat-icon>drag_handle</mat-icon>
+      <div class="header-left">
+        <div>Total Portfolio Value</div>
+        <div>{{ totalPortfolio }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="header-right">
+    <a class="header-logo-nav" (click)="toggleMenu()">
+      <span class="icon"></span>
+    </a>
+    <div>
+      <div class="notifications">
+        <mat-icon
+          matBadge="{{ notificationCount }}"
+          matBadgeColor="warn"
+          svgIcon="notification"
+          class="notification-icon"
+        ></mat-icon>
+      </div>
+      <mat-form-field class="store-currency-dropdown">
+        <div
+          [(ngModel)]="selectedStore"
+          ngDefaultControl
+          class="selected-currency-div {{ selectedStore.code }}"
+        >
+          <img [src]="selectedStore.img" />
+          <div>{{ selectedStore.currency }}</div>
+        </div>
+        <mat-select
+          ngClass="selected"
+          [(ngModel)]="selectedStore"
+          ngDefaultControl
+          panelClass="store-currency-dropdown-panel"
+          (selectionChange)="onChangeStore()"
+        >
+          <mat-label class="currency-label" #currencyLabel
+            >Select Store</mat-label
+          >
+          <ng-container *ngFor="let store of stores">
+            <mat-option
+              [value]="store"
+              *ngIf="store.currency != selectedStore.currency"
+              class="store-currency-option {{ store.code }}"
+              ><a fxLayout="row" fxLayoutAlign="space-between space-between"
+                ><img [src]="store.img" /> <span>{{ store.currency }}</span></a
+              >
+            </mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+      <ng-container *ngIf="isLoggedIn; else notLoggedIn">
+        <div
+          (mouseover)="hideElement = false"
+          (mouseleave)="hideElement = true"
+        >
+          <button mat-flat-button color="primary" class="user-account-btn">
+            <div class="user-initial">{{ userInitials }}</div>
+            <div class="header-login">
+              {{ shortName }}
+              <div class="account-balance">{{ accountCreditBalance }}</div>
+            </div>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </button>
+          <app-header-account
+            [hidden]="hideElement"
+            class="header-account"
+            (hideModalEvent)="hideElement = $event"
+          ></app-header-account>
+        </div>
+      </ng-container>
+      <ng-template #notLoggedIn>
+        <div
+          (mouseover)="hideElement = false"
+          (mouseleave)="hideElement = true"
+        >
+          <button mat-flat-button color="primary" class="user-account-btn">
+            <mat-icon svgIcon="account"></mat-icon>
+            <div class="header-login">Sign In</div>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </button>
+          <app-header-login-popup
+            [hidden]="hideElement"
+            class="header-account"
+          ></app-header-login-popup>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</header>
