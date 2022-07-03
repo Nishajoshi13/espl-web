@@ -23,16 +23,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSortModule } from '@angular/material/sort';
 import { MatChipsModule } from '@angular/material/chips';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { EmptyRouterComponent } from '@core/components/misc/empty-router.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { HeaderComponent } from './components/header/header.component';
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatRadioModule } from '@angular/material/radio';
-import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { HeaderComponent } from './components/header/header.component';
 
 const MODULES: any[] = [
   CommonModule,
@@ -40,7 +38,6 @@ const MODULES: any[] = [
   FormsModule,
   ReactiveFormsModule,
   RouterModule,
-  ClipboardModule,
   FlexLayoutModule,
   MatExpansionModule,
 
@@ -66,13 +63,10 @@ const MODULES: any[] = [
   MatProgressBarModule,
   MatRadioModule,
   MatChipsModule,
+  MatToolbarModule,
 ];
 
-const COMPONENTS: any[] = [
-  EmptyRouterComponent,
-  MenuComponent,
-  HeaderComponent,
-];
+const COMPONENTS: any[] = [EmptyRouterComponent, HeaderComponent];
 
 const DIRECTIVES: any[] = [];
 

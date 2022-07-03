@@ -1,0 +1,53 @@
+.contact-details-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 25px;
+
+  mat-card {
+    width: 30%;
+    text-align: center;
+    padding: 28px;
+
+    p {
+      margin-bottom: 4px;
+    }
+  }
+
+  mat-icon {
+    font-size: 42px;
+    height: 42px;
+    width: 42px;
+    margin-bottom: 20px;
+  }
+}
+
+.contact-form-card {
+  padding: 2.5rem 8rem 5rem 8rem;
+  h2 {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 42px;
+  }
+  .form-row {
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+    margin-bottom: 20px;
+
+    > div {
+      width: 47%;
+      mat-form-field {
+        width: 100%;
+      }
+    }
+
+    .full-width {
+      width: 100%;
+    }
+  }
+  label {
+    display: block;
+    font-weight: 300;
+  }
+}

@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Define all the mixins */
+@import "mixins";
+
+html,
+body {
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #232526;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #232526;
+  text-decoration: none;
+}
+
+.mat-card:not([class*="mat-elevation-z"]) {
+  box-shadow: 0 5px 25px rgb(0 0 0 / 10%);
+}
+
+.mat-form-field {
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1.125;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  letter-spacing: normal;
+}
+
+.mat-form-field-appearance-outline {
+  .mat-form-field-infix {
+    padding: 1em 0;
+  }
+  .mat-form-field-outline {
+    color: #0000001f;
+  }
+}
+
+mat-card {
+  background: #fff;
+}
+
+.main-container {
+  box-sizing: border-box;
+  margin: 25px auto 0 auto;
+  max-width: 1200px;
+  padding: 0 16px;
+}

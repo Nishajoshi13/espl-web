@@ -1,0 +1,44 @@
+<div class="banner-wrapper">
+  <mat-carousel
+    timings="500ms ease-in"
+    [autoplay]="true"
+    [interval]="3000"
+    color="accent"
+    maxWidth="auto"
+    [proportion]="30"
+    [slides]="2"
+    [loop]="true"
+    [hideArrows]="true"
+    [hideIndicators]="false"
+    [useKeyboard]="true"
+    [useMouseWheel]="false"
+    orientation="ltr"
+    pause="null"
+  >
+    <mat-carousel-slide
+      #matCarouselSlide
+      *ngFor="let slide of slides; let i = index"
+      [image]="slide.image"
+      overlayColor="rgba(0,0,0,0.5)"
+      [hideOverlay]="false"
+    ></mat-carousel-slide>
+  </mat-carousel>
+
+  <div class="wrap-banner-text">
+    <div>
+      <h1>We Entangle With You</h1>
+      <h3>We develop effective plans to move your customers behaviour.</h3>
+    </div>
+  </div>
+</div>
+
+<div class="home-card-wrapper">
+  <ng-container *ngFor="let item of homeCard">
+    <mat-card class="home-card">
+      <mat-card-title>{{ item.title }}</mat-card-title>
+      <mat-card-content>
+        <p>{{ item.desc }}</p>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
