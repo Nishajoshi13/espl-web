@@ -31,6 +31,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const MODULES: any[] = [
   CommonModule,
@@ -66,7 +67,11 @@ const MODULES: any[] = [
   MatToolbarModule,
 ];
 
-const COMPONENTS: any[] = [EmptyRouterComponent, HeaderComponent];
+const COMPONENTS: any[] = [
+  EmptyRouterComponent,
+  HeaderComponent,
+  FooterComponent,
+];
 
 const DIRECTIVES: any[] = [];
 
