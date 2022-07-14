@@ -9,23 +9,12 @@ export class HomeComponent implements OnInit {
 
   homeCard = [
     {
-      title: 'Product Design',
-      desc: `We embrace technologies to empower enterprises with enterprise & web content management, BPM & Big Data Analytics.`,
+      title: 'Who are we',
+      desc: `Test`,
     },
     {
-      title: 'IT management',
-      desc: `
-    Aspernatur sit adipisci quaerat unde at neque Redug Lagre
-    dolor sit amet consectetu. independent agency, free from
-    the internal demands.
-  `,
-    },
-    {
-      title: 'Data security',
-      desc: `
-    Aspernatur sit adipisci quaerat unde at neque Redug Lagre
-    dolor sit amet consectetu. independent agency, free from
-    the internal demands.
+      title: 'What we do',
+      desc: `We embrace technologies and find the best software solutions to empower your business.
   `,
     },
   ];

@@ -1,5 +1,19 @@
-<div class="page-wrapper">
-  <app-header></app-header>
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
-</div>
+<mat-drawer-container (backdropClick)="close()" hasBackdrop="true">
+  <mat-drawer
+    #drawer
+    class="l-navbar"
+    mode="over"
+    position="end"
+    autoFocus="false"
+  >
+    <app-side-drawer [drawerRef]="drawer"> </app-side-drawer>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="page-wrapper">
+      <app-header [drawerRef]="drawer"></app-header>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

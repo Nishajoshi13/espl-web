@@ -22,3 +22,19 @@ mat-toolbar {
 .active {
   color: #bb3624;
 }
+
+.menu-bar {
+  display: none;
+}
+
+@media screen and(max-width:770px) {
+  .main-items {
+    display: none;
+  }
+  .menu-bar {
+    display: block;
+    font-size: 28px;
+    height: 28px;
+    width: 28px;
+  }
+}

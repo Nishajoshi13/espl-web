@@ -1,10 +1,36 @@
 <footer>
-  <div class="main-container flex-space-between">
-    <div>Entange with us</div>
-    <div class="flex-space-between" style="width: 60%">
-      <div>Services</div>
-      <div>Team</div>
-      <div>Contact</div>
+  <div class="flex-space-between main-container">
+    <div>
+      <div>We Entangle With You</div>
+      <div class="ft-desc">
+        Develop your business with our software solutions.
+      </div>
+      <div class="social-btns-wrapper">
+        <a
+          *ngFor="let item of socialPlatforms"
+          href="{{ item.link }}"
+          target="_blank"
+        >
+          <img [src]="item.icon" />
+        </a>
+      </div>
+    </div>
+
+    <div class="flex-space-between ft-nav-wrapper">
+      <a
+        *ngFor="let item of navItems"
+        [routerLink]="[item.url]"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        {{ item.title }}
+      </a>
+    </div>
+  </div>
+  <div class="ft-bottom main-container">
+    <div>
+      Copyright© 2022. <span class="blue-text"> Entangle </span> All rights
+      reserved.
     </div>
   </div>
 </footer>

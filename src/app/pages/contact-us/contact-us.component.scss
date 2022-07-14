@@ -1,11 +1,11 @@
 .contact-details-wrapper {
-  display: flex;
-  gap: 40px;
+  display: grid;
+  grid-gap: 40px;
   justify-content: center;
   margin-bottom: 25px;
-
+  grid-template-columns: 0.4fr 0.4fr;
   mat-card {
-    width: 30%;
+    width: 100%;
     text-align: center;
     padding: 28px;
 
@@ -24,6 +24,8 @@
 
 .contact-form-card {
   padding: 2.5rem 8rem 5rem 8rem;
+  margin-bottom: 100px;
+
   h2 {
     text-align: center;
     font-weight: 500;
@@ -49,5 +51,21 @@
   label {
     display: block;
     font-weight: 300;
+  }
+}
+
+@media screen and(max-width:770px) {
+  .contact-details-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .contact-form-card {
+    padding: 2rem;
+
+    .form-row {
+      display: block;
+      div {
+        width: 100%;
+      }
+    }
   }
 }
