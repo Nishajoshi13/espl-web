@@ -1,0 +1,15 @@
+<div class="drawer-wrapper">
+  <div class="drawer-header">
+    <mat-icon (click)="toggleMenu()">close</mat-icon>
+  </div>
+
+  <div class="drawer-content-wrapper">
+    <div *ngFor="let item of navItems">
+      <a [routerLink]="item.url" (click)="toggleMenu()"
+        ><div>
+          {{ item.title }}
+        </div></a
+      >
+    </div>
+  </div>
+</div>

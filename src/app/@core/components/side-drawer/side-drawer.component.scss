@@ -1,0 +1,25 @@
+.drawer-wrapper {
+  transition: 0.4s;
+}
+.drawer-content-wrapper {
+  padding: 10px 16px;
+  a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #232526;
+
+    div {
+      padding: 16px 0;
+      border-bottom: 1px solid #e7ecee;
+    }
+  }
+}
+.drawer-header {
+  padding: 16px;
+  padding-bottom: 0;
+  mat-icon {
+    float: right;
+  }
+}
