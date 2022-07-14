@@ -14,7 +14,7 @@ export class FooterComponent implements OnInit {
 
   socialPlatforms = [
     {
-      link: 'https://twitter.com/espl_software"',
+      link: 'https://twitter.com/espl_software',
       icon: 'assets/images/general/twitter.svg',
     },
     {
