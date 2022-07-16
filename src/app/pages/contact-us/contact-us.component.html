@@ -16,43 +16,49 @@
 
   <mat-card class="contact-form-card">
     <h2>We Want to Hear from You</h2>
-    <div class="form-row">
-      <div>
-        <label>First Name*</label>
-        <mat-form-field appearance="outline">
-          <input matInput />
-        </mat-form-field>
+    <form [formGroup]="form">
+      <div class="form-row">
+        <div>
+          <label>First Name*</label>
+          <mat-form-field appearance="outline">
+            <input matInput [formControl]="firstName" />
+          </mat-form-field>
+        </div>
+        <div>
+          <label>Last Name<span>*</span></label>
+          <mat-form-field appearance="outline">
+            <input matInput [formControl]="lastName" />
+          </mat-form-field>
+        </div>
       </div>
-      <div>
-        <label>Last Name</label>
-        <mat-form-field appearance="outline">
-          <input matInput />
-        </mat-form-field>
+      <div class="form-row">
+        <div>
+          <label>Email Address<span>*</span></label>
+          <mat-form-field appearance="outline">
+            <input matInput [formControl]="email" />
+            <mat-error *ngIf="email.invalid">{{
+              "Please enter valid email"
+            }}</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <label>Contact No<span>*</span></label>
+          <mat-form-field appearance="outline">
+            <input matInput [formControl]="contactNo" />
+          </mat-form-field>
+        </div>
       </div>
-    </div>
-    <div class="form-row">
-      <div>
-        <label>Email Address*</label>
-        <mat-form-field appearance="outline">
-          <input matInput />
-        </mat-form-field>
-      </div>
-      <div>
-        <label>Contact No</label>
-        <mat-form-field appearance="outline">
-          <input matInput />
-        </mat-form-field>
-      </div>
-    </div>
 
-    <div class="form-row">
-      <div class="full-width">
-        <label>Message*</label>
-        <mat-form-field appearance="outline">
-          <textarea matInput placeholder="Comment"> </textarea>
-        </mat-form-field>
+      <div class="form-row">
+        <div class="full-width">
+          <label>Message*</label>
+          <mat-form-field appearance="outline">
+            <textarea matInput placeholder="Comment" [formControl]="message">
+            </textarea>
+          </mat-form-field>
+        </div>
       </div>
-    </div>
-    <button mat-flat-button>Send</button>
+      <button mat-flat-button (click)="sendEmail()">Send</button>
+    </form>
   </mat-card>
 </div>
