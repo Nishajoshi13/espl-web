@@ -68,8 +68,8 @@ export class ContactUsComponent implements OnInit {
         .pipe(catchError(async () => console.error('Something went wrong')))
         .subscribe(() => {
           Swal.fire({
-            title: 'Thank you!',
-            text: 'You submitted succesfully!',
+            title: 'Thanks for your interest!',
+            text: 'We will contact you soon.',
             icon: 'success',
             confirmButtonColor: '#1483f8',
           });

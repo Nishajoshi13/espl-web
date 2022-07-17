@@ -123,6 +123,22 @@ a.active-header-option {
 .swal2-styled.swal2-confirm {
   background: #1483f8;
 }
+
+.tech-icons {
+  padding: 0 30px;
+  text-align: center;
+  .owl-carousel .owl-item img {
+    width: 50px !important;
+    height: 50px;
+    margin: auto;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
 @media screen and(max-width:960px) {
   .carousel-slide {
     height: 500px;

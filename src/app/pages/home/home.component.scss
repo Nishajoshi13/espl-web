@@ -7,13 +7,75 @@
   justify-content: center;
 }
 
-.home-card {
-  max-width: 360px;
-  padding: 24px;
-  letter-spacing: 1px;
-  margin: 30px 0;
+.what-we-do {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  padding: 0;
+  min-height: 250px;
+
+  > div:first-child {
+    color: #fff;
+    background: #1a214d;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+  }
+  h1 {
+    font-weight: 300;
+    font-size: 50px;
+    width: max-content;
+  }
+  > div {
+    padding: 32px;
+  }
+  .desc {
+    font-size: 17px;
+    margin-bottom: 30px;
+    font-weight: 100;
+  }
+}
+.tech-icons-wrapper {
+  margin-top: 50px;
+  padding: 25px;
+  padding-bottom: 33px;
+
+  h2 {
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 26px;
+  }
+  > div {
+    display: flex;
+  }
+  .tech-icons {
+    padding: 50px 0;
+  }
 }
 
+.develop-platforms {
+  padding: 20px;
+  max-width: 400px;
+  img,
+  mat-icon {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    opacity: 0.5;
+    margin-right: 5px;
+  }
+  .title {
+    font-size: 18px;
+    letter-spacing: normal;
+    color: rgba(48, 49, 51, 0.9);
+    font-weight: 500;
+    margin: 4px 0 11px;
+  }
+  > div:last-child {
+    font-weight: 100;
+  }
+}
 mat-card-title {
   font-size: 22px;
   text-align: center;
@@ -56,6 +118,9 @@ mat-card-content {
   }
 }
 
+section {
+  padding: 0 50px;
+}
 @media screen and(max-width:560px) {
   .banner-wrapper .wrap-banner-text {
     div {
@@ -67,5 +132,14 @@ mat-card-content {
     h3 {
       font-size: 16px;
     }
+  }
+}
+
+@media screen and(max-width:960px) {
+  .what-we-do {
+    display: block;
+  }
+  section {
+    padding: 0 20px;
   }
 }

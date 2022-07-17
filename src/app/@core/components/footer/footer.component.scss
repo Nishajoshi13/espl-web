@@ -51,6 +51,16 @@ footer {
   color: cornflowerblue;
 }
 
+.location {
+  margin-top: 20px;
+  > div {
+    margin-bottom: 6px;
+  }
+  p {
+    font-size: 12px;
+    font-weight: 200;
+  }
+}
 @media screen and(max-width:770px) {
   .main-container {
     padding: 0;

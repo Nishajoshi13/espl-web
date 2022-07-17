@@ -35,14 +35,43 @@
     </div>
   </div>
 
-  <div class="home-card-wrapper">
-    <ng-container *ngFor="let item of homeCard">
-      <mat-card class="home-card">
-        <mat-card-title>{{ item.title }}</mat-card-title>
-        <mat-card-content>
-          <p>{{ item.desc }}</p>
-        </mat-card-content>
-      </mat-card>
-    </ng-container>
-  </div>
+  <section>
+    <mat-card class="what-we-do">
+      <div>
+        <h1>What we do</h1>
+      </div>
+
+      <div>
+        <p class="desc">
+          We embrace technologies and find the robust software solutions to
+          empower your business. We bring our industry knowledge and experience
+          to help clients evolving technology solutions into their business to
+          stay ahead of the curve.
+        </p>
+        <div class="flex-space-between" style="flex-wrap: wrap">
+          <div class="develop-platforms" *ngFor="let item of developPlatforms">
+            <ng-container *ngIf="item.icon; else imgIconTemp">
+              <mat-icon>{{ item.icon }}</mat-icon>
+            </ng-container>
+            <ng-template #imgIconTemp>
+              <img [src]="item.img" />
+            </ng-template>
+            <div class="title">{{ item.title }}</div>
+            <div>{{ item.desc }}</div>
+          </div>
+        </div>
+
+        <div></div>
+      </div>
+    </mat-card>
+    <mat-card class="tech-icons-wrapper">
+      <h2>Technologies we work on</h2>
+      <owl-carousel-o [options]="customOptions" class="tech-icons">
+        <ng-template carouselSlide *ngFor="let item of technologiesIcons">
+          <img [src]="item.icon" />
+          <p>{{ item.title }}</p>
+        </ng-template>
+      </owl-carousel-o>
+    </mat-card>
+  </section>
 </div>
