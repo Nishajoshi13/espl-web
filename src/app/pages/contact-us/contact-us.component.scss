@@ -51,7 +51,15 @@
   label {
     display: block;
     font-weight: 300;
+    font-size: 15px;
+    span {
+      color: #f44336;
+    }
   }
+}
+
+.blue-btn {
+  width: 100px;
 }
 
 @media screen and(max-width:770px) {

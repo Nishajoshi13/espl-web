@@ -25,6 +25,10 @@ export class FooterComponent implements OnInit {
       link: 'https://www.instagram.com/entanglesoftware',
       icon: 'assets/images/general/instagram.svg',
     },
+    {
+      link: 'https://github.com/entanglesoftware-angular',
+      icon: 'assets/images/general/github.svg',
+    },
   ];
   constructor() {}
 

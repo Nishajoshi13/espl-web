@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 import { catchError } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import Swal from 'sweetalert2';
 
 @Component({
   templateUrl: './contact-us.component.html',
@@ -18,10 +19,18 @@ export class ContactUsComponent implements OnInit {
 
   protected formGroup: FormGroup = this.fb.group({
     firstName: ['', Validators.required],
-    lastName: ['', Validators.required],
-    email: ['', Validators.compose([Validators.required, Validators.email])],
-    message: [null],
-    contactNo: [null],
+    lastName: [''],
+    email: ['', [Validators.required, Validators.email]],
+    message: [null, Validators.required],
+    contactNo: [
+      null,
+      [
+        Validators.required,
+        Validators.pattern('^[0-9]*$'),
+        Validators.minLength(10),
+        Validators.maxLength(10),
+      ],
+    ],
   });
 
   ngOnInit() {}
@@ -57,7 +66,14 @@ export class ContactUsComponent implements OnInit {
       this.http
         .post<any>(sendEmailUrl, this.form.value)
         .pipe(catchError(async () => console.error('Something went wrong')))
-        .subscribe(() => {});
+        .subscribe(() => {
+          Swal.fire({
+            title: 'Thank you!',
+            text: 'You submitted succesfully!',
+            icon: 'success',
+            confirmButtonColor: '#1483f8',
+          });
+        });
     }
   }
 }

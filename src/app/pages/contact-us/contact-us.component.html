@@ -19,13 +19,16 @@
     <form [formGroup]="form">
       <div class="form-row">
         <div>
-          <label>First Name*</label>
+          <label>First Name<span>*</span></label>
           <mat-form-field appearance="outline">
             <input matInput [formControl]="firstName" />
+            <mat-error *ngIf="message.invalid">{{
+              "This field is required"
+            }}</mat-error>
           </mat-form-field>
         </div>
         <div>
-          <label>Last Name<span>*</span></label>
+          <label>Last Name</label>
           <mat-form-field appearance="outline">
             <input matInput [formControl]="lastName" />
           </mat-form-field>
@@ -45,20 +48,33 @@
           <label>Contact No<span>*</span></label>
           <mat-form-field appearance="outline">
             <input matInput [formControl]="contactNo" />
+            <mat-error *ngIf="contactNo.invalid">{{
+              "Please enter valid phone number"
+            }}</mat-error>
           </mat-form-field>
         </div>
       </div>
 
       <div class="form-row">
         <div class="full-width">
-          <label>Message*</label>
+          <label>Message<span>*</span></label>
           <mat-form-field appearance="outline">
             <textarea matInput placeholder="Comment" [formControl]="message">
             </textarea>
+            <mat-error *ngIf="message.invalid">{{
+              "This field is required"
+            }}</mat-error>
           </mat-form-field>
         </div>
       </div>
-      <button mat-flat-button (click)="sendEmail()">Send</button>
+      <button
+        mat-flat-button
+        (click)="sendEmail()"
+        class="blue-btn"
+        [disabled]="form.invalid"
+      >
+        Send
+      </button>
     </form>
   </mat-card>
 </div>

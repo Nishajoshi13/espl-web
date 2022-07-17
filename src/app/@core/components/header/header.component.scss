@@ -6,6 +6,11 @@
   display: flex;
   align-items: center;
   gap: 36px;
+
+  a {
+    font-weight: 400;
+    font-size: 18px;
+  }
 }
 
 mat-toolbar {
@@ -17,10 +22,6 @@ mat-toolbar {
 .main-logo {
   height: 50px;
   width: 150px;
-}
-
-.active {
-  color: #bb3624;
 }
 
 .menu-bar {

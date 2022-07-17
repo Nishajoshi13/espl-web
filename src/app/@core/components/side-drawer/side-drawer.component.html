@@ -5,7 +5,11 @@
 
   <div class="drawer-content-wrapper">
     <div *ngFor="let item of navItems">
-      <a [routerLink]="item.url" (click)="toggleMenu()"
+      <a
+        [routerLink]="item.url"
+        [routerLinkActive]="'active-header-option'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="toggleMenu()"
         ><div>
           {{ item.title }}
         </div></a

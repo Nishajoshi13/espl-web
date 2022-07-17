@@ -1,4 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$espl-primary: mat.define-palette(mat.$indigo-palette, 900);
+$espl-accent: mat.define-palette(mat.$red-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$espl-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$espl-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $espl-primary,
+      accent: $espl-accent,
+      warn: $espl-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($espl-theme);
 
 /* Define all the mixins */
 @import "mixins";
@@ -43,12 +78,18 @@ a {
 .mat-form-field-appearance-outline {
   .mat-form-field-infix {
     padding: 1em 0;
+    border: 0;
   }
   .mat-form-field-outline {
     color: #0000001f;
   }
+  .mat-form-field-subscript-wrapper {
+    padding: 0 !important;
+  }
 }
-
+mat-error {
+  font-size: 12px;
+}
 mat-card {
   background: #fff;
 }
@@ -70,6 +111,18 @@ mat-card {
   background: rgba(0, 0, 0, 0.2);
 }
 
+.blue-btn {
+  background: #1483f8;
+  color: #fff;
+}
+
+a.active-header-option {
+  color: #bb3624;
+}
+
+.swal2-styled.swal2-confirm {
+  background: #1483f8;
+}
 @media screen and(max-width:960px) {
   .carousel-slide {
     height: 500px;
