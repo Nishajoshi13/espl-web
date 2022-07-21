@@ -1,32 +1,6 @@
 <div class="container">
   <div class="banner-wrapper">
-    <mat-carousel
-      timings="500ms ease-in"
-      [autoplay]="true"
-      [interval]="3000"
-      color="accent"
-      maxWidth="auto"
-      [proportion]="30"
-      [slides]="2"
-      [loop]="true"
-      [hideArrows]="true"
-      [hideIndicators]="false"
-      [useKeyboard]="true"
-      [useMouseWheel]="false"
-      orientation="ltr"
-      pause="null"
-      [maintainAspectRatio]="false"
-      slideHeight="500px"
-    >
-      <mat-carousel-slide
-        #matCarouselSlide
-        *ngFor="let slide of slides; let i = index"
-        [image]="slide.image"
-        overlayColor="rgba(0,0,0,0.6)"
-        [hideOverlay]="false"
-      ></mat-carousel-slide>
-    </mat-carousel>
-
+    <div class="home-banner"></div>
     <div class="wrap-banner-text">
       <div>
         <h1>We Entangle With You</h1>
@@ -42,12 +16,12 @@
       </div>
 
       <div>
-        <p class="desc">
+        <i class="desc">
           We embrace technologies and find the robust software solutions to
           empower your business. We bring our industry knowledge and experience
           to help clients evolving technology solutions into their business to
           stay ahead of the curve.
-        </p>
+        </i>
         <div class="flex-space-between" style="flex-wrap: wrap">
           <div class="develop-platforms" *ngFor="let item of developPlatforms">
             <ng-container *ngIf="item.icon; else imgIconTemp">

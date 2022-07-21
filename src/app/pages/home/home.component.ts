@@ -23,9 +23,7 @@ export class HomeComponent implements OnInit {
     {
       img: 'assets/images/general/machine-learning.png',
       title: 'Machine Learning',
-      desc: `Deep expertise in building highly scalable, secure and
-      futuristic applications across a multitude of domains including
-      but not limited to Finance, E-commerce, Logistics, Career and Jobs, Health, Social Networking, E-learning etc.`,
+      desc: `Solve real time problems that once contrained the growth. Introduce automate in your business`,
     },
   ];
 
@@ -39,11 +37,6 @@ export class HomeComponent implements OnInit {
     { icon: `${this.techIconsUrl}/sql-server.png`, title: 'SQL' },
     { icon: `${this.techIconsUrl}/docker.svg`, title: 'Docker' },
     { icon: `${this.techIconsUrl}/kubernetes.svg`, title: 'Kubernetes' },
-  ];
-
-  slides = [
-    { image: '/assets/images/general/test1.jpg' },
-    { image: '/assets/images/general/test2.jpg' },
   ];
 
   customOptions: OwlOptions = {

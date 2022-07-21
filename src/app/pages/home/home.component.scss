@@ -7,33 +7,42 @@
   justify-content: center;
 }
 
+.home-banner {
+  height: 693px;
+  background: url("/assets/images/general/test2.jpg") center top / cover
+    no-repeat scroll;
+  padding: 2% 0 8%;
+}
+
 .what-we-do {
   width: 100%;
-  margin: auto;
-  display: flex;
-  padding: 0;
+  padding: 32px;
   min-height: 250px;
 
   > div:first-child {
-    color: #fff;
-    background: #1a214d;
-    opacity: 0.7;
-    display: flex;
-    align-items: center;
     letter-spacing: 1px;
+  }
+  > :last-child {
+    padding-top: 30px;
   }
   h1 {
     font-weight: 300;
-    font-size: 50px;
     width: max-content;
+    font-size: 41px;
+    line-height: 1.1em;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+    border-left-style: solid;
+    border-left-width: 4px;
+    border-color: #f1c40f;
   }
-  > div {
-    padding: 32px;
-  }
+
   .desc {
     font-size: 17px;
     margin-bottom: 30px;
     font-weight: 100;
+    letter-spacing: 1px;
   }
 }
 .tech-icons-wrapper {
@@ -103,13 +112,17 @@ mat-card-content {
     z-index: 1;
     color: #fff;
     letter-spacing: 1px;
+    background: linear-gradient(2deg, rgba(255, 255, 255, 0) 0%, #88abcd 100%);
     div {
       top: 32%;
       position: relative;
+      width: 40%;
+      float: right;
     }
     h1 {
-      font-size: 56px;
-      margin-bottom: 5px;
+      font-size: 4.5em;
+      margin-bottom: 0.3em;
+      font-weight: 400;
     }
     h1,
     h3 {
