@@ -9,17 +9,12 @@
   height: 100%;
   top: 0;
   color: #fff;
-
+  background: none;
   > div {
-    top: 9%;
     position: relative;
-    width: 65%;
+    width: 75%;
     padding-left: 50px;
-  }
-  h1 {
-    margin-bottom: 8px;
-    font-size: 4.5rem;
-    font-weight: 600;
+    float: left;
   }
   h2 {
     font-weight: 300;
@@ -109,6 +104,29 @@
       div {
         width: 100%;
       }
+    }
+  }
+}
+
+@media screen and(max-width:1000px) {
+  .wrap-banner-text h2 {
+    font-size: 35px;
+  }
+}
+
+@media screen and(max-width:800px) {
+  .wrap-banner-text > div {
+    width: 95%;
+  }
+}
+
+@media screen and(max-width:650px) {
+  .wrap-banner-text {
+    > div {
+      width: 100%;
+    }
+    h2 {
+      font-size: 28px;
     }
   }
 }
