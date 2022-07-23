@@ -1,0 +1,41 @@
+.container {
+  padding-bottom: 40px;
+}
+.home-card-wrapper {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.about-us-banner {
+  height: 550px;
+  background: url("/assets/images/general/about-us.webp") center top / cover
+    no-repeat scroll;
+  padding: 2% 0 8%;
+}
+
+section {
+  padding: 0 50px;
+}
+@media screen and(max-width:560px) {
+  .banner-wrapper .wrap-banner-text {
+    div {
+      top: 40%;
+    }
+    h1 {
+      font-size: 38px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and(max-width:960px) {
+  .what-we-do {
+    display: block;
+  }
+  section {
+    padding: 0 20px;
+  }
+}

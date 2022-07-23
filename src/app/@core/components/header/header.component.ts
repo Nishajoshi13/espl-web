@@ -5,7 +5,7 @@ export const navItems = [
   { title: 'Home', url: '' },
   { title: 'Services', url: 'services' },
   { title: 'Team', url: 'team' },
-  { title: 'About', url: 'about' },
+  { title: 'About', url: 'about-us' },
   { title: 'Contact', url: 'contact-us' },
 ];
 @Component({

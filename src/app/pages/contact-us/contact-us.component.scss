@@ -1,3 +1,37 @@
+.main-container {
+  margin: auto;
+  margin-top: -66px;
+}
+.wrap-banner-text {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  color: #fff;
+
+  > div {
+    top: 9%;
+    position: relative;
+    width: 65%;
+    padding-left: 50px;
+  }
+  h1 {
+    margin-bottom: 8px;
+    font-size: 4.5rem;
+    font-weight: 600;
+  }
+  h2 {
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 1.3;
+  }
+}
+.contact-us-banner {
+  height: 500px;
+  background: linear-gradient(to right, rgb(1 5 33 / 65%), #1a214d);
+  padding: 2% 0 8%;
+}
 .contact-details-wrapper {
   display: grid;
   grid-gap: 40px;
@@ -5,9 +39,10 @@
   margin-bottom: 25px;
   grid-template-columns: 0.4fr 0.4fr;
   mat-card {
-    width: 100%;
+    width: 90%;
     text-align: center;
     padding: 28px;
+    margin: auto;
 
     p {
       margin-bottom: 4px;

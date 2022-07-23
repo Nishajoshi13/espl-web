@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     {
       img: 'assets/images/general/machine-learning.png',
       title: 'Machine Learning',
-      desc: `Solve real time problems that once contrained the growth. Introduce automate in your business`,
+      desc: `Solve real time problems that once contrained the growth. Introduce automation in your business`,
     },
   ];
 
