@@ -97,9 +97,9 @@ mat-card {
 
 .main-container {
   box-sizing: border-box;
-
   max-width: 1200px;
   padding: 0 16px;
+  margin: auto;
 }
 
 .flex-space-between {
@@ -154,7 +154,7 @@ a.active-header-option {
     z-index: 1;
     color: #fff;
     letter-spacing: 1px;
-    background: linear-gradient(to right, rgb(1 5 33 / 65%), #1a214d);
+    background: linear-gradient(83deg, rgba(255, 255, 255, 0) 0%, #1a214d);
 
     div {
       top: 32%;

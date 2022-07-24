@@ -3,18 +3,12 @@
   margin-top: -66px;
 }
 .wrap-banner-text {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  color: #fff;
-  background: none;
   > div {
     position: relative;
     width: 75%;
     padding-left: 50px;
-    float: left;
+    text-align: right;
+    padding-right: 16px;
   }
   h2 {
     font-weight: 300;
@@ -25,6 +19,8 @@
 .contact-us-banner {
   height: 500px;
   background: linear-gradient(to right, rgb(1 5 33 / 65%), #1a214d);
+  background: url("/assets/images/general/contact-us.jpg") center top / cover
+    no-repeat scroll;
   padding: 2% 0 8%;
 }
 .contact-details-wrapper {
@@ -38,7 +34,7 @@
     text-align: center;
     padding: 28px;
     margin: auto;
-
+    z-index: 9;
     p {
       margin-bottom: 4px;
     }

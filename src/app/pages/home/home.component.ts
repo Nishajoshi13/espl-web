@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
       icon: 'desktop_mac',
       title: 'Web Development',
       desc: `Expertise in building highly scalable, secure and
-       robust applications across several domains taht work for every user regardless of their browser`,
+       ui rich applications across several domains that work for every user regardless of their browser.`,
     },
     {
       icon: 'smartphone',
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     {
       img: 'assets/images/general/machine-learning.png',
       title: 'Machine Learning',
-      desc: `Solve real time problems that once contrained the growth. Introduce automation in your business`,
+      desc: `Solve real time problems that once contrained the growth. Introduce automation in your business.`,
     },
   ];
 

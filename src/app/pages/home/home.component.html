@@ -4,11 +4,30 @@
     <div class="wrap-banner-text">
       <div>
         <h1>we entangle with you</h1>
-        <h3>We develop effective plans to move your customers behaviour.</h3>
+        <h3>Develop effective plans to move your customers behaviour.</h3>
+        <a
+          mat-flat-button
+          class="transparent-btn"
+          [routerLink]="'../contact-us'"
+          >Get In Touch</a
+        >
       </div>
     </div>
   </div>
 
+  <section class="who-we-are">
+    <div>
+      <h1>Who we are</h1>
+
+      <p>
+        We're a software development and consultancy company that provides the
+        robust software solutions to empower businesses like you. We bring our
+        industry knowledge and experience to help clients by leveraging evolving
+        technology solutions into their business to stay ahead of the curve.
+      </p>
+    </div>
+    <img src="assets/images/general/home-2.jpg" />
+  </section>
   <section>
     <mat-card class="what-we-do">
       <div>
@@ -17,10 +36,8 @@
 
       <div>
         <i class="desc">
-          We embrace technologies and find the robust software solutions to
-          empower your business. We bring our industry knowledge and experience
-          to help clients evolving technology solutions into their business to
-          stay ahead of the curve.
+          We offer several services that boost your interaction with the
+          customer at unprecedented speed.
         </i>
         <div class="flex-space-between" style="flex-wrap: wrap">
           <div class="develop-platforms" *ngFor="let item of developPlatforms">
@@ -30,8 +47,10 @@
             <ng-template #imgIconTemp>
               <img [src]="item.img" />
             </ng-template>
-            <div class="title">{{ item.title }}</div>
-            <div>{{ item.desc }}</div>
+            <div>
+              <div class="title">{{ item.title }}</div>
+              <div>{{ item.desc }}</div>
+            </div>
           </div>
         </div>
 
@@ -39,13 +58,14 @@
       </div>
     </mat-card>
     <mat-card class="tech-icons-wrapper">
-      <h1>Technologies we work on</h1>
-      <owl-carousel-o [options]="customOptions" class="tech-icons">
-        <ng-template carouselSlide *ngFor="let item of technologiesIcons">
+      <h1>Our Expertise</h1>
+      <div class="tech-icons">
+        <div *ngFor="let item of technologiesIcons">
           <img [src]="item.icon" />
           <p>{{ item.title }}</p>
-        </ng-template>
-      </owl-carousel-o>
+        </div>
+      </div>
     </mat-card>
   </section>
+  <app-contact-us></app-contact-us>
 </div>

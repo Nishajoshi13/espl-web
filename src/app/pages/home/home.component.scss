@@ -7,31 +7,23 @@
   justify-content: center;
 }
 
+section {
+  margin-top: 40px;
+}
+
 .home-banner {
   height: 693px;
   background: url("/assets/images/general/test2.jpg") center top / cover
     no-repeat scroll;
   padding: 2% 0 8%;
 }
-
-.what-we-do,
-.tech-icons-wrapper {
-  h1 {
-    font-weight: 300;
-    font-size: 35px;
-    line-height: 1.1em;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 20px;
-    border-left-style: solid;
-    border-left-width: 4px;
-    border-color: #bb3624;
-    margin-bottom: 30px;
-  }
+.transparent-btn {
+  margin-top: 28px;
+  padding: 3px 25px;
+  border: 1px solid #fff;
 }
 .what-we-do {
   width: 100%;
-  padding: 32px;
   min-height: 250px;
   background: none;
   box-shadow: none;
@@ -50,12 +42,11 @@
     letter-spacing: 1px;
 
     ~ div {
-      margin-top: 16px;
+      margin-top: 50px;
     }
   }
 }
 .tech-icons-wrapper {
-  margin-top: 50px;
   padding: 25px;
   padding-bottom: 33px;
   background: none;
@@ -71,12 +62,27 @@
   }
   .tech-icons {
     padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 0.8fr);
+    grid-gap: 20px;
+    width: 100%;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+    > div {
+      border-radius: 20px;
+      box-shadow: 0 2px 9px #3bb6f338;
+      padding: 10px;
+    }
   }
 }
 
 .develop-platforms {
   padding: 20px;
   max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
   img,
   mat-icon {
     font-size: 36px;
@@ -84,16 +90,19 @@
     height: 36px;
     opacity: 0.5;
     margin-right: 5px;
+    margin-top: 10px;
   }
+
   .title {
     font-size: 18px;
     letter-spacing: normal;
     color: rgba(48, 49, 51, 0.9);
     font-weight: 500;
-    margin: 4px 0 11px;
+    margin: 4px 0 8px;
   }
   > div:last-child {
     font-weight: 100;
+    margin-top: 14px;
   }
 }
 mat-card-title {
@@ -114,15 +123,71 @@ mat-card-content {
   }
 }
 
-section {
-  padding: 0 50px;
+.who-we-are {
+  display: flex;
+  justify-content: space-between;
+  div:first-child {
+    padding: 0 30px;
+  }
+  img {
+    width: 50%;
+  }
 }
 
+.who-we-are,
+.what-we-do,
+.tech-icons-wrapper {
+  h1 {
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 1.1em;
+    padding-right: 0;
+    padding-bottom: 0;
+    border-left: 2px solid #bb3624;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 24px;
+    padding-left: 10px;
+  }
+}
+.who-we-are p {
+  font-size: 17px;
+}
 @media screen and(max-width:960px) {
   .what-we-do {
     display: block;
   }
-  section {
-    padding: 0 20px;
+}
+
+@media screen and(max-width:750px) {
+  .tech-icons-wrapper {
+    .tech-icons {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .who-we-are {
+    display: block;
+    p {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .develop-platforms {
+    padding: 20px 0;
+  }
+  .what-we-do > :last-child {
+    padding: 0;
+  }
+}
+
+@media screen and(max-width:450px) {
+  .tech-icons-wrapper {
+    .tech-icons {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
