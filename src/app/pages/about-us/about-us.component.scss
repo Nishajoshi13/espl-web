@@ -43,15 +43,12 @@
   padding: 25px 0;
   flex-wrap: wrap;
   margin-top: 80px;
-
+  justify-content: space-between;
   > div {
     padding: 20px 0;
     margin-bottom: 30px;
     position: relative;
-    margin-right: 135px;
-    width: -webkit-calc(100%/2 - 135px);
-    width: calc(100% / 2 - 135px);
-
+    width: 45%;
     h2 {
       margin-bottom: 20px;
       font-size: 20px;
@@ -98,6 +95,17 @@
       width: 100%;
       margin: auto;
       margin-top: 15px;
+    }
+  }
+  .section-2 {
+    margin-top: 0;
+  }
+}
+
+@media screen and(max-width:650px) {
+  .section-2 {
+    > div {
+      width: 100%;
     }
   }
 }
