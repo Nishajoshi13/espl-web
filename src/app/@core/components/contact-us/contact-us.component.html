@@ -1,33 +1,9 @@
-<div class="banner-wrapper">
-  <div class="contact-us-banner"></div>
-  <div class="wrap-banner-text">
-    <div>
-      <h1>contact us</h1>
-      <h2>Let's connect to transform your enterprise.</h2>
-    </div>
-  </div>
-</div>
-<div class="main-container">
-  <div class="contact-details-wrapper">
-    <mat-card>
-      <mat-icon class="material-icons-outlined">phone_iphone</mat-icon>
-      <mat-card-content>
-        <p>+91-9667312464</p>
-      </mat-card-content>
-    </mat-card>
-    <mat-card>
-      <mat-icon class="material-icons-outlined">email</mat-icon>
-      <mat-card-content>
-        <p>info@entanglesoftware.com</p>
-      </mat-card-content>
-    </mat-card>
-  </div>
-
+<div class="contact-us-wrapper flex-center">
   <mat-card class="contact-form-card">
-    <h2>We Want to Hear from You</h2>
-    <form [formGroup]="form">
-      <div class="form-row">
-        <div>
+    <div>
+      <h2>We Want to Hear from You</h2>
+      <form [formGroup]="form">
+        <div class="form-row">
           <label>First Name<span>*</span></label>
           <mat-form-field appearance="outline">
             <input matInput [formControl]="firstName" />
@@ -36,15 +12,13 @@
             }}</mat-error>
           </mat-form-field>
         </div>
-        <div>
+        <div class="form-row">
           <label>Last Name</label>
           <mat-form-field appearance="outline">
             <input matInput [formControl]="lastName" />
           </mat-form-field>
         </div>
-      </div>
-      <div class="form-row">
-        <div>
+        <div class="form-row">
           <label>Email Address<span>*</span></label>
           <mat-form-field appearance="outline">
             <input matInput [formControl]="email" />
@@ -53,7 +27,7 @@
             }}</mat-error>
           </mat-form-field>
         </div>
-        <div>
+        <div class="form-row">
           <label>Contact No<span>*</span></label>
           <mat-form-field appearance="outline">
             <input matInput [formControl]="contactNo" />
@@ -62,28 +36,43 @@
             }}</mat-error>
           </mat-form-field>
         </div>
-      </div>
-
-      <div class="form-row">
-        <div class="full-width">
-          <label>Message<span>*</span></label>
-          <mat-form-field appearance="outline">
-            <textarea matInput placeholder="Comment" [formControl]="message">
-            </textarea>
-            <mat-error *ngIf="message.invalid">{{
-              "This field is required"
-            }}</mat-error>
-          </mat-form-field>
+        <div class="form-row">
+          <div class="full-width">
+            <label>Message<span>*</span></label>
+            <mat-form-field appearance="outline">
+              <textarea matInput placeholder="Comment" [formControl]="message">
+              </textarea>
+              <mat-error *ngIf="message.invalid">{{
+                "This field is required"
+              }}</mat-error>
+            </mat-form-field>
+          </div>
         </div>
-      </div>
-      <button
-        mat-flat-button
-        (click)="sendEmail()"
-        class="blue-btn"
-        [disabled]="form.invalid"
-      >
-        Send
-      </button>
-    </form>
+        <button
+          mat-flat-button
+          (click)="sendEmail()"
+          class="blue-btn"
+          [disabled]="form.invalid"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+  </mat-card>
+  <mat-card>
+    <div class="contact-information">
+      <h4>What happens next?</h4>
+      <ul>
+        <li>
+          Our sales manager reaches you out within a few days after analyzing
+          your business requirements
+        </li>
+        <li>Meanwhile, we sign an NDA to ensure the highest privacy level</li>
+        <li>
+          Our pre-sale manager presents project estimates and approximate
+          timeline
+        </li>
+      </ul>
+    </div>
   </mat-card>
 </div>

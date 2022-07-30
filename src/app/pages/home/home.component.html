@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <section class="who-we-are">
+  <section class="who-we-are main-container">
     <div>
       <h1>Who we are</h1>
 
@@ -28,8 +28,8 @@
     </div>
     <img src="assets/images/general/home-2.jpg" />
   </section>
-  <section>
-    <mat-card class="what-we-do">
+  <section class="main-container">
+    <div class="what-we-do">
       <div>
         <h1>What we do</h1>
       </div>
@@ -56,8 +56,8 @@
 
         <div></div>
       </div>
-    </mat-card>
-    <mat-card class="tech-icons-wrapper">
+    </div>
+    <div class="tech-icons-wrapper">
       <h1>Our Expertise</h1>
       <div class="tech-icons">
         <div *ngFor="let item of technologiesIcons">
@@ -65,7 +65,13 @@
           <p>{{ item.title }}</p>
         </div>
       </div>
-    </mat-card>
+    </div>
   </section>
-  <app-contact-us></app-contact-us>
+
+  <section>
+    <div class="contact-us-banner">
+      <div class="overlay"></div>
+      <app-contact-us></app-contact-us>
+    </div>
+  </section>
 </div>
