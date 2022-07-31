@@ -1,5 +1,5 @@
 .contact-us-wrapper {
-  padding: 40px 20px 2px;
+  padding: 40px 20px;
   margin-bottom: 100px;
   h4 {
     margin-bottom: 20px;
@@ -17,10 +17,9 @@
     position: relative;
 
     &:before {
-      content: counter(my-awesome-counter) "";
+      content: "\2713";
       width: 28px;
-      font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 18px;
       line-height: 28px;
       display: inline-block;
@@ -93,6 +92,20 @@
       div {
         width: 100%;
       }
+    }
+  }
+  .contact-form-card {
+    width: 100%;
+  }
+  .contact-us-wrapper {
+    display: block;
+    mat-card:last-child {
+      margin: 0;
+      width: 100%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      padding: 40px 20px 20px;
+      max-width: 100%;
     }
   }
 }

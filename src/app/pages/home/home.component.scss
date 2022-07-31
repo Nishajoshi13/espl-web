@@ -17,11 +17,7 @@ section {
     no-repeat scroll;
   padding: 2% 0 8%;
 }
-.transparent-btn {
-  margin-top: 28px;
-  padding: 3px 25px;
-  border: 1px solid #fff;
-}
+
 .what-we-do {
   width: 100%;
   min-height: 250px;
@@ -204,5 +200,12 @@ mat-card-content {
     .tech-icons {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+}
+
+@media screen and(max-width:770px) {
+  .contact-us-banner {
+    height: unset;
+    margin-bottom: 0;
   }
 }

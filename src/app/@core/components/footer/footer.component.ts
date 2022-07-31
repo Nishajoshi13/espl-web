@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   navItems = [
     { title: 'Services', url: 'services' },
-    { title: 'About', url: 'about' },
+    { title: 'About', url: 'about-us' },
     { title: 'Contact', url: 'contact-us' },
   ];
 

@@ -1,0 +1,25 @@
+<div class="banner-wrapper">
+  <div class="our-services-banner"></div>
+  <div class="wrap-banner-text">
+    <div>
+      <h1>our services</h1>
+      <h2>Accelerate your business with our services.</h2>
+      <a mat-flat-button class="transparent-btn" [routerLink]="'../contact-us'"
+        >Get In Touch</a
+      >
+    </div>
+  </div>
+</div>
+
+<div class="web-dev-banner">
+  <h1>Development</h1>
+  <div class="web-dev-wrapper">
+    <div class="text-wrap" *ngFor="let item of webDevContent">
+      <div id="something"></div>
+      <div class="section-heading">{{ item.title }}</div>
+      <div class="section-para">
+        {{ item.desc }}
+      </div>
+    </div>
+  </div>
+</div>
