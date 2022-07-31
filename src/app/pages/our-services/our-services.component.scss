@@ -24,13 +24,10 @@
   height: auto;
   padding: 4% 2% 6%;
   position: relative;
-  background: linear-gradient(to right, rgb(1 5 33 / 65%), #1a214d);
-  background: url("/assets/images/general/web-dev.jpg") center top / cover
-    no-repeat scroll;
+  //   background: url("/assets/images/general/web-dev.jpg") center top / cover
+  //     no-repeat scroll;
 
   h1 {
-    color: #fff;
-    backdrop-filter: blur(1px);
     padding: 0 50px;
     font-size: 3.5rem;
     margin-bottom: 23px;
@@ -38,7 +35,7 @@
   }
 }
 
-.web-dev-banner:before {
+.background-banner:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -48,8 +45,8 @@
   right: 0;
   bottom: 0;
   z-index: 0;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -62,23 +59,39 @@
     width: 32%;
     border-radius: 8px;
   }
+}
+
+.text-wrap {
+  padding: 2rem;
+  background: rgba(26, 33, 77, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: white;
+
+  .section-heading {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .section-para {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+}
+
+.qa-banner {
+  height: 100vh;
+  display: flex;
+  padding: 4% 2% 6%;
+  position: relative;
+  background: url("/assets/images/general/web-dev.jpg") center top / cover
+    no-repeat scroll;
+
   .text-wrap {
-    padding: 2rem;
-    background-color: rgba(26, 33, 77, 0.7);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    color: white;
-
-    .section-heading {
-      font-size: 1.8rem;
-      margin-bottom: 8px;
-    }
-
-    .section-para {
-      font-size: 15px;
-      letter-spacing: 1px;
-      font-weight: 300;
-    }
+    background: rgba(0, 0, 0, 0.3);
+    float: right;
+    align-self: center;
   }
 }
 
