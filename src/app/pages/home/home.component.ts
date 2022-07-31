@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
 
   technologiesIcons = [
     { icon: `${this.techIconsUrl}/magento.svg`, title: 'Magento' },
+    { icon: `${this.techIconsUrl}/scandipwa.png`, title: 'ScandiPWA' },
     { icon: `${this.techIconsUrl}/php.svg`, title: 'Php' },
     { icon: `${this.techIconsUrl}/angular.svg`, title: 'Angular' },
     { icon: `${this.techIconsUrl}/react.svg`, title: 'React' },
