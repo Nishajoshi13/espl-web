@@ -1,0 +1,75 @@
+<div class="contact-us-wrapper flex-center">
+  <mat-card class="contact-form-card">
+    <div>
+      <h2>We Want to Hear from You</h2>
+      <form [formGroup]="form">
+        <div class="form-row">
+          <label>First Name<span>*</span></label>
+          <mat-form-field appearance="outline">
+            <input matInput [formControl]="firstName" />
+            <mat-error *ngIf="message.invalid">{{
+              "This field is required"
+            }}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <label>Last Name</label>
+          <mat-form-field appearance="outline">
+            <input matInput [formControl]="lastName" />
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <label>Email Address<span>*</span></label>
+          <mat-form-field appearance="outline">
+            <input matInput [formControl]="email" />
+            <mat-error *ngIf="email.invalid">{{
+              "Please enter valid email"
+            }}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <label>Contact No<span>*</span></label>
+          <mat-form-field appearance="outline">
+            <input matInput [formControl]="contactNo" />
+            <mat-error *ngIf="contactNo.invalid">{{
+              "Please enter valid phone number"
+            }}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <div class="full-width">
+            <label>Message<span>*</span></label>
+            <mat-form-field appearance="outline">
+              <textarea matInput placeholder="Comment" [formControl]="message">
+              </textarea>
+              <mat-error *ngIf="message.invalid">{{
+                "This field is required"
+              }}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <button
+          mat-flat-button
+          (click)="sendEmail()"
+          class="blue-btn"
+          [disabled]="form.invalid"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+  </mat-card>
+  <mat-card>
+    <div class="contact-information">
+      <h4>What's next?</h4>
+      <ul>
+        <li>Our business executive will reach you out within a few days.</li>
+        <li>Meanwhile, we will analyse your requirements.</li>
+        <li>
+          We'll present the estimates and an approximate timeline for the
+          project.
+        </li>
+      </ul>
+    </div>
+  </mat-card>
+</div>

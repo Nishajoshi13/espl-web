@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   templateUrl: './contact-us.component.html',
-  styleUrls: [],
+  styleUrls: ['./contact-us.component.scss'],
 })
 export class ContactUsComponent {
   constructor() {}

@@ -26,8 +26,15 @@
     margin-top: 20px;
 
     p {
-      width: 62%;
+      width: 64%;
       margin-top: 8px;
+
+      strong {
+        font-size: 17px;
+      }
+      span {
+        font-size: 14px;
+      }
     }
   }
   img {

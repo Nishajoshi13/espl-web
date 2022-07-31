@@ -33,7 +33,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SideDrawerComponent } from './components/side-drawer/side-drawer.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { ContactUsFormComponent } from './components/contact-us-form/contact-us-form.component';
 
 const MODULES: any[] = [
   CommonModule,
@@ -74,7 +74,7 @@ const COMPONENTS: any[] = [
   HeaderComponent,
   FooterComponent,
   SideDrawerComponent,
-  ContactUsComponent,
+  ContactUsFormComponent,
 ];
 
 const DIRECTIVES: any[] = [];

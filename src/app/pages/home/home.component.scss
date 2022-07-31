@@ -17,11 +17,7 @@ section {
     no-repeat scroll;
   padding: 2% 0 8%;
 }
-.transparent-btn {
-  margin-top: 28px;
-  padding: 3px 25px;
-  border: 1px solid #fff;
-}
+
 .what-we-do {
   width: 100%;
   min-height: 250px;
@@ -47,7 +43,6 @@ section {
   }
 }
 .tech-icons-wrapper {
-  padding: 25px;
   padding-bottom: 33px;
   background: none;
   box-shadow: none;
@@ -72,7 +67,6 @@ section {
     }
     > div {
       border-radius: 20px;
-      box-shadow: 0 2px 9px #3bb6f338;
       padding: 10px;
     }
   }
@@ -127,7 +121,9 @@ mat-card-content {
   display: flex;
   justify-content: space-between;
   div:first-child {
-    padding: 0 30px;
+    p {
+      padding: 0 26px;
+    }
   }
   img {
     width: 50%;
@@ -153,6 +149,21 @@ mat-card-content {
 .who-we-are p {
   font-size: 17px;
 }
+
+.contact-us-banner {
+  padding: 0;
+  position: relative;
+  margin-bottom: 250px;
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000;
+    opacity: 0.5;
+  }
+}
+
 @media screen and(max-width:960px) {
   .what-we-do {
     display: block;
@@ -189,5 +200,12 @@ mat-card-content {
     .tech-icons {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+}
+
+@media screen and(max-width:770px) {
+  .contact-us-banner {
+    height: unset;
+    margin-bottom: 0;
   }
 }

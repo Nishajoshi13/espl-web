@@ -15,6 +15,14 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
+        path: 'services',
+        loadChildren: () =>
+          import('./our-services/our-services.module').then(
+            (m) => m.OurServiceModule
+          ),
+        pathMatch: 'full',
+      },
+      {
         path: 'about-us',
         loadChildren: () =>
           import('./about-us/about-us.module').then((m) => m.AboutUsModule),

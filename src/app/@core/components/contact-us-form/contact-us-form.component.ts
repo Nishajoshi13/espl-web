@@ -11,11 +11,11 @@ import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-contact-us',
-  templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss'],
+  selector: 'app-contact-us-form',
+  templateUrl: './contact-us-form.component.html',
+  styleUrls: ['./contact-us-form.component.scss'],
 })
-export class ContactUsComponent implements OnInit {
+export class ContactUsFormComponent implements OnInit {
   constructor(protected fb: FormBuilder, private http: HttpClient) {}
 
   protected formGroup: FormGroup = this.fb.group({

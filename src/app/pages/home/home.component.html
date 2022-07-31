@@ -4,7 +4,7 @@
     <div class="wrap-banner-text">
       <div>
         <h1>we entangle with you</h1>
-        <h3>Develop effective plans to move your customers behaviour.</h3>
+        <h3>Develop effective plans to move your customers' behaviour.</h3>
         <a
           mat-flat-button
           class="transparent-btn"
@@ -15,12 +15,12 @@
     </div>
   </div>
 
-  <section class="who-we-are">
+  <section class="who-we-are main-container">
     <div>
       <h1>Who we are</h1>
 
       <p>
-        We're a software development and consultancy company that provides the
+        We're a software development and consultancy company that provides
         robust software solutions to empower businesses like you. We bring our
         industry knowledge and experience to help clients by leveraging evolving
         technology solutions into their business to stay ahead of the curve.
@@ -28,16 +28,17 @@
     </div>
     <img src="assets/images/general/home-2.jpg" />
   </section>
-  <section>
-    <mat-card class="what-we-do">
+  <section class="main-container">
+    <div class="what-we-do">
       <div>
         <h1>What we do</h1>
       </div>
 
       <div>
         <i class="desc">
-          We offer several services that boost your interaction with the
-          customer at unprecedented speed.
+          We offer several services that will boost customers' engagement with
+          your product at remarkable speed. We deliver high quality products
+          with our expertise and commitment.
         </i>
         <div class="flex-space-between" style="flex-wrap: wrap">
           <div class="develop-platforms" *ngFor="let item of developPlatforms">
@@ -56,8 +57,8 @@
 
         <div></div>
       </div>
-    </mat-card>
-    <mat-card class="tech-icons-wrapper">
+    </div>
+    <div class="tech-icons-wrapper">
       <h1>Our Expertise</h1>
       <div class="tech-icons">
         <div *ngFor="let item of technologiesIcons">
@@ -65,7 +66,13 @@
           <p>{{ item.title }}</p>
         </div>
       </div>
-    </mat-card>
+    </div>
   </section>
-  <app-contact-us></app-contact-us>
+
+  <section>
+    <div class="contact-us-banner">
+      <div class="overlay"></div>
+      <app-contact-us-form></app-contact-us-form>
+    </div>
+  </section>
 </div>
