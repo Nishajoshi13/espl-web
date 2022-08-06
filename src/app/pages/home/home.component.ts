@@ -21,6 +21,12 @@ export class HomeComponent implements OnInit {
       desc: `We have extensive expertise in building high performance native and hybrid mobile app development.`,
     },
     {
+      img: 'assets/images/general/devops-icon.png',
+      title: 'DevOps',
+      desc: `Our DevOps development and consulting services help to enable continuous delivery of 
+      applications and services. It provides better collaboration, easy deployment, more security, scalability, and efficiency.`,
+    },
+    {
       img: 'assets/images/general/machine-learning.png',
       title: 'Machine Learning',
       desc: `Solve real time problems that once contrained the growth. Introduce automation in your business.`,
