@@ -7,7 +7,7 @@ footer {
 }
 
 .main-container {
-  padding: 24px;
+  padding: 14px;
   margin-top: 0;
   align-items: baseline;
 }
@@ -36,8 +36,11 @@ footer {
 
 .ft-nav-wrapper {
   width: 60%;
+  display: flex;
+  justify-content: space-between;
   a {
     color: #fff;
+    font-weight: 500;
   }
 }
 
@@ -61,7 +64,18 @@ footer {
     font-weight: 200;
   }
 }
-@media screen and(max-width:770px) {
+
+.ft-nav-subpoints {
+  margin-top: 8px;
+  a,
+  div {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2.3;
+  }
+}
+@media screen and(max-width:900px) {
   .main-container {
     padding: 0;
   }

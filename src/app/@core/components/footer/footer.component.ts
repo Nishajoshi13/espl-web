@@ -7,9 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   navItems = [
-    { title: 'Services', url: 'services' },
-    { title: 'About', url: 'about-us' },
-    { title: 'Contact', url: 'contact-us' },
+    {
+      title: 'Services',
+      url: 'services',
+      subPoints: [
+        { title: 'Frontend Development', url: 'services' },
+        { title: 'Backend Development', url: 'services' },
+        { title: 'Mobile Apps Development', url: 'services' },
+        { title: 'DevOps', url: 'services' },
+        { title: 'QA Testing', url: 'services' },
+      ],
+    },
+    {
+      title: 'Company',
+      url: '',
+      subPoints: [
+        { title: 'About', url: 'about-us' },
+        { title: 'Team', url: 'team' },
+      ],
+    },
+    {
+      title: 'Contact',
+      url: 'contact-us',
+      subPoints: [
+        { title: '+91-9667312464', url: '' },
+        { title: 'info@entanglesoftware.com', url: '' },
+      ],
+    },
   ];
 
   socialPlatforms = [
