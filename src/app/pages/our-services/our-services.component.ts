@@ -10,7 +10,8 @@ export class OurServicesComponent {
       title: 'Web Frontend',
       desc: `We build highly scalable, secure, and UI-rich applications across 
       several domains that work for every user regardless of their browser, 
-      helping businesses achieve a competitive edge.
+      helping businesses achieve a competitive edge by 
+      leveraging the latest technologies like Angular, React, Javascript, Jquery, Bootstrap.
       `,
     },
     {

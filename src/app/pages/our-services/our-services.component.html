@@ -1,38 +1,60 @@
-<div class="banner-wrapper">
-  <div class="our-services-banner"></div>
-  <div class="wrap-banner-text">
-    <div>
-      <h1>our services</h1>
-      <h2>Accelerate your business with our services.</h2>
-      <a mat-flat-button class="transparent-btn" [routerLink]="'../contact-us'"
-        >Get In Touch</a
-      >
-    </div>
-  </div>
-</div>
-
-<div class="web-dev-banner">
-  <h1>Development</h1>
-  <div class="web-dev-wrapper">
-    <div class="text-wrap" *ngFor="let item of webDevContent">
-      <div id="something"></div>
-      <div class="section-heading">{{ item.title }}</div>
-      <div class="section-para">
-        {{ item.desc }}
+<div class="container">
+  <div class="banner-wrapper">
+    <div class="our-services-banner"></div>
+    <div class="wrap-banner-text">
+      <div>
+        <h1>our services</h1>
+        <h2>Accelerate your business with our services.</h2>
+        <a
+          mat-flat-button
+          class="transparent-btn"
+          [routerLink]="'../contact-us'"
+          >Get In Touch</a
+        >
       </div>
     </div>
   </div>
-</div>
 
-<div class="qa-banner background-banner">
-  <div class="text-wrap" style="width: 50%">
-    <div class="section-heading">QA Testing</div>
-    <div class="section-para">
-      Our QA team conducts comprehensive and rigorous testing of your product
-      after the development and unit testing phases. We collaborate with you to
-      provide a comprehensive approach to testing and quality assurance that
-      ensures improved functionality, performance, and security while also
-      increasing your company's credibility and customer confidence.
+  <div class="web-dev-banner">
+    <h1>Development</h1>
+    <div class="web-dev-wrapper">
+      <div class="text-wrap" *ngFor="let item of webDevContent">
+        <div id="something"></div>
+        <div class="section-heading">{{ item.title }}</div>
+        <div class="section-para">
+          {{ item.desc }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="devops-banner background-banner">
+    <div class="text-wrap">
+      <div class="section-heading">DevOps</div>
+      <div class="section-para">
+        Our DevOps development and consulting services help to enable continuous
+        delivery of applications and services to your end users. It provides
+        better collaboration, easy deployment, more security, scalability, and
+        efficiency. Our services give you greater visibility and control across
+        your applications, servers, and services. It speeds up the product
+        release due to continuous integration of code into a shared repository
+        and an automated build verifies each check-in so that defects can be
+        identified in an early stage.
+      </div>
+    </div>
+  </div>
+
+  <div class="qa-banner background-banner">
+    <div class="text-wrap">
+      <div class="section-heading">QA Testing</div>
+      <div class="section-para">
+        Our QA team conducts comprehensive and rigorous testing of your product
+        after the development and unit testing phases. We will collaborate with
+        you to ensure improved functionality and performance. Our quality
+        assurance ensures your application is bug-free, which increases the
+        credibility of th product and creates a great user experience for your
+        customers.
+      </div>
     </div>
   </div>
 </div>
