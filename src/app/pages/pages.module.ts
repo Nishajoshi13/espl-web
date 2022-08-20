@@ -29,6 +29,12 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
+        path: 'team',
+        loadChildren: () =>
+          import('./team/team.module').then((m) => m.TeamModule),
+        pathMatch: 'full',
+      },
+      {
         path: 'contact-us',
         loadChildren: () =>
           import('./contact-us/contact-us.module').then(
