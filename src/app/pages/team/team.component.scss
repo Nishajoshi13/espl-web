@@ -24,7 +24,7 @@
 }
 
 .main-container {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 .team-img-section {
   display: flex;
@@ -55,6 +55,19 @@
   }
 }
 
+.meet-team-outer {
+  text-align: center;
+  padding-bottom: 60px;
+  h1 {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  div {
+    width: 50%;
+    margin: auto;
+    padding-top: 5px;
+  }
+}
 @media screen and(max-width:650px) {
   .team-img-section {
     display: block;
@@ -66,6 +79,11 @@
     }
     h2 {
       font-size: 28px;
+    }
+  }
+  .meet-team-outer {
+    div {
+      width: 100%;
     }
   }
 }
