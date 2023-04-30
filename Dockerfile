@@ -20,7 +20,7 @@
 # Specify the default image for making the build
 # Revert back to node:17.8.0-alpine image 
 # If args is not provided
-ARG BUILD_IMAGE=node:17.8.0-alpine
+ARG BUILD_IMAGE=node:18.0.0-alpine
 
 # Installs the current application on a Node Image.
 FROM $BUILD_IMAGE AS espl-prod-build
