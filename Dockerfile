@@ -23,7 +23,7 @@
 ARG BUILD_IMAGE=node:17.8.0-alpine
 
 # Installs the current application on a Node Image.
-FROM $BUILD_IMAGE AS live-market-prod-build
+FROM $BUILD_IMAGE AS espl-prod-build
 
 # The qq is for silent output in the console
 # You are welcome to modify this part as it
@@ -77,9 +77,11 @@ WORKDIR /usr/share/nginx/html
 
 RUN rm -rf *
 
+# Copy configuration file from the previous build stage to current one
+COPY --from=espl-prod-build /vendor/app/deployment/config/prod/nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy the static files from the build stage to the nginx folder
-COPY --from=live-market-prod-build /vendor/app/dist/espl-website /usr/share/nginx/html
+COPY --from=espl-prod-build /vendor/app/dist/espl-website /usr/share/nginx/html
 
 # Containers run nginx with global directives and daemon off
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
