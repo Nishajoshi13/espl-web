@@ -67,7 +67,7 @@ WORKDIR /vendor/app
 COPY . .
 
 # !IMPORTANT Copy the node modules for VSCode Intellisense
-RUN ng build --configuration=$DEPLOY_MODE
+RUN npm run build --configuration=$DEPLOY_MODE
 
 # Stage 2 build
 FROM nginx:1.20.2-alpine
