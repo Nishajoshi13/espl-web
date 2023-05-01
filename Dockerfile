@@ -20,7 +20,7 @@
 # Specify the default image for making the build
 # Revert back to node:17.8.0-alpine image 
 # If args is not provided
-ARG BUILD_IMAGE=node:18.10.0-alpine
+ARG BUILD_IMAGE=node:16.10.0-alpine
 
 # Installs the current application on a Node Image.
 FROM $BUILD_IMAGE AS espl-prod-build
@@ -58,7 +58,7 @@ RUN npm config set save=true && npm config set save-exact=true
 # i.e Above WORKDIR /app is Overriden by line volumes: - ./:/app
 # So, we will create an install directory and install node_modules 
 # there and then import it from there
-RUN npm install -g @angular/cli@13.3.7 && npm install --production
+RUN npm install -g @angular/cli@13.3.7 && npm install -g npm@9.6.5 --omit=dev
 
 # Changing the working directory to be /vendor/app
 WORKDIR /vendor/app
