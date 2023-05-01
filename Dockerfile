@@ -58,7 +58,7 @@ RUN npm config set save=true && npm config set save-exact=true
 # i.e Above WORKDIR /app is Overriden by line volumes: - ./:/app
 # So, we will create an install directory and install node_modules 
 # there and then import it from there
-RUN npm install -g @angular/cli@13.3.7 && npm install --omit=dev
+RUN npm install -g @angular/cli@13.3.7 && npm install
 
 # Changing the working directory to be /vendor/app
 WORKDIR /vendor/app
