@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
+  UntypedFormBuilder,
+  UntypedFormControl,
+  UntypedFormGroup,
   Validators,
 } from '@angular/forms';
 import { catchError } from 'rxjs';
@@ -16,9 +16,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./contact-us-form.component.scss'],
 })
 export class ContactUsFormComponent implements OnInit {
-  constructor(protected fb: FormBuilder, private http: HttpClient) {}
+  constructor(protected fb: UntypedFormBuilder, private http: HttpClient) {}
 
-  protected formGroup: FormGroup = this.fb.group({
+  protected formGroup: UntypedFormGroup = this.fb.group({
     firstName: ['', Validators.required],
     lastName: [''],
     email: ['', [Validators.required, Validators.email]],
@@ -41,23 +41,23 @@ export class ContactUsFormComponent implements OnInit {
   }
 
   get firstName() {
-    return this.form.controls['firstName'] as FormControl;
+    return this.form.controls['firstName'] as UntypedFormControl;
   }
 
   get lastName() {
-    return this.form.controls['lastName'] as FormControl;
+    return this.form.controls['lastName'] as UntypedFormControl;
   }
 
   get email() {
-    return this.form.controls['email'] as FormControl;
+    return this.form.controls['email'] as UntypedFormControl;
   }
 
   get message() {
-    return this.form.controls['message'] as FormControl;
+    return this.form.controls['message'] as UntypedFormControl;
   }
 
   get contactNo() {
-    return this.form.controls['contactNo'] as FormControl;
+    return this.form.controls['contactNo'] as UntypedFormControl;
   }
 
   sendEmail() {
