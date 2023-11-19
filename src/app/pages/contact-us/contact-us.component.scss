@@ -41,7 +41,7 @@
   width: 100px;
 }
 
-@media screen and(max-width:770px) {
+@media screen and (max-width: 770px) {
   .contact-details-wrapper {
     grid-template-columns: 1fr;
   }
@@ -57,7 +57,7 @@
   }
 }
 
-@media screen and(max-width:800px) {
+@media screen and (max-width: 800px) {
   .wrap-banner-text {
     > div {
       width: 95%;
@@ -68,7 +68,7 @@
   }
 }
 
-@media screen and(max-width:650px) {
+@media screen and (max-width: 650px) {
   .wrap-banner-text {
     > div {
       width: 100%;

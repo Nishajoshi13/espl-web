@@ -206,7 +206,7 @@ a.active-header-option {
   padding: 2% 0 8%;
 }
 
-@media screen and(max-width:960px) and (min-width: 600px) {
+@media screen and (max-width: 960px) and (min-width: 600px) {
   .banner-wrapper .wrap-banner-text {
     div:first-child {
       width: 50%;
@@ -217,7 +217,7 @@ a.active-header-option {
   }
 }
 
-@media screen and(max-width:599px) {
+@media screen and (max-width: 599px) {
   .banner-wrapper .wrap-banner-text {
     div:first-child {
       width: 50%;
@@ -232,7 +232,7 @@ a.active-header-option {
   }
 }
 
-@media screen and(max-width:480px) {
+@media screen and (max-width: 480px) {
   .banner-wrapper .wrap-banner-text {
     div:first-child {
       width: 70%;

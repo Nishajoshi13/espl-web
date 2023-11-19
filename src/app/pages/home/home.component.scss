@@ -164,13 +164,13 @@ mat-card-content {
   }
 }
 
-@media screen and(max-width:960px) {
+@media screen and (max-width: 960px) {
   .what-we-do {
     display: block;
   }
 }
 
-@media screen and(max-width:750px) {
+@media screen and (max-width: 750px) {
   .tech-icons-wrapper {
     .tech-icons {
       grid-template-columns: repeat(3, 1fr);
@@ -195,7 +195,7 @@ mat-card-content {
   }
 }
 
-@media screen and(max-width:450px) {
+@media screen and (max-width: 450px) {
   .tech-icons-wrapper {
     .tech-icons {
       grid-template-columns: repeat(2, 1fr);
@@ -203,7 +203,7 @@ mat-card-content {
   }
 }
 
-@media screen and(max-width:770px) {
+@media screen and (max-width: 770px) {
   .contact-us-banner {
     height: unset;
     margin-bottom: 0;
