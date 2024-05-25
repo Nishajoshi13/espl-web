@@ -1,16 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#DD0031;}
-	.st1{fill:#C3002F;}
-	.st2{fill:#FFFFFF;}
-</style>
-<g>
-	<polygon class="st0" points="125,30 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,230 203.9,186.3 218.1,63.2 	"/>
-	<polygon class="st1" points="125,30 125,52.2 125,52.1 125,153.4 125,153.4 125,230 125,230 203.9,186.3 218.1,63.2 125,30 	"/>
-	<path class="st2" d="M125,52.1L66.8,182.6h0h21.7h0l11.7-29.2h49.4l11.7,29.2h0h21.7h0L125,52.1L125,52.1L125,52.1L125,52.1
-		L125,52.1z M142,135.4H108l17-40.9L142,135.4z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="220px" height="233px" viewBox="0 0 220 232" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="0.250715" y1="0.909292" x2="0.961322" y2="0.551837" gradientTransform="matrix(220,0,0,231.984375,0,0)">
+<stop offset="0" style="stop-color:rgb(89.411765%,0%,20.784314%);stop-opacity:1;"/>
+<stop offset="0.24" style="stop-color:rgb(96.470588%,3.921569%,28.235294%);stop-opacity:1;"/>
+<stop offset="0.352" style="stop-color:rgb(94.901961%,2.745098%,33.333333%);stop-opacity:1;"/>
+<stop offset="0.494" style="stop-color:rgb(86.27451%,3.137255%,49.019608%);stop-opacity:1;"/>
+<stop offset="0.745" style="stop-color:rgb(59.215686%,9.019608%,90.588235%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(42.352941%,0%,96.078431%);stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="0.218629" y1="0.120575" x2="0.68367" y2="0.682103" gradientTransform="matrix(220,0,0,231.984375,0,0)">
+<stop offset="0" style="stop-color:rgb(100%,19.215686%,85.098039%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,35.686275%,88.235294%);stop-opacity:0;"/>
+</linearGradient>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 220 38.675781 L 212.054688 162.945312 L 136.101562 0 Z M 167.390625 199.363281 L 110 231.984375 L 52.609375 199.363281 L 64.28125 171.179688 L 155.71875 171.179688 Z M 110 61.851562 L 140.074219 134.683594 L 79.925781 134.683594 Z M 7.863281 162.945312 L 0 38.675781 L 83.898438 0 Z M 7.863281 162.945312 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 220 38.675781 L 212.054688 162.945312 L 136.101562 0 Z M 167.390625 199.363281 L 110 231.984375 L 52.609375 199.363281 L 64.28125 171.179688 L 155.71875 171.179688 Z M 110 61.851562 L 140.074219 134.683594 L 79.925781 134.683594 Z M 7.863281 162.945312 L 0 38.675781 L 83.898438 0 Z M 7.863281 162.945312 "/>
 </g>
 </svg>

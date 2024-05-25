@@ -9,8 +9,7 @@
           mat-flat-button
           class="transparent-btn"
           [routerLink]="'../contact-us'"
-          >Get In Touch</a
-        >
+          >Get In Touch</a>
       </div>
     </div>
   </div>
@@ -20,27 +19,35 @@
       <h1>Who we are</h1>
 
       <p>
-        We're a software development and consultancy company that provides
-        robust software solutions to empower businesses like you. We bring our
-        industry knowledge and experience to help clients by leveraging evolving
-        technology solutions into their business to stay ahead of the curve.
+        We are a premier software development and consultancy firm dedicated to delivering
+        robust software solutions that empower businesses like yours. Leveraging our extensive
+        industry knowledge and experience, we help clients integrate cutting-edge technology
+        into their operations, ensuring they stay ahead of the curve. Our commitment is to drive
+        innovation and efficiency, transforming your business challenges into opportunities for
+        growth and success
       </p>
     </div>
     <img src="assets/images/general/home-2.jpg" />
   </section>
   <section class="main-container">
-    <div class="what-we-do">
+    <div class="what-we-do" style="margin-bottom: 20px">
       <div>
         <h1>What we do</h1>
       </div>
-
-      <div>
-        <i class="desc">
-          We offer several services that will boost customers' engagement with
-          your product at remarkable speed. We deliver high quality products
-          with our expertise and commitment.
-        </i>
-        <div class="flex-space-between" style="flex-wrap: wrap">
+      <div style="display: flex">
+        <div class="desc" style="flex: 0.54; padding-right: 20px;">
+          At Entangle, we offer a range of services to enhance customer engagement and drive
+          business growth. Our expertise includes custom software development, IT consultancy,
+          system integration, mobile app and web development, cloud solutions, and ongoing
+          maintenance and support. We are committed to delivering high-quality, scalable
+          solutions tailored to your unique needs. Our team works closely with you to ensure
+          seamless integration and optimal performance, helping your business stay ahead of the
+          curve and achieve remarkable results. Our innovative approach leverages the latest
+          technologies to create robust, user-friendly applications that elevate your brand.
+          We prioritize security and efficiency, ensuring your data is protected while maximizing
+          operational productivity.
+        </div>
+        <div class="flex-space-between" style="flex-wrap: wrap; flex: 0.7; margin-left: 20px; margin-top:0px;">
           <div class="develop-platforms" *ngFor="let item of developPlatforms">
             <ng-container *ngIf="item.icon; else imgIconTemp">
               <mat-icon>{{ item.icon }}</mat-icon>
@@ -54,19 +61,65 @@
             </div>
           </div>
         </div>
-
-        <div></div>
       </div>
+
     </div>
+<!--    tech icons-->
     <div class="tech-icons-wrapper">
       <h1>Our Expertise</h1>
       <div class="tech-icons">
-        <div *ngFor="let item of technologiesIcons">
-          <img [src]="item.icon" />
-          <p>{{ item.title }}</p>
+        <div class="column">
+          <h2 class="section-header">Backend</h2>
+          <div class="icons" style="flex: 1">
+            <div class="icon-item" *ngFor="let item of backendIcons">
+              <a [href]="item.link">
+              <img [src]="item.icon" />
+              </a>
+              <p>{{ item.title }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="column">
+          <h2 class="section-header">Frontend</h2>
+          <div class="icons" style="flex: 1;">
+            <div class="icon-item" *ngFor="let item of frontendIcons ">
+              <a [href]="item.link">
+                <img [src]="item.icon" />
+              </a>
+              <p>{{ item.title }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+
+      </div>
+      <div class="tech-icons" style="padding-top:20px">
+        <div class="column">
+          <h2 class="section-header">Databases</h2>
+          <div class="icons">
+            <div class="icon-item" *ngFor="let item of databaseIcons">
+              <a [href]="item.link">
+                <img [src]="item.icon" />
+              </a>
+              <p>{{ item.title }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <h2 class="section-header">DevOps</h2>
+          <div class="icons">
+            <div class="icon-item" *ngFor="let item of devopsIcons">
+              <a [href]="item.link">
+                <img [src]="item.icon" />
+              </a>
+              <p>{{ item.title }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
   </section>
 
   <section>

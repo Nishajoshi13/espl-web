@@ -14,7 +14,7 @@ section {
 .home-banner {
   height: 693px;
   background: url("/assets/images/general/test2.jpg") center top / cover
-    no-repeat scroll;
+  no-repeat scroll;
   padding: 2% 0 8%;
 }
 
@@ -46,35 +46,72 @@ section {
   padding-bottom: 33px;
   background: none;
   box-shadow: none;
+  text-align: center;
+}
 
-  h2 {
-    margin-bottom: 25px;
-    font-weight: 400;
-    font-size: 26px;
-  }
-  > div {
-    display: flex;
-  }
+.tech-icons-wrapper h1 {
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+.section-header {
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon-item {
+  flex: 0 0 30%;
+  margin: 5px;
+  text-align: center;
+}
+
+.icon-item img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+.divider {
+  width: 2px;
+  background-color: #000;
+  margin: auto 10px;
+}
+
+@media screen and (max-width: 960px) {
   .tech-icons {
-    padding: 50px 0;
-    display: grid;
-    grid-template-columns: repeat(5, 0.8fr);
-    grid-gap: 20px;
-    width: 100%;
-    img {
-      width: 80px;
-      height: 80px;
-    }
-    > div {
-      border-radius: 20px;
-      padding: 10px;
-    }
+    flex-direction: column;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .column {
+    margin-bottom: 20px;
   }
 }
 
 .develop-platforms {
-  padding: 20px;
-  max-width: 400px;
+  padding: 0 20px 20px;
+  max-width: 300px;
   display: flex;
   flex-wrap: wrap;
   img,
@@ -84,7 +121,6 @@ section {
     height: 36px;
     opacity: 0.5;
     margin-right: 5px;
-    margin-top: 10px;
   }
 
   .title {
@@ -99,6 +135,7 @@ section {
     margin-top: 14px;
   }
 }
+
 mat-card-title {
   font-size: 22px;
   text-align: center;

@@ -12,19 +12,17 @@ export class HomeComponent implements OnInit {
     {
       icon: 'desktop_mac',
       title: 'Web Development',
-      desc: `Expertise in building highly scalable, secure and
-       ui rich applications across several domains that work for every user regardless of their browser.`,
+      desc: `We excel in scalable, secure, UI-rich web apps for all browsers.`,
     },
     {
       icon: 'smartphone',
       title: 'Mobile Solutions',
-      desc: `We have extensive expertise in building high performance native and hybrid mobile app development.`,
+      desc: `We specialize in crafting high-performance native and hybrid mobile apps.`,
     },
     {
       img: 'assets/images/general/devops-icon.png',
       title: 'DevOps',
-      desc: `Our DevOps development and consulting services help to enable continuous delivery of 
-      applications and services. It provides better collaboration, easy deployment, more security, scalability, and efficiency.`,
+      desc: `Our DevOps team enable effortless collaboration, deployment, security, scalability, and efficiency.`,
     },
     {
       img: 'assets/images/general/machine-learning.png',
@@ -33,18 +31,31 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  technologiesIcons = [
-    { icon: `${this.techIconsUrl}/magento.svg`, title: 'Magento' },
-    { icon: `${this.techIconsUrl}/scandipwa.png`, title: 'ScandiPWA' },
-    { icon: `${this.techIconsUrl}/php.svg`, title: 'Php' },
-    { icon: `${this.techIconsUrl}/angular.svg`, title: 'Angular' },
-    { icon: `${this.techIconsUrl}/react.svg`, title: 'React' },
-    { icon: `${this.techIconsUrl}/nodejs.svg`, title: 'Nodejs' },
-    { icon: `${this.techIconsUrl}/mongodb.svg`, title: 'MongoDb' },
-    { icon: `${this.techIconsUrl}/sql-server.png`, title: 'SQL' },
-    { icon: `${this.techIconsUrl}/docker.svg`, title: 'Docker' },
-    { icon: `${this.techIconsUrl}/kubernetes.svg`, title: 'Kubernetes' },
-  ];
+  backendIcons = [
+    { icon: `${this.techIconsUrl}/magento.svg`, title: 'Magento', link:'https://business.adobe.com/products/magento/magento-commerce.html'},
+    { icon: `${this.techIconsUrl}/php.svg`, title: 'Php' , link:'https://www.php.net/'},
+    { icon: `${this.techIconsUrl}/nodejs.svg`, title: 'Nodejs' , link:'https://nodejs.org/en'},
+    { icon: `${this.techIconsUrl}/Golang.svg`, title: 'Golang' , link:'https://go.dev/'},
+    { icon: `${this.techIconsUrl}/wordpress.svg`, title: 'Wordpress' , link:'https://wordpress.com/'},
+    { icon: `${this.techIconsUrl}/shopify.svg`, title: 'Shopify' , link:'https://www.shopify.com/in'},
+
+  ]
+  frontendIcons = [
+    { icon: `${this.techIconsUrl}/angular.svg`, title: 'Angular', link:'https://angular.dev/' },
+    { icon: `${this.techIconsUrl}/react.svg`, title: 'React' , link:'https://react.dev/'},
+    { icon: `${this.techIconsUrl}/jquery.svg`, title: 'Jquery' , link:'https://jquery.com//'},
+    { icon: `${this.techIconsUrl}/html.svg`, title: 'Html', link:'' },
+    { icon: `${this.techIconsUrl}/css2.svg`, title: 'CSS' , link:''},
+    { icon: `${this.techIconsUrl}/sass.svg`, title: 'Scss' , link:'https://sass-lang.com/'},
+  ]
+  devopsIcons = [
+    { icon: `${this.techIconsUrl}/docker.svg`, title: 'Docker' , link:'https://www.docker.com/'},
+    { icon: `${this.techIconsUrl}/kubernetes.svg`, title: 'Kubernetes' , link:'https://kubernetes.io/'},
+  ]
+  databaseIcons = [
+    { icon: `${this.techIconsUrl}/mongodb.svg`, title: 'MongoDb' , link:'https://www.mongodb.com/'},
+    { icon: `${this.techIconsUrl}/sql-server.png`, title: 'SQL' , link:'https://www.mysql.com/'},
+  ]
 
   customOptions: OwlOptions = {
     loop: true,
