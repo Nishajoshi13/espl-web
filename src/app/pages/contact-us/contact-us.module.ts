@@ -9,6 +9,7 @@ const routes: Routes = [
     component: ContactUsComponent,
   },
 ];
+
 @NgModule({
   imports: [SharedModule, RouterModule.forChild(routes)],
   declarations: [ContactUsComponent],

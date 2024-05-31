@@ -37,6 +37,13 @@ section {
   transition: 0.3s;
 }
 
+@media (max-width: 770px){
+  .card {
+    width: 300px;
+    margin: 10px;
+  }
+}
+
 .card:hover {
   transform: translateY(-5px) scale(1.005) translateZ(0);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -60,6 +67,11 @@ section {
   color: black;
 }
 
+@media (max-width: 770px) {
+  .title {
+    font-size: 15px;
+  }
+}
 .date {
   padding-left: 25px;
   padding-bottom: 6px;
@@ -79,3 +91,11 @@ section {
   border-radius: 10px;
 }
 
+@media (max-width: 770px) {
+  .desc {
+    font-size: 13px;
+  }
+  .date {
+    font-size: 13px;
+  }
+}

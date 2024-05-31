@@ -4,8 +4,19 @@
 }
 
 .card {
-  padding-left: 280px;
-  padding-right: 280px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+@media (max-width: 770px) {
+  .card {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (max-width: 700px) {
+
 }
 
 .title {
@@ -31,8 +42,8 @@
 
 .image {
   padding-top: 25px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 5px;
   padding-bottom: 30px;
   max-height: 100%;
