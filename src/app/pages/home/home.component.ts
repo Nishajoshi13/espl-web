@@ -6,28 +6,28 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor()  {}
   techIconsUrl = 'assets/images/tech-icons';
   developPlatforms = [
     {
-      icon: 'desktop_mac',
+      img: 'assets/images/general/imac.svg',
       title: 'Web Development',
-      desc: `We excel in scalable, secure, UI-rich web apps for all browsers.`,
+      desc: `We excel in scalable, secure, UI-rich web applications for all browsers.`,
     },
     {
-      icon: 'smartphone',
+      img: 'assets/images/general/mobile.svg',
       title: 'Mobile Solutions',
       desc: `We specialize in crafting high-performance native and hybrid mobile apps.`,
     },
     {
       img: 'assets/images/general/devops-icon.png',
       title: 'DevOps',
-      desc: `Our DevOps team enable effortless collaboration, deployment, security, scalability, and efficiency.`,
+      desc: `Our DevOps team enable effortless collaboration, deployment, and efficiency.`,
     },
     {
       img: 'assets/images/general/machine-learning.png',
       title: 'Machine Learning',
-      desc: `Solve real time problems that once contrained the growth. Introduce automation in your business.`,
+      desc: `We automate your business to solve real-time growth constraints.`,
     },
   ];
 
@@ -83,5 +83,6 @@ export class HomeComponent implements OnInit {
       },
     },
   };
+
   ngOnInit() {}
 }

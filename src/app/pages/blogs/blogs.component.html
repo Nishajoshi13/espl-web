@@ -1,0 +1,19 @@
+<div class="container">
+<div class="card-container">
+  <div *ngFor="let item of cards">
+    <mat-card class="card" style="flex:1">
+      <div class="card-image">
+        <img class="card-image" [src]="item.img"/>
+      </div>
+      <mat-card-title class="title">
+        <a (click)="OnReadMore(item.url)" [routerLink]="'/blogs/'+item.url">{{ item.title }}</a>
+      </mat-card-title>
+      <div class="date"> {{ item.date }}</div>
+      <mat-card-content class="desc">{{ item.desc }}</mat-card-content>
+      <a mat-stroked-button class="read" (click)="OnReadMore(item.title)" [routerLink]="'/blogs/'+item.url">
+        Read More
+      </a>
+    </mat-card>
+  </div>
+</div>
+</div>

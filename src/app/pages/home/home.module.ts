@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '@core/shared.module';
 import { HomeComponent } from './home.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+
 const routes: Routes = [
   {
     path: '',

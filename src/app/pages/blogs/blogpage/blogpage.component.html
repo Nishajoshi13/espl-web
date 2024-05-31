@@ -1,0 +1,20 @@
+<div class="container"></div>
+<mat-card class="card">
+    <mat-card-title class="title"> {{Info.title}}</mat-card-title>
+  <div style="display: flex">
+    <img class="auth-icon" [src]="'assets/images/blog-icons/person.svg'">
+      <mat-card-title class="auth-title">By {{Info.author}}</mat-card-title>
+    </div>
+  <img class="image" [src]="Info.img">
+  <div class="subparts" *ngFor="let item of Info.subparts">
+    <mat-card-title class="subhead">{{ item.subhead }}</mat-card-title>
+    <div class="desc" *ngFor="let description of item.description">
+      <div *ngIf="isImageUrl(description)">
+        <img [src]="description">
+      </div>
+      <div *ngIf="!isImageUrl(description)">
+        {{ description }}
+      </div>
+      </div>
+  </div>
+</mat-card>

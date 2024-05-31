@@ -23,6 +23,30 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
+        path: 'blogs',
+        loadChildren: () =>
+          import('./blogs/blogs.module').then(
+            (m) => m.BlogsModule
+          ),
+        pathMatch: 'full',
+      },
+      {
+        path: 'blogs/:id',
+        loadChildren: () =>
+          import('./blogs/blogpage/blogpage.module').then(
+            (m) => m.BlogpageModule
+          ),
+        pathMatch: 'full',
+      },
+      {
+        path: 'blogpage',
+        loadChildren: () =>
+          import('./blogs/blogpage/blogpage.module').then(
+            (m) => m.BlogpageModule
+          ),
+        pathMatch: 'full',
+      },
+      {
         path: 'about-us',
         loadChildren: () =>
           import('./about-us/about-us.module').then((m) => m.AboutUsModule),
