@@ -13,7 +13,7 @@ export class BlogpageComponent {
   Database = new Map<string, BlogInfo>();
   BlogKey = ''
 
-  constructor(private sharedService: SharedService,private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {}
 
   isImageUrl(url: string): boolean {
     return url.match(/\.(jpeg|jpg|gif|png|webp)$/) != null;
@@ -149,32 +149,60 @@ export class BlogpageComponent {
 
     this.Database.set('mastering-the-first-impression',
       new BlogInfo(
-        'Mastering the First Impression: Your intriguing post title goes here',
+        'Mastering the First Impression: Your Attractive Post Title Goes Here',
         'assets/images/blog-icons/photo-3.webp',
-        'Levi Ackerman',[
+        'Bellman Ford',
+        [
           {
-            subhead:'Welcome to the Entangle Software Private Limited Blog',
+            subhead: 'The Power of First Impressions',
             description: [
-              'Welcome to the Entangle Software Private Limited Blog – your gateway to the latest insights in web and app development. We are excited to have you join us on this journey through the ever-evolving digital landscape. Our aim is to unravel industry trends, share expert tips, and showcase our passion for crafting exceptional digital experiences.',
+              'First impressions are formed quickly and can have a lasting impact. Here\'s why they matter:',
+              '1. Immediate Judgment: People form opinions within seconds.',
+              '2. Lasting Effect: Initial impressions influence future perceptions.',
+              '3. Professional Impact: A strong first impression can open doors to opportunities.'
             ]
           },
           {
-            subhead:'Unraveling Industry Trends',
+            subhead: 'Elements of a Strong First Impression',
             description: [
-              'Welcome to the Entangle Software Private Limited blog – your gateway to the latest insights in web and app development. Join us on a journey through the ever-evolving digital landscape, where we unravel industry trends, share expert tips, and showcase our passion for crafting exceptional digital experiences.',
-              'From the rise of artificial intelligence and machine learning to the impact of blockchain technology, we delve into the innovations that are shaping the future of digital transformation. Our expert team of developers and designers share their knowledge and expertise, offering practical advice and actionable strategies to help you navigate the complexities of the digital world.'
+              '1. Appearance: Dress appropriately for the context. Your attire should convey professionalism and respect.',
+              'Example: A tailored suit for a business meeting or smart casual for a creative industry event.',
+              '2. Body Language: Non-verbal cues like eye contact, posture, and handshake can convey confidence and openness.',
+              'Example: Maintaining eye contact shows engagement and confidence.',
+              '3. Communication: Clear, concise, and confident speech is crucial. Pay attention to your tone and pace.',
+              'Example: Introducing yourself with a smile and a firm handshake.'
             ]
           },
           {
-            subhead:'Empowering Businesses in the Dynamic World of Technology',
+            subhead: 'Techniques for Making a Positive First Impression',
             description: [
-              'Digital transformation is no longer an option but a necessity for businesses in today’s competitive landscape. Our blog aims to empower businesses by equipping them with the knowledge and tools they need to thrive in the digital world. We provide practical tips and actionable strategies to help businesses leverage technology to drive growth, improve efficiency, and enhance customer experiences.',
-              'From choosing the right development framework to optimizing user interfaces, our blog covers a wide range of topics that are relevant to businesses of all sizes and industries. We believe that by sharing our expertise and insights, we can contribute to the success of businesses in the digital age.',
-              'Stay connected with us as we continue to explore the art of innovation and unravel the complexities of digital transformation. Together, let’s navigate the ever-changing digital landscape and unlock the full potential of technology for your business.'
+              '1. Be Punctual: Arrive on time to show that you value others\' time.',
+              'Example: Arriving 10 minutes early for a meeting.',
+              '2. Show Genuine Interest: Ask questions and listen actively to show that you care about the other person.',
+              'Example: Asking about someone\'s role and responsibilities in a genuine manner.',
+              '3. Prepare Ahead: Know who you\'re meeting and the context of the interaction to tailor your approach.',
+              'Example: Researching a potential client\'s business before a meeting.'
+            ]
+          },
+          {
+            subhead: 'Examples of Effective First Impressions',
+            description: [
+              '1. "Arriving early for a job interview, well-prepared with questions and knowledge about the company."',
+              '2. "Greeting new clients with a confident handshake and a warm smile."',
+              '3. "Engaging in meaningful conversation at a networking event, asking insightful questions and listening attentively."',
+              '4. "Dressing appropriately for a conference, presenting oneself as both professional and approachable."'
+            ]
+          },
+          {
+            subhead: 'Conclusion',
+            description: [
+              'Mastering the art of making a great first impression involves attention to detail and genuine interest in others. By focusing on your appearance, body language, and communication skills, you can create a positive and lasting impression. Remember, the effort you put into that initial interaction can pave the way for meaningful and successful relationships.'
             ]
           }
         ]
-      ));
+      )
+    );
+
 
     this.Database.set('crafting-captivating-headlines',
         new BlogInfo(
@@ -206,37 +234,126 @@ export class BlogpageComponent {
 
     this.Database.set('the-art-of-drawing-reader-introduction',
       new BlogInfo(
-        'The Art of Drawing Readers In: Your attractive post title goes here',
+        'The Art of Drawing Readers In',
         'assets/images/blog-icons/photo-2.webp',
         'Bellman Ford',
         [
           {
-            subhead: 'Engaging Introductions: Capturing Your Audience’s Interest',
+            subhead: 'Understanding the Importance of a Good Title',
             description: [
-              'The initial impression your blog post makes is crucial, and that’s where your introduction comes into play. Hook your readers with a captivating opening that sparks curiosity or emotion. Address their pain points or questions to establish a connection. Outline the purpose of your post and give a sneak peek into what they can expect. A well-crafted introduction sets the tone for an immersive reading experience.'
+              'A good title serves multiple purposes:',
+              '1. Grabs Attention: In a sea of information, an eye-catching title stands out.',
+              '2. Conveys Value: It tells readers what they can expect, promising value or insights.',
+              '3. Boosts SEO: Search engines favor titles with relevant keywords, improving your content\'s visibility.'
             ]
           },
           {
-            subhead: 'Crafting Informative and Cohesive Body Content',
+            subhead: 'Elements of an Attractive Title',
             description: [
-              'Within the body of your blog post lies the heart of your message. Break down your content into coherent sections, each with a clear heading that guides readers through the narrative. Dive deep into each subtopic, providing valuable insights, data, and relatable examples. Maintain a logical flow between paragraphs using transitions, ensuring that each point naturally progresses to the next. By structuring your body content effectively, you keep readers engaged and eager to learn more.'
+              '1. Clarity: Ensure your title clearly conveys the topic or benefit of your article. Ambiguity can deter readers.',
+              'Example: "10 Tips for Writing Effective Blog Titles" vs. "Better Blog Titles"',
+              '2. Relevance: Align your title with the interests and needs of your target audience.',
+              'Example: "Healthy Meal Plans for Busy Professionals" vs. "Meal Plans"',
+              '3. Intrigue: Pique curiosity with a unique or surprising element.',
+              'Example: "The Surprising Benefits of Waking Up at 5 AM"',
+              '4. Emotional Appeal: Use words that evoke emotions, making the reader feel something.',
+              'Example: "Unlock the Secrets to a Stress-Free Life"'
             ]
           },
           {
-            subhead: 'Powerful Closures: Leaving a Lasting Impression',
+            subhead: 'Techniques for Crafting Compelling Titles',
             description: [
-              'Concluding your blog post isn’t just about wrapping things up – it’s your final opportunity to leave a strong impact. Summarize the key takeaways from your post, reinforcing your main points. If relevant, provide actionable solutions or thought-provoking questions to keep readers thinking beyond the post. Encourage engagement by inviting comments, questions, or sharing. A well-crafted conclusion should linger in your readers’ minds, inspiring them to explore further or apply what they’ve learned.'
+              '1. Use Numbers and Lists: Titles with numbers are clear and promise a structured read.',
+              'Example: "7 Proven Strategies to Boost Your Productivity"',
+              '2. Ask Questions: Engage readers by posing a question they want answered.',
+              'Example: "Are You Making These Common Grammar Mistakes?"',
+              '3. Include Power Words: Words like "Ultimate," "Essential," "Guide," "Secrets," and "How to" attract attention.',
+              'Example: "The Ultimate Guide to Social Media Marketing"',
+              '4. Promise a Benefit: Highlight the benefit or solution your article provides.',
+              'Example: "How to Save Money on Your Monthly Bills"'
+            ]
+          },
+          {
+            subhead: 'Examples of Effective Titles',
+            description: [
+              '1. "10 Simple Habits for a Happier Life"',
+              '2. "Mastering the Art of Public Speaking: Tips and Tricks"',
+              '3. "The Beginner\'s Guide to Investing in Cryptocurrency"',
+              '4. "How to Stay Fit Without Going to the Gym"'
+            ]
+          },
+          {
+            subhead: 'Conclusion',
+            description: [
+              'Creating an attractive post title is a blend of art and science. By understanding your audience, employing proven techniques, and continually refining your approach, you can craft titles that draw readers in and set the stage for engaging, valuable content. Remember, the title is often the first—and sometimes the only—impression you make, so make it count!'
             ]
           }
         ]
       )
-    )
+    );
+
 
     this.Database.set('web-development',
       new BlogInfo(
-        'No content Added so far','','Sumit Kumar',[]
+        'Web Development: Building the Digital World',
+        'assets/images/blog-icons/photo-6.jpeg',
+        'Jane Doe',
+        [
+          {
+            subhead: 'Introduction to Web Development',
+            description: [
+              'Web development is the process of creating websites and web applications for the internet or an intranet.',
+              'It encompasses several aspects including web design, web content development, client-side/server-side scripting, and network security configuration.',
+              'Web development ranges from creating simple text pages to complex web-based applications, social network applications, and electronic business applications.'
+            ]
+          },
+          {
+            subhead: 'Key Components of Web Development',
+            description: [
+              '1. Front-End Development: Focuses on what users interact with. This includes HTML, CSS, and JavaScript.',
+              'Example: Creating a responsive website layout using HTML5 and CSS3.',
+              '2. Back-End Development: Manages server-side logic, databases, and application integration. Languages include PHP, Python, Ruby, and Node.js.',
+              'Example: Building a RESTful API using Node.js and Express.js.',
+              '3. Full-Stack Development: Combines both front-end and back-end development skills to build complete web applications.',
+              'Example: Developing a complete e-commerce website with a user interface and server-side functionality.'
+            ]
+          },
+          {
+            subhead: 'Popular Web Development Frameworks and Libraries',
+            description: [
+              '1. React: A JavaScript library for building user interfaces, maintained by Facebook.',
+              'Example: Developing a single-page application with dynamic content using React.',
+              '2. Angular: A TypeScript-based framework for building web applications, maintained by Google.',
+              'Example: Creating a dynamic web application with complex forms using Angular.',
+              '3. Vue.js: A progressive JavaScript framework for building user interfaces.',
+              'Example: Building a lightweight and high-performance single-page application using Vue.js.',
+              '4. Django: A high-level Python web framework that encourages rapid development and clean, pragmatic design.',
+              'Example: Building a secure and scalable web application with Django.'
+            ]
+          },
+          {
+            subhead: 'Best Practices in Web Development',
+            description: [
+              '1. Responsive Design: Ensuring your website looks good on all devices.',
+              'Example: Using CSS media queries to adjust the layout for different screen sizes.',
+              '2. Performance Optimization: Reducing load times and improving user experience.',
+              'Example: Minifying CSS and JavaScript files to improve page load speed.',
+              '3. Security Best Practices: Protecting your website from threats and vulnerabilities.',
+              'Example: Implementing HTTPS and regularly updating software to fix security issues.',
+              '4. SEO Optimization: Making your website more discoverable by search engines.',
+              'Example: Using appropriate meta tags and keywords to improve search engine ranking.'
+            ]
+          },
+          {
+            subhead: 'Conclusion',
+            description: [
+              'Web development is a dynamic and ever-evolving field that plays a crucial role in the digital age. By mastering front-end and back-end technologies, leveraging popular frameworks, and following best practices, developers can create powerful, efficient, and secure web applications. Whether you are building a personal blog or a complex enterprise solution, understanding the fundamentals of web development is essential for success in the digital world.'
+            ]
+          }
+        ]
       )
-    )
+    );
+
     this.BlogKey = this.route.snapshot.params['id'];
     // @ts-ignore
     this.Info = this.Database.get(this.BlogKey)

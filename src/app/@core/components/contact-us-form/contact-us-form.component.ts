@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {
   UntypedFormBuilder,
@@ -9,14 +9,15 @@ import {
 import { catchError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2';
-
 @Component({
   selector: 'app-contact-us-form',
   templateUrl: './contact-us-form.component.html',
   styleUrls: ['./contact-us-form.component.scss'],
 })
 export class ContactUsFormComponent implements OnInit {
-  constructor(protected fb: UntypedFormBuilder, private http: HttpClient) {}
+   constructor(protected fb: UntypedFormBuilder, private http: HttpClient) {
+
+  }
 
   protected formGroup: UntypedFormGroup = this.fb.group({
     firstName: ['', Validators.required],

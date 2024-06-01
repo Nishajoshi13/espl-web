@@ -6,12 +6,5 @@ import {BlogInfo} from "../blogs/blogs.module";
   providedIn: 'root'
 })
 export class SharedService {
-  message = ''
-  constructor() { }
-  setMessage(message:string) {
-    this.message = message;
-  }
-  getMessage(){
-    return this.message;
-  }
+
 }

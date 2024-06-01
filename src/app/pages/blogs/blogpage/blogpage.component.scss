@@ -15,16 +15,17 @@
   }
 }
 
-@media (max-width: 700px) {
-
-}
-
 .title {
   align-content: center;
   padding-bottom: 25px;
   padding-top: 10px;
   font-size: 35px;
   font-weight: 550;
+}
+@media (max-width: 770px) {
+  .title{
+    font-size: 30px;
+  }
 }
 
 .auth-icon {
