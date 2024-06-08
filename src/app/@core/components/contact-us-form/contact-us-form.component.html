@@ -1,4 +1,7 @@
-<div class="contact-us-wrapper flex-center">
+<div *ngIf="showCloseButton" class="cross">
+  <mat-icon mat-dialog-close>close</mat-icon>
+</div>
+<div class="flex-center" [class.contact-us-wrapper]="!showCloseButton">
   <mat-card class="contact-form-card">
     <div>
       <h2>Get in touch with us</h2>
@@ -59,7 +62,7 @@
       </form>
     </div>
   </mat-card>
-  <mat-card >
+  <mat-card *ngIf="!showCloseButton" >
     <div class="contact-information">
       <ul>
         <li>      <h4>What's next?</h4>

@@ -31,6 +31,14 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
+        path: 'products',
+        loadChildren: () =>
+          import('./products/products.module').then(
+            (m) => m.ProductsModule
+          ),
+        pathMatch: 'full',
+      },
+      {
         path: 'blogs/:id',
         loadChildren: () =>
           import('./blogs/blogpage/blogpage.module').then(
@@ -47,6 +55,22 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
+        path: 'products/text-to-speech',
+        loadChildren: () =>
+          import('./products/text-to-speech/text-to-speech.module').then(
+            (m) => m.TextToSpeechModule
+          ),
+        pathMatch: 'full',
+      },
+      // {
+      //   path: 'products/convex-hull',
+      //   loadChildren: () =>
+      //     import('./products/convex-hull/convex-hull.module').then(
+      //       (m) => m.TextToSpeechModule
+      //     ),
+      //   pathMatch: 'full',
+      // },
+      {
         path: 'about-us',
         loadChildren: () =>
           import('./about-us/about-us.module').then((m) => m.AboutUsModule),
@@ -56,6 +80,12 @@ const routes: Routes = [
         path: 'team',
         loadChildren: () =>
           import('./team/team.module').then((m) => m.TeamModule),
+        pathMatch: 'full',
+      },
+      {
+        path: 'products/circle-detector',
+        loadChildren: () =>
+          import('./products/circle-detector/circle-detector.module').then((m) => m.CircleDetectorModule),
         pathMatch: 'full',
       },
       {

@@ -1,0 +1,36 @@
+<div class="page">
+<div class="main-container">
+  <div class="header"><div>Text To Audio Generator</div></div>
+
+  <form #textForm="ngForm" (ngSubmit)="generateAudio(textForm.value)">
+    <div class="full-width" appearance="fill">
+      <textarea
+        class="input"
+        matInput
+        placeholder="Enter text..."
+        ngModel
+        name="text"
+        required
+        rows="5"
+        style="height: 300px;"
+      ></textarea>
+    </div>
+
+    <div class="options">
+      <mat-button-toggle-group [(ngModel)]="voice" name="voice" appearance="legacy">
+        <mat-button-toggle value="Male"><img class="gender"[src]="'assets/images/general/male.png'"></mat-button-toggle>
+        <mat-button-toggle value="Female"><img class="gender"[src]="'assets/images/general/female.png'"></mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+
+    <div class="button-container">
+      <button mat-raised-button
+              class="audiobtn"
+              type="submit"
+              [disabled]="textForm.invalid">
+        Generate Audio
+      </button>
+    </div>
+  </form>
+</div>
+</div>

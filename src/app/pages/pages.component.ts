@@ -3,7 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 import { throttleTime } from 'rxjs';
 import {MatDialog} from "@angular/material/dialog";
-import {ContactUsFormComponent} from "@core/components/contact-us-form/contact-us-form.component";
+import {ContactBoxComponent} from "./contact-box/contact-box.component";
 
 @Component({
   templateUrl: './pages.component.html',
@@ -15,13 +15,11 @@ export class PagesComponent implements OnInit {
   website = true;
   constructor(private breakpointObserver: BreakpointObserver, public dialog: MatDialog)  {
     setTimeout(() => {
-        this.dialog.open(ContactUsFormComponent,{
-          width: '60%',
-          height: '80%',
-          maxHeight: '100vh',
+        this.dialog.open(ContactBoxComponent,{
+          data: { showCloseButton: true }
         })
       }
-      , 5000
+      , 20000
     )
   }
 

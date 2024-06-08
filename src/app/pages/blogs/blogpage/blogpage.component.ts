@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {BlogInfo} from "../blogs.module";
-import {SharedService} from "../../shared/shared.service";
 import {Routes, ActivatedRoute} from "@angular/router";
 
 @Component({
@@ -149,7 +148,7 @@ export class BlogpageComponent {
 
     this.Database.set('mastering-the-first-impression',
       new BlogInfo(
-        'Mastering the First Impression: Your Attractive Post Title Goes Here',
+        'Mastering the First Impression',
         'assets/images/blog-icons/photo-3.webp',
         'Bellman Ford',
         [
@@ -206,7 +205,7 @@ export class BlogpageComponent {
 
     this.Database.set('crafting-captivating-headlines',
         new BlogInfo(
-          'Crafting Captivating Headlines: Your awesome post title goes here',
+          'Crafting Captivating Headlines',
           'assets/images/blog-icons/photo-1.webp',
           'Erwin Smith',
           [

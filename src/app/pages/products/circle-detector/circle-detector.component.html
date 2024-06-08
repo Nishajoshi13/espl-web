@@ -1,0 +1,35 @@
+<!--In development-->
+
+<div class="main-container">
+  <h2>Circle Detector</h2>
+  <div class="dropzone-container">
+    <ngx-dropzone class="dropzone"
+                  (change)="onSelect($event)">
+      <img class="upload-icon" [src]="'assets/logo/upload.png'">
+      <h3>Drop your image here</h3>
+<!--      <ngx-dropzone-label>Drop Your Image Here</ngx-dropzone-label>-->
+        <img *ngFor="let f of files" [src]="f.preview" class="preview-img">
+
+    </ngx-dropzone>
+  </div>
+  <div>
+    <mat-card class="container">
+      <div class="inner">
+      <mat-card class="card">
+        <img class="image" [src]="'assets/images/blog-icons/photo-3.webp'">
+      </mat-card>
+      <mat-card class="card">
+        <img class="image" [src]="'assets/images/blog-icons/photo-6.jpeg'">
+      </mat-card>
+      </div>
+      <div class="horizontal">
+        <div class="button-container">
+          <button mat-raised-button class="button">Upload Image</button>
+        </div>
+        <div class="button-container">
+          <button mat-raised-button class="button">Detect Circles</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

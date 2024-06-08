@@ -34,6 +34,12 @@
     margin-bottom: 23px;
     font-weight: 400;
   }
+  @media screen and (max-width: 770px) {
+    h1{
+      font-size: 2.5rem;
+      justify-content: center;
+    }
+  }
 }
 
 .background-banner:before {

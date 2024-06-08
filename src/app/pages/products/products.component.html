@@ -1,0 +1,38 @@
+<div class="head">
+  <h1>Our Products</h1>
+</div>
+
+<div>
+  <div *ngFor="let items of Projects">
+    <div class="header">
+      <img class="logo" [src]="items.logo">
+      <h2 class="text">{{items.title}}</h2>
+    </div>
+      <div class="card-container">
+      <div *ngFor="let item of items.products ">
+        <mat-card class="card">
+          <img [src]="item.imageUrl">
+          <mat-card-title>{{item.title}}</mat-card-title>
+          <mat-card-content>{{item.desc}}</mat-card-content>
+          <div class="button-container">
+            <div *ngIf="item.type=='Visit'">
+              <a [href]=item.link>
+              <button mat-raised-button
+                      class="button"
+                      color="primary"
+              >{{ item.type }}</button>
+              </a>
+            </div>
+            <div *ngIf="item.type=='Try'">
+                <button mat-raised-button
+                        class="button"
+                        [routerLink]="['/products',item.link]"
+                        color="primary"
+                >{{ item.type }}</button>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+      </div>
+    </div>
+</div>

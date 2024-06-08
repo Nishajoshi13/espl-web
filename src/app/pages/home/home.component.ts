@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import {Router} from "@angular/router";
 
 @Component({
   templateUrl: './home.component.html',
@@ -7,7 +8,14 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class HomeComponent implements OnInit {
 
-  constructor()  {}
+  constructor(private router: Router)  {
+
+  }
+
+  navigateTo(route: string) {
+    this.router.navigate([route]);
+  }
+
   techIconsUrl = 'assets/images/tech-icons';
   developPlatforms = [
     {

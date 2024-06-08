@@ -1,0 +1,42 @@
+<div @dialogAnimation class="background">
+  <div class="cross"><mat-icon mat-dialog-close >close</mat-icon></div>
+
+  <div class="container">
+  <div class="heading">Let's Build Your Online Presence</div>
+  <div class="heading">Connect with Us</div>
+  <div>
+    <mat-form-field class="form">
+      <input matInput
+             placeholder="Name"
+             [formControl]="firstName"
+             (blur)="updateNameError()"
+             required>
+      @if (firstName.invalid) {
+        <mat-error>{{ nameError }}</mat-error>
+      }
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="form">
+      <input matInput
+             placeholder="Email"
+             [formControl]="email"
+             (blur)="updateMailError()"
+             required>
+      @if (email.invalid) {
+        <mat-error>{{mailError}}</mat-error>
+      }
+    </mat-form-field>
+  </div>
+  <div class="outer-container">
+    <div class="button-container">
+      <button mat-raised-button
+              color="primary"
+              class="button"
+              [disabled]="!isFormValid()"
+              (click)="sendEmail()"
+      >Let's Connect</button>
+    </div>
+  </div>
+</div>
+</div>

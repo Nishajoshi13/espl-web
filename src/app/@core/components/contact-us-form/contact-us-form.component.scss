@@ -1,3 +1,10 @@
+.cross {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
 .contact-us-wrapper {
   padding: 40px 20px;
   margin-bottom: 100px;
@@ -48,7 +55,7 @@
 
 .contact-form-card {
   width: 580px;
-  padding: 30px 15px;
+  padding: 15px 15px;
 
   h2 {
     text-align: center;
@@ -85,8 +92,10 @@
 
 @media screen and (max-width: 770px) {
   .contact-form-card {
-    padding: 2rem;
-
+    padding: 15px 10px;
+    h2 {
+      font-size: 20px;
+    }
     .form-row {
       display: block;
       div {

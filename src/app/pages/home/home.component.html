@@ -5,10 +5,12 @@
       <div>
         <h1>we entangle with you</h1>
         <h3>Develop effective plans to move your customers' behaviour.</h3>
-        <button
-          class="transparent-btn"
-          style="height: 50px; width:200px"
-          ><a [routerLink]="'contact-us'">Get In Touch</a></button>
+        <a [routerLink]="'contact-us'">
+          <button
+            class="transparent-btn"
+            style="height: 50px; width:200px"
+          >Get in Touch</button>
+        </a>
       </div>
     </div>
   </div>
@@ -63,7 +65,7 @@
     <div class="tech-icons-wrapper" >
       <h1 style="font-weight: 400">Our Expertise</h1>
       <div class="tech-icons">
-        <mat-card class="excard">
+        <mat-card class="excard" (click)="navigateTo('products')" >
         <div class="column">
           <div class="icons" style="flex: 1">
             <div class="icon-item" *ngFor="let item of backendIcons">
@@ -76,7 +78,8 @@
           <h2 class="section-header">Backend</h2>
         </div>
         </mat-card>
-        <mat-card class="excard">
+
+        <mat-card class="excard" (click)="navigateTo('products')">
         <div class="column">
           <div class="icons" style="flex: 1;">
             <div class="icon-item" *ngFor="let item of frontendIcons ">
@@ -91,8 +94,9 @@
         </mat-card>
 
       </div>
+
       <div class="tech-icons" style="padding-top:5px">
-        <mat-card class="excard">
+        <mat-card class="excard" (click)="navigateTo('products')">
         <div class="column">
           <div class="icons">
             <div class="icon-item" *ngFor="let item of databaseIcons">
@@ -105,7 +109,8 @@
           <h2 class="section-header">Databases</h2>
         </div>
         </mat-card>
-        <mat-card class="excard">
+
+        <mat-card class="excard" (click)="navigateTo('products')">
         <div class="column">
           <div class="icons">
             <div class="icon-item" *ngFor="let item of devopsIcons">
@@ -118,15 +123,15 @@
           <h2 class="section-header">DevOps</h2>
         </div>
           </mat-card>
+
       </div>
     </div>
-
   </section>
 
   <section>
     <div class="contact-us-banner">
       <div class="overlay"></div>
-      <app-contact-us-form></app-contact-us-form>
+      <app-contact-us-form [showCloseButton]="false" ></app-contact-us-form>
     </div>
   </section>
 </div>

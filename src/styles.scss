@@ -205,6 +205,11 @@ a.active-header-option {
     no-repeat scroll;
   padding: 2% 0 8%;
 }
+.mat-mdc-dialog-container {
+  --mdc-dialog-container-shape: 5px;
+}
+
+
 
 @media screen and (max-width: 960px) and (min-width: 600px) {
   .banner-wrapper .wrap-banner-text {

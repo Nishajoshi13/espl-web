@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit, Optional} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {
   UntypedFormBuilder,
@@ -9,15 +9,25 @@ import {
 import { catchError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2';
+import {MAT_DIALOG_DATA} from "@angular/material/dialog";
+
 @Component({
   selector: 'app-contact-us-form',
   templateUrl: './contact-us-form.component.html',
   styleUrls: ['./contact-us-form.component.scss'],
 })
 export class ContactUsFormComponent implements OnInit {
-   constructor(protected fb: UntypedFormBuilder, private http: HttpClient) {
 
-  }
+  @Input() showCloseButton: boolean = false;
+   constructor(
+               @Optional() @Inject(MAT_DIALOG_DATA) public data: any,
+               protected fb: UntypedFormBuilder,
+               private http: HttpClient
+   ) {
+     if(data) {
+       this.showCloseButton = data.showCloseButton
+     }
+   }
 
   protected formGroup: UntypedFormGroup = this.fb.group({
     firstName: ['', Validators.required],
