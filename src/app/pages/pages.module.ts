@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {Routes, RouterModule, ExtraOptions} from '@angular/router';
 import { SharedModule } from '@core/shared.module';
 import { PagesComponent } from './pages.component';
 
@@ -109,6 +109,11 @@ const routes: Routes = [
     ],
   },
 ];
+
+const routerOptions : ExtraOptions = {
+  scrollPositionRestoration:'enabled',
+  anchorScrolling:'enabled'
+}
 @NgModule({
   imports: [SharedModule, RouterModule.forChild(routes)],
   declarations: [PagesComponent],

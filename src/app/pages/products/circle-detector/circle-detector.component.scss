@@ -108,7 +108,7 @@ ngx-dropzone {
   border-radius: 10px;
   align-content: center;
   justify-content: center;
-  color:#BB3624;
+  color:#BB3624  !important;
   transition: 0.4s;
 }
 
@@ -120,7 +120,7 @@ ngx-dropzone {
   border-radius: 10px;
   align-content: center;
   justify-content: center;
-  color:#1A214D;
+  color:#1A214D  !important;
   transition: 0.4s;
 }
 .reset_button:hover{

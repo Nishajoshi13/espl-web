@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
+import {NavigationEnd, Router} from "@angular/router";
+import {filter} from "rxjs";
 
 @Component({
   templateUrl: './products.component.html',
@@ -18,8 +19,9 @@ export class ProductsComponent {
   productUrl = 'assets/products/'
   Projects = [
     {
-      title:'Angular',
-      logo: `${this.techIconsUrl}/angular.svg`,
+      title:'',
+      logo: `${this.techIconsUrl}/gradient.gif`,
+      tag:'angular',
       products: [
         {
           title: 'Svg Donught',
@@ -33,6 +35,7 @@ export class ProductsComponent {
     {
       title: 'Wordpress',
       logo: `${this.techIconsUrl}/wordpress.svg`,
+      tag:'wordpress',
       products: [
         {
           title: 'Resto',
@@ -60,6 +63,7 @@ export class ProductsComponent {
     {
       title: 'Machine Learning',
       logo: `${this.techIconsUrl}/ml.svg`,
+      tag:'machine-learning',
       products: [
         {
           title: 'Text to Speech Converter',

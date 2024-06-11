@@ -31,11 +31,13 @@ export class CircleDetectorComponent {
   }
 
   onReset(): void {
+    if(this.processedImageSrc){
+      this.deleteImage(this.ObjectId).subscribe(data => {});
+    }
     this.imageSrc = null;
     this.processedImageSrc = null;
     this.circleCount = 0;
     this.selectedFile = null;
-    this.deleteImage(this.ObjectId).subscribe(data => {});
     this.DetectionOn = false;
   }
 
@@ -76,13 +78,17 @@ export class CircleDetectorComponent {
   }
 
   ngOnDestroy() {
-    this.deleteImage(this.ObjectId).subscribe(()=>{});
+    if(this.processedImageSrc){
+      this.deleteImage(this.ObjectId).subscribe(data => {});
+    }
     window.removeEventListener('beforeunload', this.onBeforeUnload.bind(this));
   }
 
   @HostListener('window:beforeunload', ['$event'])
   onBeforeUnload(event: Event) {
-    this.deleteImage(this.ObjectId).subscribe(()=>{});
+    if(this.processedImageSrc){
+      this.deleteImage(this.ObjectId).subscribe(data => {});
+    }
   }
 
 }

@@ -2,9 +2,10 @@
   <h1>Our Products</h1>
 </div>
 
-<div>
+<div >
+
   <div *ngFor="let items of Projects">
-    <div class="header">
+    <div class="header" [id]="items.tag">
       <img class="logo" [src]="items.logo">
       <h2 class="text">{{items.title}}</h2>
     </div>

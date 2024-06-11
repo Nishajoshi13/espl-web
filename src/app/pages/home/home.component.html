@@ -65,13 +65,24 @@
     <div class="tech-icons-wrapper" >
       <h1 style="font-weight: 400">Our Expertise</h1>
       <div class="tech-icons">
-        <mat-card class="excard" (click)="navigateTo('products')" >
+        <mat-card class="excard" (click)="navigateTo('')" >
         <div class="column">
           <div class="icons" style="flex: 1">
             <div class="icon-item" *ngFor="let item of backendIcons">
-              <a [href]="item.link">
-              <img [src]="item.icon" />
-              </a>
+              <ng-container *ngIf="item.tag.length > 0; else noTooltip">
+              <div
+                matTooltip="{{item.title}} Products"
+                [matTooltipPosition]="'above'"
+                (click)="navigateTo(item.tag)">
+              <img
+                   [src]="item.icon" />
+              </div>
+              </ng-container>
+              <ng-template #noTooltip>
+                <div (click)="navigateTo(item.tag)">
+                  <img [src]="item.icon" />
+                </div>
+              </ng-template>
               <p>{{ item.title }}</p>
             </div>
           </div>
@@ -79,13 +90,24 @@
         </div>
         </mat-card>
 
-        <mat-card class="excard" (click)="navigateTo('products')">
+        <mat-card class="excard" (click)="navigateTo('')">
         <div class="column">
           <div class="icons" style="flex: 1;">
             <div class="icon-item" *ngFor="let item of frontendIcons ">
-              <a [href]="item.link">
-                <img [src]="item.icon" />
-              </a>
+              <ng-container *ngIf="item.tag.length > 0; else noTooltip">
+                <div
+                  matTooltip="{{item.title}} Products"
+                  [matTooltipPosition]="'above'"
+                  (click)="navigateTo(item.tag)">
+                  <img
+                    [src]="item.icon" />
+                </div>
+              </ng-container>
+              <ng-template #noTooltip>
+                <div (click)="navigateTo(item.tag)">
+                  <img [src]="item.icon" />
+                </div>
+              </ng-template>
               <p>{{ item.title }}</p>
             </div>
           </div>
@@ -96,13 +118,25 @@
       </div>
 
       <div class="tech-icons" style="padding-top:5px">
-        <mat-card class="excard" (click)="navigateTo('products')">
+        <mat-card class="excard" (click)="navigateTo('')">
         <div class="column">
           <div class="icons">
             <div class="icon-item" *ngFor="let item of databaseIcons">
-              <a [href]="item.link">
-                <img [src]="item.icon" />
-              </a>
+              <ng-container *ngIf="item.tag.length > 0; else noTooltip">
+                <div
+                  matTooltip="{{item.title}} Products"
+                  [matTooltipPosition]="'above'"
+                  (click)="navigateTo(item.tag)">
+                  <img
+                    [src]="item.icon" />
+                </div>
+              </ng-container>
+              <ng-template #noTooltip>
+                <div (click)="navigateTo(item.tag)">
+                  <img [src]="item.icon" />
+                </div>
+              </ng-template>
+
               <p>{{ item.title }}</p>
             </div>
           </div>
@@ -110,13 +144,25 @@
         </div>
         </mat-card>
 
-        <mat-card class="excard" (click)="navigateTo('products')">
+        <mat-card class="excard" (click)="navigateTo('')">
         <div class="column">
           <div class="icons">
             <div class="icon-item" *ngFor="let item of devopsIcons">
-              <a [href]="item.link">
-                <img [src]="item.icon" />
-              </a>
+              <ng-container *ngIf="item.tag.length > 0; else noTooltip">
+                <div
+                  matTooltip="{{item.title}} Products"
+                  [matTooltipPosition]="'above'"
+                  (click)="navigateTo(item.tag)">
+                  <img
+                    [src]="item.icon" />
+                </div>
+              </ng-container>
+              <ng-template #noTooltip>
+                <div (click)="navigateTo(item.tag)">
+                  <img [src]="item.icon" />
+                </div>
+              </ng-template>
+
               <p>{{ item.title }}</p>
             </div>
           </div>
