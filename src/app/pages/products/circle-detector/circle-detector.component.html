@@ -29,10 +29,17 @@
       <div *ngIf="processedImageSrc" class="circle_count">Your image contains {{circleCount}} Circles</div>
       <div class="horizontal">
         <div class="button-container">
-          <button mat-raised-button class="button" (click)="onReset()">Reset</button>
+          <button
+            mat-raised-button
+            class="reset_button"
+            (click)="onReset()">Reset</button>
         </div>
         <div class="button-container">
-          <button mat-raised-button class="button" [disabled]="!DetectionOn" (click)="onDetect()">Detect Circles</button>
+          <button
+            mat-raised-button
+            class="detect_button"
+            [disabled]="!DetectionOn"
+            (click)="onDetect()">Detect Circles</button>
         </div>
       </div>
     </mat-card>

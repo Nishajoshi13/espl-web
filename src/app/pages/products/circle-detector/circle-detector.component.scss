@@ -11,7 +11,7 @@
   font-weight: 550;
   font-size: 25px;
   padding-bottom:20px;
-  color: #5b5d60;
+  color: black;
 }
 .content{
   display: flex;
@@ -100,7 +100,7 @@ ngx-dropzone {
   padding: 15px 0 20px 20px;
 }
 
-.button {
+.reset_button {
   font-weight: 450;
   font-size:20px;
   flex:1;
@@ -108,4 +108,26 @@ ngx-dropzone {
   border-radius: 10px;
   align-content: center;
   justify-content: center;
+  color:#BB3624;
+  transition: 0.4s;
+}
+
+.detect_button {
+  font-weight: 450;
+  font-size:20px;
+  flex:1;
+  padding:30px;
+  border-radius: 10px;
+  align-content: center;
+  justify-content: center;
+  color:#1A214D;
+  transition: 0.4s;
+}
+.reset_button:hover{
+  color: white  !important;
+  background-color:#BB3624;
+}
+.detect_button:hover{
+  color: white  !important;
+  background-color:#1A214D;
 }
