@@ -16,7 +16,7 @@
           <mat-card-content>{{item.desc}}</mat-card-content>
           <div class="button-container">
             <div *ngIf="item.type=='Visit'">
-              <a [href]=item.link>
+              <a [href]=item.link target="_blank">
               <button mat-raised-button
                       class="button"
                       color="primary"
@@ -26,7 +26,7 @@
             <div *ngIf="item.type=='Try'">
                 <button mat-raised-button
                         class="button"
-                        [routerLink]="['/products',item.link]"
+                        (click)="openInNewTab(item.link)"
                         color="primary"
                 >{{ item.type }}</button>
             </div>

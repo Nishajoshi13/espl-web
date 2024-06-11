@@ -89,6 +89,12 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
+        path: 'products/testo',
+        loadChildren: () =>
+          import('./products/testo/testo.module').then((m) => m.TestoModule),
+        pathMatch: 'full',
+      },
+      {
         path: 'contact-us',
         loadChildren: () =>
           import('./contact-us/contact-us.module').then(

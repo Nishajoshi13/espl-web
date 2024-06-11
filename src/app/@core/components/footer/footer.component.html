@@ -34,11 +34,19 @@
         </a>
         <div class="ft-nav-subpoints">
           <ng-container *ngFor="let subItem of item.subPoints">
-            <ng-container *ngIf="subItem.url != ''; else noLink">
+            <ng-container >
               <a
+                *ngIf="item.title != 'Contact';"
                 [routerLink]="[subItem.url]"
                 [routerLinkActive]="'active'"
                 [routerLinkActiveOptions]="{ exact: true }"
+              >
+                {{ subItem.title }}
+              </a>
+              <a
+                *ngIf="item.title == 'Contact';"
+                class="blue-text"
+                [href]="subItem.url"
               >
                 {{ subItem.title }}
               </a>

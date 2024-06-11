@@ -9,7 +9,6 @@ import {
 import { catchError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2';
-import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-contact-us-form',
@@ -18,16 +17,7 @@ import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 })
 export class ContactUsFormComponent implements OnInit {
 
-  @Input() showCloseButton: boolean = false;
-   constructor(
-               @Optional() @Inject(MAT_DIALOG_DATA) public data: any,
-               protected fb: UntypedFormBuilder,
-               private http: HttpClient
-   ) {
-     if(data) {
-       this.showCloseButton = data.showCloseButton
-     }
-   }
+   constructor(protected fb: UntypedFormBuilder, private http: HttpClient) {}
 
   protected formGroup: UntypedFormGroup = this.fb.group({
     firstName: ['', Validators.required],

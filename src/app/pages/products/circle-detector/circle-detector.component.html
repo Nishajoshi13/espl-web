@@ -1,33 +1,38 @@
-<!--In development-->
-
-<div class="main-container">
-  <h2>Circle Detector</h2>
-  <div class="dropzone-container">
-    <ngx-dropzone class="dropzone"
-                  (change)="onSelect($event)">
-      <img class="upload-icon" [src]="'assets/logo/upload.png'">
-      <h3>Drop your image here</h3>
-<!--      <ngx-dropzone-label>Drop Your Image Here</ngx-dropzone-label>-->
-        <img *ngFor="let f of files" [src]="f.preview" class="preview-img">
-
-    </ngx-dropzone>
+<div class="container">
+  <div class="header">
+    <h2>Circulize</h2>
   </div>
-  <div>
-    <mat-card class="container">
-      <div class="inner">
-      <mat-card class="card">
-        <img class="image" [src]="'assets/images/blog-icons/photo-3.webp'">
-      </mat-card>
-      <mat-card class="card">
-        <img class="image" [src]="'assets/images/blog-icons/photo-6.jpeg'">
-      </mat-card>
+  <div class="content">
+    <mat-card class="card">
+      <ngx-dropzone *ngIf="!imageSrc"  (change)="onSelect($event)">
+        <ngx-dropzone-label>
+          <div class="dropzone-content">
+            <i class="upload-icon"></i>
+            <p>Drag & Drop or Browse</p>
+          </div>
+        </ngx-dropzone-label>
+      </ngx-dropzone>
+      <div class="image-group">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center" *ngIf="imageSrc">
+          <div class="image-container">
+            <img [src]="imageSrc" alt="Uploaded Image">
+          </div>
+          <h3 style="padding-top: 10px">Original Image</h3>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center" *ngIf="processedImageSrc">
+          <div class="image-container">
+            <img [src]="processedImageSrc" alt="Processed Image">
+          </div>
+          <h3 style="padding-top: 10px">Processed Image</h3>
+        </div>
       </div>
+      <div *ngIf="processedImageSrc" class="circle_count">Your image contains {{circleCount}} Circles</div>
       <div class="horizontal">
         <div class="button-container">
-          <button mat-raised-button class="button">Upload Image</button>
+          <button mat-raised-button class="button" (click)="onReset()">Reset</button>
         </div>
         <div class="button-container">
-          <button mat-raised-button class="button">Detect Circles</button>
+          <button mat-raised-button class="button" [disabled]="!DetectionOn" (click)="onDetect()">Detect Circles</button>
         </div>
       </div>
     </mat-card>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   templateUrl: './products.component.html',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
 })
 
 export class ProductsComponent {
+  constructor(private router: Router) {}
+
+  openInNewTab(link: string) {
+    const url = this.router.serializeUrl(this.router.createUrlTree(['/products', link]));
+    window.open(url, '_blank');
+  }
 
   techIconsUrl = 'assets/images/tech-icons';
   productUrl = 'assets/products/'
@@ -59,6 +66,14 @@ export class ProductsComponent {
           desc: 'Transform text into natural, high-quality speech with VoiceWave. Customize voices, adjust speed, and integrate effortlessly with your favorite apps. Download now and let your words be heard!',
           imageUrl: `${this.techIconsUrl}/text.webp`,
           link: 'text-to-speech',
+          type: 'Try'
+
+        },
+        {
+          title: 'Circulize',
+          desc: 'Circulize: Seamlessly identify, analyze, and appreciate circles in your images with our intuitive and sleek app interface',
+          imageUrl: `${this.techIconsUrl}/circle.jpg`,
+          link: 'circle-detector',
           type: 'Try'
 
         },

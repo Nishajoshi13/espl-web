@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="header">
+    <h2>Circle Detector</h2>
+  </div>
+  <div class="content">
+<mat-card class="card">
+  <ngx-dropzone *ngIf="!imageSrc" (change)="onSelect($event)">
+    <ngx-dropzone-label>
+      <div class="dropzone-content">
+        <i class="upload-icon"></i>
+        <p>Drag & Drop or Browse</p>
+      </div>
+    </ngx-dropzone-label>
+  </ngx-dropzone>
+  <div class="image-group">
+    <div class="image-container" *ngIf="imageSrc">
+      <img [src]="imageSrc" alt="Uploaded Image">
+    </div>
+    <div class="image-container" *ngIf="testshow">
+      <img [src]="imageSrc" alt="Uploaded Image">
+    </div>
+<!--    <div class="processed-image-container" *ngIf="processedImageSrc">-->
+<!--      <img [src]="processedImageSrc" alt="Processed Image">-->
+<!--    </div>-->
+  </div>
+  <div class="horizontal">
+    <div class="button-container">
+      <button mat-raised-button
+              class="button"
+              [disabled]="!imageSrc"
+              (click)="onReset()"
+                >Reset</button>
+    </div>
+    <div class="button-container">
+      <button
+        mat-raised-button
+        class="button"
+        (click)="onDetect()"
+      >Detect Circles</button>
+    </div>
+  </div>
+</mat-card>
+  </div>
+</div>
