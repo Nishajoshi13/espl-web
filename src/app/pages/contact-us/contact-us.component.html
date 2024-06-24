@@ -11,16 +11,21 @@
 <div class="main-container">
   <div class="contact-details-wrapper">
     <mat-card>
-      <mat-icon class="material-icons-outlined">phone_iphone</mat-icon>
-      <mat-card-content>
-        <p>+91-9667312464</p>
-      </mat-card-content>
+      <div class="card-content">
+        <mat-icon>phone_iphone</mat-icon>
+        <mat-card-content>
+          <a href="tel:+91-9667312464">+91-9667312464</a>
+        </mat-card-content>
+      </div>
     </mat-card>
     <mat-card>
-      <mat-icon class="material-icons-outlined">email</mat-icon>
-      <mat-card-content>
-        <p>info&#64;entanglesoftware.com</p>
-      </mat-card-content>
+      <div class="card-content">
+        <mat-icon class="material-icons-outlined">email</mat-icon>
+        <mat-card-content style="margin-top: 7px">
+          <a href="mailto:info@entanglesoftware.com"
+          >info&#64;entanglesoftware.com</a>
+        </mat-card-content>
+      </div>
     </mat-card>
   </div>
   <app-contact-us-form></app-contact-us-form>

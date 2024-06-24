@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '@core/shared.module';
 import { HomeComponent } from './home.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 const routes: Routes = [
   {
@@ -11,7 +12,7 @@ const routes: Routes = [
   },
 ];
 @NgModule({
-  imports: [SharedModule, RouterModule.forChild(routes), CarouselModule],
+  imports: [SharedModule, RouterModule.forChild(routes), CarouselModule, MatTooltipModule],
   declarations: [HomeComponent],
 })
 export class HomeModule {}

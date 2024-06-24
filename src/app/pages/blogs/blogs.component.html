@@ -9,10 +9,21 @@
         <a [routerLink]="['/blogs', item.url]">{{ item.title }}</a>
       </mat-card-title>
       <div class="date"> {{ item.date }}</div>
-      <mat-card-content class="desc">{{ item.desc }}</mat-card-content>
-      <a mat-stroked-button class="read" [routerLink]="['/blogs', item.url]">
-        Read More
-      </a>
+      <mat-card-content
+        class="desc"
+        *ngIf="item.desc.length <= 105; else longContent"
+      >{{ item.desc }}</mat-card-content>
+      <p
+        class="desc"
+        style="color:#BB3624 !important;cursor:pointer"
+        [routerLink]="['/blogs', item.url]"
+
+      >Read More...</p>
+      <ng-template #longContent>
+        <mat-card-content
+          class="desc"
+        >{{ item.desc.slice(0, 105) }}...</mat-card-content>
+      </ng-template>
     </mat-card>
   </div>
 </div>

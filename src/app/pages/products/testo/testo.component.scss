@@ -1,7 +1,6 @@
 .container{
-  background: url("/assets/images/general/circlebackground.jpg");
-  padding-top: 90px;
-  padding-bottom: 80px;
+  padding-top: 100px;
+  padding-bottom: 40px;
   justify-content: center;
   align-items: center;
 }
@@ -10,8 +9,7 @@
   justify-content: center;
   font-weight: 550;
   font-size: 25px;
-  padding-bottom:20px;
-  color: black;
+  padding-bottom:50px;
 }
 .content{
   display: flex;
@@ -20,15 +18,15 @@
 }
 .image-group {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space images evenly */
   gap: 30px;
   width: 100%;
-  max-width: 700px;
+  max-width: 700px; /* Ensure the group doesn't exceed the card width */
 
 }
 
 .card {
-  width: 700px;
+  width: fit-content;
   padding: 30px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -62,20 +60,11 @@ ngx-dropzone {
   color: #ccc;
   margin-bottom: 10px;
 }
-.circle_count {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding:10px;
-  font-size: 20px;
-  font-weight: 500;
-}
+
 .image-container {
-  border-radius: 10px;
   width: 100%;
   height: 300px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -100,7 +89,7 @@ ngx-dropzone {
   padding: 15px 0 20px 20px;
 }
 
-.reset_button {
+.button {
   font-weight: 450;
   font-size:20px;
   flex:1;
@@ -108,26 +97,4 @@ ngx-dropzone {
   border-radius: 10px;
   align-content: center;
   justify-content: center;
-  color:#BB3624  !important;
-  transition: 0.4s;
-}
-
-.detect_button {
-  font-weight: 450;
-  font-size:20px;
-  flex:1;
-  padding:30px;
-  border-radius: 10px;
-  align-content: center;
-  justify-content: center;
-  color:#1A214D  !important;
-  transition: 0.4s;
-}
-.reset_button:hover{
-  color: white  !important;
-  background-color:#BB3624;
-}
-.detect_button:hover{
-  color: white  !important;
-  background-color:#1A214D;
 }

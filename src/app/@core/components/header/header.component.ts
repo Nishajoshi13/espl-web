@@ -4,7 +4,7 @@ import { Router, NavigationEnd } from '@angular/router';
 
 export const navItems = [
   { title: 'Home', url: '' },
-  { title: 'Services', url: 'services' },
+  { title: 'Products', url: 'products' },
   { title: 'Blogs', url: 'blogs' },
   { title: 'Team', url: 'team' },
   { title: 'About', url: 'about-us' },

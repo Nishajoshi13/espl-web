@@ -1,95 +1,94 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NgxDropzoneChangeEvent } from 'ngx-dropzone';
+
 @Component({
+  selector: 'app-circle-detector',
   templateUrl: './circle-detector.component.html',
-  styleUrl: './circle-detector.component.scss'
+  styleUrls: ['./circle-detector.component.scss']
 })
+
 export class CircleDetectorComponent {
-
-  files: any[] = [];
-
-  onSelect(event: any) {
-    this.files = [];  // Clear the array to ensure only one file is selected
-    const file = event.addedFiles[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        this.files.push({ preview: e.target.result });
-      };
-      reader.readAsDataURL(file);
-    }
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-  originalImageUrl: string | ArrayBuffer | null = null;
-  processedImageUrl: string | ArrayBuffer | null = null;
-  circleCount: number | null = null;
+  circleCount:any;
+  imageSrc: string | ArrayBuffer | null = null;
+  processedImageSrc: string | ArrayBuffer | null = null;
   selectedFile: File | null = null;
+  DetectionOn:boolean = false;
+  private uploadUrl = 'http://127.0.0.1:8000/api/images/';
 
   constructor(private http: HttpClient) {}
 
-  onFileSelected(event: any): void {
-    const file: File = event.target.files[0];
-
-    if (file) {
-      this.selectedFile = file;
+  onSelect(event: NgxDropzoneChangeEvent): void {
+    if (event.addedFiles.length > 0) {
+      this.DetectionOn = true;
+      this.selectedFile = event.addedFiles[0];
       const reader = new FileReader();
       reader.onload = (e) => {
-        // @ts-ignore
-        this.originalImageUrl = e.target?.result;
+        this.imageSrc = e.target?.result as string;
       };
-      reader.readAsDataURL(file);
-    }
-  }
-  obj:any;
-  imageUrl: string = '';
-  count:number = 0;
-  makereq(){
-    this.obj = this.http.get('http://localhost:9000/').subscribe(
-      data => {
-        console.log('data');
-        this.obj = data
-      },
-    )
-  }
-  detectCircles(): void {
-    if (this.selectedFile) {
-      const formData = new FormData();
-      formData.append('image', this.selectedFile);
-      this.http.get(`http://127.0.0.1:8000/api/images/6/detect_circles/`).subscribe(
-        (detectResponse: any) => {
-          this.processedImageUrl = detectResponse.processed_image;
-          console.log(this.processedImageUrl);
-          this.circleCount = detectResponse.circles_detected;
-        },
-        (error) => {
-          console.error('Error detecting circles:', error);
-        }
-      );
-      // First, send the image and get the image ID in the response
-      // this.http.post('http://127.0.0.1:8000/api/images/', formData).subscribe(
-      //   (response: any) => {
-      //     const imageId = response.id; // Assume the response contains the image ID
-      //     // Now request the circle detection API with the image ID
-      //     console.log(response.id)
-      //
-      //   },
-      //   (error) => {
-      //     console.error('Error uploading image:', error);
-      //   }
-      // );
+      reader.readAsDataURL(this.selectedFile);
     }
   }
 
+  onReset(): void {
+    if(this.processedImageSrc){
+      this.deleteImage(this.ObjectId).subscribe(data => {});
+    }
+    this.imageSrc = null;
+    this.processedImageSrc = null;
+    this.circleCount = 0;
+    this.selectedFile = null;
+    this.DetectionOn = false;
+  }
+
+  ObjectId:any;
+
+  onDetect(): void {
+    if (this.selectedFile) {
+      this.uploadImage(this.selectedFile).subscribe(response => {
+        this.ObjectId = response.id;
+        this.getProcessedImage(this.ObjectId).subscribe(data => {
+          this.circleCount = data.circles | 0
+          this.processedImageSrc = data.image;
+        });
+      });
+    }
+    this.DetectionOn = false
+  }
+
+  private uploadImage(file: File) {
+    const formData = new FormData();
+    formData.append('image', file);
+    return this.http.post<any>(this.uploadUrl, formData);
+  }
+  getImageUrl = ''
+  private getProcessedImage(id: string) {
+    this.getImageUrl = `${this.uploadUrl}${this.ObjectId}/detect_circles/`;
+    return this.http.get<any>(this.getImageUrl, {
+      withCredentials: true,
+    });
+  }
+
+  private deleteImage(id: string) {
+     return this.http.delete<any>(`${this.uploadUrl}${this.ObjectId}/`);
+  }
+
+  ngOnInit() {
+    window.addEventListener('beforeunload', this.onBeforeUnload.bind(this));
+  }
+
+  ngOnDestroy() {
+    if(this.processedImageSrc){
+      this.deleteImage(this.ObjectId).subscribe(data => {});
+    }
+    window.removeEventListener('beforeunload', this.onBeforeUnload.bind(this));
+  }
+
+  @HostListener('window:beforeunload', ['$event'])
+  onBeforeUnload(event: Event) {
+    if(this.processedImageSrc){
+      this.deleteImage(this.ObjectId).subscribe(data => {});
+    }
+  }
 
 }

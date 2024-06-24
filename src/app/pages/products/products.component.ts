@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {NavigationEnd, Router} from "@angular/router";
+import {filter} from "rxjs";
 
 @Component({
   templateUrl: './products.component.html',
@@ -6,13 +8,20 @@ import { Component } from '@angular/core';
 })
 
 export class ProductsComponent {
+  constructor(private router: Router) {}
+
+  openInNewTab(link: string) {
+    const url = this.router.serializeUrl(this.router.createUrlTree(['/products', link]));
+    window.open(url, '_blank');
+  }
 
   techIconsUrl = 'assets/images/tech-icons';
   productUrl = 'assets/products/'
   Projects = [
     {
-      title:'Angular',
-      logo: `${this.techIconsUrl}/angular.svg`,
+      title:'',
+      logo: `${this.techIconsUrl}/gradient.gif`,
+      tag:'angular',
       products: [
         {
           title: 'Svg Donught',
@@ -26,6 +35,7 @@ export class ProductsComponent {
     {
       title: 'Wordpress',
       logo: `${this.techIconsUrl}/wordpress.svg`,
+      tag:'wordpress',
       products: [
         {
           title: 'Resto',
@@ -53,12 +63,21 @@ export class ProductsComponent {
     {
       title: 'Machine Learning',
       logo: `${this.techIconsUrl}/ml.svg`,
+      tag:'machine-learning',
       products: [
         {
           title: 'Text to Speech Converter',
           desc: 'Transform text into natural, high-quality speech with VoiceWave. Customize voices, adjust speed, and integrate effortlessly with your favorite apps. Download now and let your words be heard!',
           imageUrl: `${this.techIconsUrl}/text.webp`,
           link: 'text-to-speech',
+          type: 'Try'
+
+        },
+        {
+          title: 'Circulize',
+          desc: 'Circulize: Seamlessly identify, analyze, and appreciate circles in your images with our intuitive and sleek app interface',
+          imageUrl: `${this.techIconsUrl}/circle.jpg`,
+          link: 'circle-detector',
           type: 'Try'
 
         },

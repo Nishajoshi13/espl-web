@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {Routes, RouterModule, ExtraOptions} from '@angular/router';
 import { SharedModule } from '@core/shared.module';
 import { PagesComponent } from './pages.component';
 
@@ -62,14 +62,6 @@ const routes: Routes = [
           ),
         pathMatch: 'full',
       },
-      // {
-      //   path: 'products/convex-hull',
-      //   loadChildren: () =>
-      //     import('./products/convex-hull/convex-hull.module').then(
-      //       (m) => m.TextToSpeechModule
-      //     ),
-      //   pathMatch: 'full',
-      // },
       {
         path: 'about-us',
         loadChildren: () =>
@@ -89,6 +81,18 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
+        path: 'products/visual-algo',
+        loadChildren: () =>
+          import('./products/visual-algo/visual-algo.module').then((m) => m.VisualAlgoModule),
+        pathMatch: 'full',
+      },
+      {
+        path: 'products/testo',
+        loadChildren: () =>
+          import('./products/testo/testo.module').then((m) => m.TestoModule),
+        pathMatch: 'full',
+      },
+      {
         path: 'contact-us',
         loadChildren: () =>
           import('./contact-us/contact-us.module').then(
@@ -103,6 +107,11 @@ const routes: Routes = [
     ],
   },
 ];
+
+const routerOptions : ExtraOptions = {
+  scrollPositionRestoration:'enabled',
+  anchorScrolling:'enabled'
+}
 @NgModule({
   imports: [SharedModule, RouterModule.forChild(routes)],
   declarations: [PagesComponent],

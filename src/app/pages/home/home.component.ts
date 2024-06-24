@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   }
 
   navigateTo(route: string) {
-    this.router.navigate([route]);
+    this.router.navigate(['/products'], { fragment: route });
   }
 
   techIconsUrl = 'assets/images/tech-icons';
@@ -41,29 +41,29 @@ export class HomeComponent implements OnInit {
   ];
 
   backendIcons = [
-    { icon: `${this.techIconsUrl}/magento.svg`, title: 'Magento', link:'https://business.adobe.com/products/magento/magento-commerce.html'},
-    { icon: `${this.techIconsUrl}/php.svg`, title: 'Php' , link:'https://www.php.net/'},
-    { icon: `${this.techIconsUrl}/nodejs.svg`, title: 'Nodejs' , link:'https://nodejs.org/en'},
-    { icon: `${this.techIconsUrl}/Golang.svg`, title: 'Golang' , link:'https://go.dev/'},
-    { icon: `${this.techIconsUrl}/wordpress.svg`, title: 'Wordpress' , link:'https://wordpress.com/'},
-    { icon: `${this.techIconsUrl}/shopify.svg`, title: 'Shopify' , link:'https://www.shopify.com/in'},
+    { icon: `${this.techIconsUrl}/magento.svg`, title: 'Magento', tag:'' },
+    { icon: `${this.techIconsUrl}/php.svg`, title: 'Php' , tag:''},
+    { icon: `${this.techIconsUrl}/nodejs.svg`, title: 'Nodejs'  , tag:''},
+    { icon: `${this.techIconsUrl}/Golang.svg`, title: 'Golang',  tag:'' },
+    { icon: `${this.techIconsUrl}/wordpress.svg`, title: 'Wordpress' ,  tag:'wordpress'},
+    { icon: `${this.techIconsUrl}/shopify.svg`, title: 'Shopify' ,  tag:''},
 
   ]
   frontendIcons = [
-    { icon: `${this.techIconsUrl}/angular.svg`, title: 'Angular', link:'https://angular.dev/' },
-    { icon: `${this.techIconsUrl}/react.svg`, title: 'React' , link:'https://react.dev/'},
-    { icon: `${this.techIconsUrl}/jquery.svg`, title: 'Jquery' , link:'https://jquery.com//'},
-    { icon: `${this.techIconsUrl}/html.svg`, title: 'Html', link:'' },
-    { icon: `${this.techIconsUrl}/css2.svg`, title: 'CSS' , link:''},
-    { icon: `${this.techIconsUrl}/sass.svg`, title: 'Scss' , link:'https://sass-lang.com/'},
+    { icon: `${this.techIconsUrl}/angular.svg`, title: 'Angular' , tag:'angular' },
+    { icon: `${this.techIconsUrl}/react.svg`, title: 'React'  , tag:''},
+    { icon: `${this.techIconsUrl}/jquery.svg`, title: 'Jquery'  , tag:''},
+    { icon: `${this.techIconsUrl}/html.svg`, title: 'Html' , tag:'' },
+    { icon: `${this.techIconsUrl}/css2.svg`, title: 'CSS'  , tag:''},
+    { icon: `${this.techIconsUrl}/sass.svg`, title: 'Scss'  , tag:''},
   ]
   devopsIcons = [
-    { icon: `${this.techIconsUrl}/docker.svg`, title: 'Docker' , link:'https://www.docker.com/'},
-    { icon: `${this.techIconsUrl}/kubernetes.svg`, title: 'Kubernetes' , link:'https://kubernetes.io/'},
+    { icon: `${this.techIconsUrl}/docker.svg`, title: 'Docker' , tag:''},
+    { icon: `${this.techIconsUrl}/kubernetes.svg`, title: 'Kubernetes' , tag:''},
   ]
   databaseIcons = [
-    { icon: `${this.techIconsUrl}/mongodb.svg`, title: 'MongoDb' , link:'https://www.mongodb.com/'},
-    { icon: `${this.techIconsUrl}/sql-server.png`, title: 'SQL' , link:'https://www.mysql.com/'},
+    { icon: `${this.techIconsUrl}/mongodb.svg`, title: 'MongoDb' , tag:''},
+    { icon: `${this.techIconsUrl}/sql-server.png`, title: 'SQL' , tag:''},
   ]
 
   customOptions: OwlOptions = {

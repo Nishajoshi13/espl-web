@@ -14,6 +14,7 @@
           <img [src]="item.icon" />
         </a>
       </div>
+
       <div class="location">
         <div>Location</div>
         <p>Khandak Par, Bihar Sharif (Nalanda),</p>
@@ -34,11 +35,18 @@
         </a>
         <div class="ft-nav-subpoints">
           <ng-container *ngFor="let subItem of item.subPoints">
-            <ng-container *ngIf="subItem.url != ''; else noLink">
+            <ng-container >
               <a
+                *ngIf="item.title != 'Contact';"
                 [routerLink]="[subItem.url]"
                 [routerLinkActive]="'active'"
                 [routerLinkActiveOptions]="{ exact: true }"
+              >
+                {{ subItem.title }}
+              </a>
+              <a
+                *ngIf="item.title == 'Contact';"
+                [href]="subItem.url"
               >
                 {{ subItem.title }}
               </a>
