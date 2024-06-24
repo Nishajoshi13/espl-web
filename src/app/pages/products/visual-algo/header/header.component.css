@@ -1,0 +1,16 @@
+.responsive {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  width: 150px;
+  height:50px;
+  padding-left:10px;
+  padding-top:10px;
+}
+.bg-dark {
+  background-color: #000000 !important;
+}
+
+.navbar-dark {
+  background-color: #000000 !important;
+}

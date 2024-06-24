@@ -6,7 +6,10 @@
 
   <div *ngFor="let items of Projects">
     <div class="header" [id]="items.tag">
-      <img class="logo" [src]="items.logo">
+      <img *ngIf="items.title; else onlylogo"class="logo" [src]="items.logo">
+      <ng-template #onlylogo>
+        <img class="onlylogo" [src]="items.logo">
+      </ng-template>
       <h2 class="text">{{items.title}}</h2>
     </div>
       <div class="card-container">

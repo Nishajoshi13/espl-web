@@ -19,8 +19,8 @@ export class ProductsComponent {
   productUrl = 'assets/products/'
   Projects = [
     {
-      title:'Angular',
-      logo: `${this.techIconsUrl}/angular.svg`,
+      title:'',
+      logo: `${this.techIconsUrl}/gradient.gif`,
       tag:'angular',
       products: [
         {

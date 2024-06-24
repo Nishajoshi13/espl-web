@@ -37,7 +37,7 @@ export class PagesComponent implements OnInit {
       const dialogRef = this.dialog.open(ContactBoxComponent);
       dialogRef.afterClosed().subscribe(() => {
         this.incrementDialogCount();
-        this.startTimer()
+        this.startTimer();
       });
     }
   }

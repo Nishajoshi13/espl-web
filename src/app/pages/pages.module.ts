@@ -62,14 +62,6 @@ const routes: Routes = [
           ),
         pathMatch: 'full',
       },
-      // {
-      //   path: 'products/convex-hull',
-      //   loadChildren: () =>
-      //     import('./products/convex-hull/convex-hull.module').then(
-      //       (m) => m.TextToSpeechModule
-      //     ),
-      //   pathMatch: 'full',
-      // },
       {
         path: 'about-us',
         loadChildren: () =>
@@ -86,6 +78,12 @@ const routes: Routes = [
         path: 'products/circle-detector',
         loadChildren: () =>
           import('./products/circle-detector/circle-detector.module').then((m) => m.CircleDetectorModule),
+        pathMatch: 'full',
+      },
+      {
+        path: 'products/visual-algo',
+        loadChildren: () =>
+          import('./products/visual-algo/visual-algo.module').then((m) => m.VisualAlgoModule),
         pathMatch: 'full',
       },
       {
