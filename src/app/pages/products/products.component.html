@@ -1,12 +1,12 @@
 <div class="head">
-  <h1>Our Products</h1>
+  <h1>Our Portfolio</h1>
 </div>
 
 <div >
 
   <div *ngFor="let items of Projects">
     <div class="header" [id]="items.tag">
-      <img *ngIf="items.title; else onlylogo"class="logo" [src]="items.logo">
+      <img *ngIf="items.title; else onlylogo" class="logo" [src]="items.logo">
       <ng-template #onlylogo>
         <img class="onlylogo" [src]="items.logo">
       </ng-template>
@@ -18,7 +18,8 @@
           <img [src]="item.imageUrl">
           <mat-card-title>{{item.title}}</mat-card-title>
           <mat-card-content>{{item.desc}}</mat-card-content>
-          <div class="button-container">
+
+          <div class="button-container" >
             <div *ngIf="item.type=='Visit'">
               <a [href]=item.link target="_blank">
               <button mat-raised-button

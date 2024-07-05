@@ -73,6 +73,7 @@
   }
 }
 .button-container {
+  align-self: flex-start;
   display: flex;
   justify-content: center;
   width: fit-content;
@@ -84,6 +85,6 @@
   font-size:20px;
   flex:1;
   border-radius: 10px;
-  align-content: center;
-  justify-content: center;
+  align-content: end;
+  justify-content: left;
 }
