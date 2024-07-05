@@ -19,20 +19,6 @@ export class ProductsComponent {
   productUrl = 'assets/products/'
   Projects = [
     {
-      title:'',
-      logo: `${this.techIconsUrl}/gradient.gif`,
-      tag:'angular',
-      products: [
-        {
-          title: 'Svg Donught',
-          desc: 'Svg Donught is an angular based library used for making donut chart with svg which make it extra-ordinary responsive even for the mobile view.',
-          imageUrl: `${this.productUrl}/donut.png`,
-          link : 'https://www.npmjs.com/package/svg-donught',
-          type: 'Visit'
-        }
-      ]
-    },
-    {
       title: 'Wordpress',
       logo: `${this.techIconsUrl}/wordpress.svg`,
       tag:'wordpress',
@@ -81,6 +67,20 @@ export class ProductsComponent {
           type: 'Try'
 
         },
+      ]
+    },
+    {
+      title:'',
+      logo: `${this.techIconsUrl}/gradient.gif`,
+      tag:'angular',
+      products: [
+        {
+          title: 'Svg Donught',
+          desc: 'Svg Donught is an angular based library used for making donut chart with svg which make it extra-ordinary responsive even for the mobile view.',
+          imageUrl: `${this.productUrl}/donut.png`,
+          link : 'https://www.npmjs.com/package/svg-donught',
+          type: 'Visit'
+        }
       ]
     },
   ]
