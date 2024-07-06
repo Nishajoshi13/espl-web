@@ -33,13 +33,11 @@ export class PagesComponent implements OnInit {
     return this.getDialogCount() < this.maxDialogOpens;
   }
   openDialog(): void {
-    if (this.canOpenDialog()) {
       const dialogRef = this.dialog.open(ContactBoxComponent);
       dialogRef.afterClosed().subscribe(() => {
         this.incrementDialogCount();
-        this.startTimer();
       });
-    }
+
   }
   startTimer(){
     setTimeout(() => {
@@ -48,7 +46,9 @@ export class PagesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.startTimer()
+    if (this.canOpenDialog()) {
+      this.startTimer()
+    }
 
     this.breakpointObserver
       .observe(['(max-width: 770px)'])

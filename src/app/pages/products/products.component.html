@@ -2,8 +2,7 @@
   <h1>Our Portfolio</h1>
 </div>
 
-<div >
-
+<div>
   <div *ngFor="let items of Projects">
     <div class="header" [id]="items.tag">
       <img *ngIf="items.title; else onlylogo" class="logo" [src]="items.logo">
