@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiBaseUrl: 'https://entanglesoftware.com/api',
+  emailJsPublicKey: 'y3kLYt5hqOwZvoUBg',
 };
 
 /*

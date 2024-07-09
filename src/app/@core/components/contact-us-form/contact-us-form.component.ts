@@ -9,6 +9,7 @@ import {
 import { catchError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact-us-form',
@@ -16,6 +17,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./contact-us-form.component.scss'],
 })
 export class ContactUsFormComponent implements OnInit {
+  processing: boolean = false;
 
    constructor(protected fb: UntypedFormBuilder, private http: HttpClient) {}
 
@@ -24,15 +26,7 @@ export class ContactUsFormComponent implements OnInit {
     lastName: [''],
     email: ['', [Validators.required, Validators.email]],
     message: [null, Validators.required],
-    contactNo: [
-      null,
-      [
-        Validators.required,
-        Validators.pattern('^[0-9]*$'),
-        Validators.minLength(10),
-        Validators.maxLength(10),
-      ],
-    ],
+    contactNo: [null, [Validators.required]],
   });
 
   ngOnInit() {}
@@ -61,8 +55,7 @@ export class ContactUsFormComponent implements OnInit {
     return this.form.controls['contactNo'] as UntypedFormControl;
   }
 
-  sendEmail() {
-    console.log(this.form.valid);
+  sendEmailVanilla() {
     if (this.form.valid) {
       const sendEmailUrl = `${environment.apiBaseUrl}/send-email`;
       this.http
@@ -77,5 +70,45 @@ export class ContactUsFormComponent implements OnInit {
           });
         });
     }
+  }
+
+  sendEmail(e: Event) {
+    e.preventDefault();
+    const $options = {
+      publicKey: environment.emailJsPublicKey,
+      blockHeadless: true,
+      limitRate: {
+        id: 'app',
+        throttle: 20000,
+      },
+    };
+
+    this.processing = true;
+
+    const $serviceKey = 'service_ai7j4rw';
+    const $templateKey = 'template_ovw9s7e';
+
+    emailjs.send($serviceKey, $templateKey, this.form.value, $options).then(
+      () => {
+        this.processing = false;
+        Swal.fire({
+          title: 'Thanks for your interest!',
+          text: 'We will contact you soon.',
+          icon: 'success',
+          confirmButtonColor: '#1483f8',
+        });
+      },
+      (error : any) => {
+        console.log(error);
+        console.log('FAILED...', (error as EmailJSResponseStatus).text);
+        this.processing = false;
+        Swal.fire({
+          title: 'Error',
+          text: 'Something went wrong while processing your request.',
+          icon: 'error',
+          confirmButtonColor: '#bb3624',
+        });
+      }
+    );
   }
 }
