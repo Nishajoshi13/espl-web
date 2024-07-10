@@ -4,14 +4,15 @@
 }
 
 .card {
+  padding-bottom: 30px;
   padding-left: 20%;
   padding-right: 20%;
 }
 
 @media (max-width: 770px) {
   .card {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -24,7 +25,7 @@
 }
 @media (max-width: 770px) {
   .title{
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
@@ -57,7 +58,7 @@
 
 .subparts {
   padding-top: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .desc {
@@ -70,4 +71,15 @@
   padding-top: 25px;
   padding-bottom: 25px;
   max-width: 100%;
+}
+
+@media (max-width: 770px) {
+  .subhead{
+    font-size: 20px;
+  }
+  .desc{
+    padding-left: 10px;
+    font-size: 17px;
+  }
+
 }

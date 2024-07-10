@@ -14,7 +14,7 @@ export class PagesComponent implements OnInit {
   @ViewChild('drawer', { static: true })
   drawer!: MatDrawer;
   website = true;
-  maxDialogOpens = 3;
+  maxDialogOpens = 1;
   matDialogKey = 'dialogOpensCount';
 
   constructor(private breakpointObserver: BreakpointObserver, public dialog: MatDialog)  {}
