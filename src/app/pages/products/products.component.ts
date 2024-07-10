@@ -39,7 +39,7 @@ export class ProductsComponent {
         },
         {
           title: 'Entangle Cart',
-          desc: 'Discover the latest in fashion at our e-commerce site, offering stylish clothing and accessories for every occasion. Enjoy great deals and fast shipping on top-quality apparel.',
+          desc: 'Discover the latest in fashion at Entangle Cart, offering stylish clothing and accessories for every occasion.',
           imageUrl: `${this.productUrl}/tcart.png`,
           link : 'https://tcart.entanglesoftware.com/',
           type: 'Visit'
@@ -53,7 +53,7 @@ export class ProductsComponent {
       products: [
         {
           title: 'Text to Speech Converter',
-          desc: 'Transform text into natural, high-quality speech with VoiceWave. Customize voices, adjust speed, and integrate effortlessly with your favorite apps. Download now and let your words be heard!',
+          desc: 'Transform text into natural, high-quality speech with VoiceWave. Customize voices, adjust speed, and integrate effortlessly with your favorite apps.',
           imageUrl: `${this.techIconsUrl}/text.webp`,
           link: 'text-to-speech',
           type: 'Try'
