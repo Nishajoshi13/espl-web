@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {Routes, RouterModule, ExtraOptions} from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { SharedModule } from '@core/shared.module';
 import { PagesComponent } from './pages.component';
 
@@ -25,17 +25,13 @@ const routes: Routes = [
       {
         path: 'blogs',
         loadChildren: () =>
-          import('./blogs/blogs.module').then(
-            (m) => m.BlogsModule
-          ),
+          import('./blogs/blogs.module').then((m) => m.BlogsModule),
         pathMatch: 'full',
       },
       {
-        path: 'products',
+        path: 'portfolio',
         loadChildren: () =>
-          import('./products/products.module').then(
-            (m) => m.ProductsModule
-          ),
+          import('./products/products.module').then((m) => m.ProductsModule),
         pathMatch: 'full',
       },
       {
@@ -55,7 +51,7 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
-        path: 'products/text-to-speech',
+        path: 'portfolio/text-to-speech',
         loadChildren: () =>
           import('./products/text-to-speech/text-to-speech.module').then(
             (m) => m.TextToSpeechModule
@@ -75,19 +71,23 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
-        path: 'products/circle-detector',
+        path: 'portfolio/circle-detector',
         loadChildren: () =>
-          import('./products/circle-detector/circle-detector.module').then((m) => m.CircleDetectorModule),
+          import('./products/circle-detector/circle-detector.module').then(
+            (m) => m.CircleDetectorModule
+          ),
         pathMatch: 'full',
       },
       {
-        path: 'products/visual-algo',
+        path: 'portfolio/visual-algo',
         loadChildren: () =>
-          import('./products/visual-algo/visual-algo.module').then((m) => m.VisualAlgoModule),
+          import('./products/visual-algo/visual-algo.module').then(
+            (m) => m.VisualAlgoModule
+          ),
         pathMatch: 'full',
       },
       {
-        path: 'products/testo',
+        path: 'portfolio/testo',
         loadChildren: () =>
           import('./products/testo/testo.module').then((m) => m.TestoModule),
         pathMatch: 'full',
@@ -108,10 +108,10 @@ const routes: Routes = [
   },
 ];
 
-const routerOptions : ExtraOptions = {
-  scrollPositionRestoration:'enabled',
-  anchorScrolling:'enabled'
-}
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+};
 @NgModule({
   imports: [SharedModule, RouterModule.forChild(routes)],
   declarations: [PagesComponent],

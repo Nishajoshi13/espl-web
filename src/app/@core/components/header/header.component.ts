@@ -4,12 +4,11 @@ import { Router, NavigationEnd } from '@angular/router';
 
 export const navItems = [
   { title: 'Home', url: '' },
-  { title: 'Portfolio', url: 'products' },
+  { title: 'Portfolio', url: 'portfolio' },
   { title: 'Blogs', url: 'blogs' },
   { title: 'Team', url: 'team' },
   { title: 'About', url: 'about-us' },
   { title: 'Contact', url: 'contact-us' },
-
 ];
 @Component({
   selector: 'app-header',
@@ -19,15 +18,14 @@ export const navItems = [
 export class HeaderComponent implements OnInit {
   navItems = navItems;
   @Input() drawerRef: MatDrawer | undefined;
-  constructor(private router:Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.router.events.subscribe(event => {
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         window.scrollTo(0, 0); // Scrolls to the top of the page
       }
     });
-
   }
   openSideDrawer() {
     this.drawerRef?.open();
