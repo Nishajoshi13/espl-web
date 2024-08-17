@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {FormControl, ReactiveFormsModule, Validators} from "@angular/forms";
-import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
-import {catchError, merge} from "rxjs";
-import {MatInputModule} from "@angular/material/input";
-import {MatButtonModule} from "@angular/material/button";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { FormControl, ReactiveFormsModule, Validators } from "@angular/forms";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
+import { catchError, merge } from "rxjs";
+import { MatInputModule } from "@angular/material/input";
+import { MatButtonModule } from "@angular/material/button";
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import {MatDialogClose} from "@angular/material/dialog";
-import {MatIconModule} from "@angular/material/icon";
-import {environment} from "../../../environments/environment";
+import { MatDialogClose } from "@angular/material/dialog";
+import { MatIconModule } from "@angular/material/icon";
+import { environment } from "../../../environments/environment";
 import Swal from "sweetalert2";
-import {HttpClient} from "@angular/common/http";
-import emailjs, {type EmailJSResponseStatus} from "@emailjs/browser";
+import { HttpClient } from "@angular/common/http";
+import emailjs, { type EmailJSResponseStatus } from "@emailjs/browser";
 
 @Component({
   standalone: true,
@@ -37,7 +37,7 @@ export class ContactBoxComponent {
 
   email = new FormControl('', [Validators.required, Validators.email]);
   firstName = new FormControl('', [Validators.required, Validators.minLength(2)]);
-  connectButton:boolean = false;
+  connectButton: boolean = false;
   mailError = '';
   nameError = '';
   constructor(private http: HttpClient) {
@@ -50,10 +50,10 @@ export class ContactBoxComponent {
 
   }
 
-  updateNameError(){
-    if(this.firstName.hasError('required')){
+  updateNameError() {
+    if (this.firstName.hasError('required')) {
       this.nameError = 'Name is required';
-    } else if(this.firstName.hasError('minlength')){
+    } else if (this.firstName.hasError('minlength')) {
       this.nameError = 'Minimum 2 characters required';
     } else {
       this.nameError = '';
@@ -69,7 +69,7 @@ export class ContactBoxComponent {
     }
   }
 
-  isFormValid():boolean{
+  isFormValid(): boolean {
     return this.firstName.valid && this.email.valid
   }
 
@@ -91,7 +91,7 @@ export class ContactBoxComponent {
       message: 'Contacted through contact box popup',
       contactNo: '9999999999'
     }
-    const $serviceKey = 'service_ai7j4rw';
+    const $serviceKey = 'service_6sqs94j';
     const $templateKey = 'template_ovw9s7e';
 
     emailjs.send($serviceKey, $templateKey, form, $options).then(
@@ -105,7 +105,7 @@ export class ContactBoxComponent {
         this.email.reset('');
         this.firstName.reset('')
       },
-      (error : any) => {
+      (error: any) => {
         console.log(error);
         console.log('FAILED...', (error as EmailJSResponseStatus).text);
         Swal.fire({
@@ -117,6 +117,6 @@ export class ContactBoxComponent {
         this.email.reset('');
         this.firstName.reset('')
       },
-  );
+    );
   }
 }
