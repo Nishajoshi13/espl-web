@@ -18,6 +18,7 @@ import { environment } from '../../../environments/environment';
 import Swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { merge } from 'rxjs';
 
 @Component({
   standalone: true,

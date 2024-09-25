@@ -30,7 +30,7 @@ export class FooterComponent implements OnInit {
       title: 'Contact',
       url: 'contact-us',
       subPoints: [
-        { title: '+91-9667312464', url: 'tel:+91-9667312464' },
+        { title: '+91-9470039388', url: 'tel:+9470039388' },
         { title: 'info@entanglesoftware.com', url: 'mailto:info@entanglesoftware.com' },
       ],
     },

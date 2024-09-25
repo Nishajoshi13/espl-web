@@ -1,5 +1,5 @@
 footer {
-  background: #0a1928;
+  background:#1a214d;
   color: #fff;
   padding: 24px;
   padding-bottom: 16px;
@@ -10,6 +10,7 @@ footer {
   padding: 14px;
   margin-top: 0;
   align-items: baseline;
+  max-width: 1280px;
 }
 
 .main-logo {
@@ -33,11 +34,10 @@ footer {
     border-radius: 50%;
   }
 }
-
 .ft-nav-wrapper {
-  width: 60%;
+  // width: 60%;
   display: flex;
-  justify-content: space-between;
+ grid-gap:20px;
   a {
     color: #a1b0be;
     font-weight: 500;

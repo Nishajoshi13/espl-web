@@ -161,13 +161,41 @@ mat-card-content {
   div:first-child {
     p {
       padding: 0 26px;
+      font-weight: 100;
+    letter-spacing: 1px;
     }
   }
   img {
     width: 50%;
   }
 }
+@media (min-width: 700px) { 
+  .video-container {
+      width: 500px; 
+      flex:none;
+}
+}
+.wwd-heading{
+  
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+}
 
+@media (max-width: 600px) {
+  .who-we-aremain-container {
+    flex-direction: column;
+  }
+}
+.wwd-content{
+  display: flex;
+}
+@media (max-width: 500px) {
+  .wwd-content {
+    flex-direction: column-reverse;
+  }
+}
 .who-we-are,
 .what-we-do,
 .tech-icons-wrapper {
