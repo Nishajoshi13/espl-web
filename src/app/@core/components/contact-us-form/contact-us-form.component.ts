@@ -30,7 +30,6 @@ export class ContactUsFormComponent implements OnInit {
   });
 
   ngOnInit() {}
-
   get form() {
     return this.formGroup;
   }

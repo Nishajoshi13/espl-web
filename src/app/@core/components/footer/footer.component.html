@@ -1,3 +1,45 @@
+<!-- <section> -->
+ <!-- <div class="carousel-container">
+  <div class="carousel-wrapper" [style.transform]="'translateX(' + translateX + 'px)'">
+    <div class="carousel-item" *ngFor="let item of items">
+      <img style="height:70px;width:90px" [src]="item.image" [alt]="item.alt" />
+    </div>
+  </div>
+</div> -->
+<!-- <section>
+  <div class="carousel-container">
+    <div *ngFor="let item of items; let i = index" class="carousel-item" [ngClass]="{ 'active': currentIndex === i }">
+      <img style="height:70px;width:90px" [src]="item.image" [alt]="item.alt" />
+    </div>
+  </div>
+</section> -->
+
+  <!-- </section> -->
+  <!-- <section>
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
+        <div class="carousel-item" *ngFor="let item of items; let i = index" [ngClass]="{ 'active': currentIndex === i }">
+          <img style="height:70px;width:90px" [src]="item.image" [alt]="item.alt" />
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <section>
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
+        <div class="carousel-item" *ngFor="let item of items">
+          <img style="height:80px;width:200px"[src]="item.image" [alt]="item.alt" />
+        </div>
+        <!-- Duplicate items to create the infinite effect -->
+        <div class="carousel-item" *ngFor="let item of items">
+          <img style="height:80px;width:200px" [src]="item.image" [alt]="item.alt" />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+   
 <footer>
   <div class="flex-space-between main-container">
     <div>

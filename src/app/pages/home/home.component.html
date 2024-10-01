@@ -2,11 +2,11 @@
   <div class="banner-wrapper">
     <div class="home-banner"></div>
     <div class="wrap-banner-text">
-      <div>
-        <h1>we entangle with you</h1>
+      <div class="heading">
+        <h4 style="font-size: xxx-large">we entangle with you</h4>
         <h3>Develop effective plans to move your customers' behaviour.</h3>
         <a [routerLink]="'contact-us'">
-          <button class="transparent-btn" style="height: 50px; width: 200px">
+          <button class="transparent-btn">
             Get in Touch
           </button>
         </a>
@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <section class="who-we-are main-container" >
+  <section class="who-we-are main-container">
     <div>
       <h1 style="font-weight: 400">Who we are</h1>
 
@@ -28,34 +28,45 @@
         opportunities for growth and success
       </p>
     </div>
-    <!-- <img src="assets/images/general/home-2.jpg" /> -->
-    <div class ="video-container" > 
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/BMxD6hwMfWk?si=IvlVU6Rgadr0Ubzi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
+    <div class="video-container">
+      <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/BMxD6hwMfWk?autoplay=1&mute=1"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+></iframe>
+
+    </div>
   </section>
   <section class="main-container">
     <div class="what-we-do" style="margin-bottom: 20px">
-      <div class="wwd-heading">
-        <h1 style="font-weight: 400;">What we do</h1>
-      </div>
-      <div class="wwd-content" >
-        <img  src="assets/images/general/home-2.jpg" height="300" width= "100%" />
-        <div class="desc" style=" padding-right: 26px; padding-left: 26px; ">
-          At Entangle, we offer a range of services to enhance customer
-          engagement and drive business growth. Our expertise includes custom
-          software development, IT consultancy, system integration, mobile app
-          and web development, cloud solutions, and ongoing maintenance and
-          support. We are committed to delivering high-quality, scalable
-          solutions tailored to your unique needs. Our team works closely with
-          you to ensure seamless integration and optimal performance, helping
-          your business stay ahead of the curve and achieve remarkable results.
-          Our innovative approach leverages the latest technologies to create
-          robust, user-friendly applications that elevate your brand. We
-          prioritize security and efficiency, ensuring your data is protected
-          while maximizing operational productivity.
+      <div class="wwd-content">
+        <img src="assets/images/general/home-2.jpg" height="300" width="100%" />
+        <div class="desc">
+          <h1>What we do</h1>
+          <p>
+            At Entangle, we offer a range of services to enhance customer
+            engagement and drive business growth. Our expertise includes custom
+            software development, IT consultancy, system integration, mobile app
+            and web development, cloud solutions, and ongoing maintenance and
+            support. We are committed to delivering high-quality, scalable
+            solutions tailored to your unique needs. Our team works closely with
+            you to ensure seamless integration and optimal performance, helping
+            your business stay ahead of the curve and achieve remarkable
+            results. Our innovative approach leverages the latest technologies
+            to create robust, user-friendly applications that elevate your
+            brand. We prioritize security and efficiency, ensuring your data is
+            protected while maximizing operational productivity.
+          </p>
         </div>
       </div>
     </div>
+
+    <h1>Our Services</h1>
     <div class="card-container">
       <div *ngFor="let item of developPlatforms">
         <mat-card class="card" style="flex: 1">
@@ -68,8 +79,8 @@
       </div>
     </div>
     <!--    tech icons-->
+    <h1>Our Expertise</h1>
     <div class="tech-icons-wrapper">
-      <h1 style="font-weight: 400">Our Expertise</h1>
       <div class="tech-icons">
         <mat-card class="excard" (click)="navigateTo('')">
           <div class="column">
@@ -175,6 +186,169 @@
           </div>
         </mat-card>
       </div>
+      <mat-card class="excard" (click)="navigateTo('')">
+        <div class="column">
+          <div class="icons">
+            <div class="icon-item" *ngFor="let item of cloudProvidersIcons">
+              <ng-container *ngIf="item.tag.length > 0; else noTooltip">
+                <div
+                  matTooltip="{{ item.title }} Products"
+                  [matTooltipPosition]="'above'"
+                  (click)="navigateTo(item.tag)"
+                >
+                  <img [src]="item.icon" />
+                </div>
+              </ng-container>
+              <ng-template #noTooltip>
+                <div (click)="navigateTo(item.tag)">
+                  <img [src]="item.icon" />
+                </div>
+              </ng-template>
+
+              <p>{{ item.title }}</p>
+            </div>
+          </div>
+          <h2 class="section-header">Cloud Providers</h2>
+        </div>
+      </mat-card>
+    </div>
+  </section>
+
+  <!-- why choose us -->
+  <section>
+    <div class="wcu-main-container">
+      <div class="why-choose-us-container">
+        <div class="why-choose-us-content">
+          <h2>Why Choose Us</h2>
+          <p>
+            Our team comprises of IT professionals well versed in latest
+            technologies.
+          </p>
+        </div>
+        <div class="grid-container">
+          <div
+            class="grid-content"
+            *ngFor="let item of whychooseus; let i = index"
+            [ngClass]="{ 'left-side': i % 2 === 0, 'right-side': i % 2 !== 0 }"
+            [ngClass]="{ 'row-reverse': (i + 1) % 2 === 0 }"
+          >
+            <div [ngClass]="{ 'even-child': i % 2 === 0 }">
+              <h3 class="title">{{ item.title }}</h3>
+              <p class="grid-desc">{{ item.desc }}</p>
+            </div>
+            <div class="img-wrapper">
+              <img class="grid-image" [src]="item.image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Industries we serve -->
+  <section>
+    <div class="Industry-we-serve-main-container">
+      <h2>Industries We Serve</h2>
+      <div class="iws-container">
+        <div class="iws-content">
+          <img
+            src="/assets/icon/icon/industries icon/Untitled design (4).svg"
+            alt="Wine shop"
+          />
+          <span>Wine Trading Solutions</span>
+        </div>
+        <div class="iws-content">
+          <img 
+            src="/assets/icon/icon/industries icon/hotel management.svg"
+            alt="hotels"
+          />
+          <span>Hotel And Management</span>
+        </div>
+        <div class="iws-content">
+          <img src="/assets/icon/icon/industries icon/finance.svg" alt="bank" />
+          <span>Bank And Finance Solutions</span>
+        </div>
+        <div class="iws-content">
+          <img
+            src="/assets/icon/icon/industries icon/school.svg"
+            alt="school"
+          />
+          <span>School</span>
+        </div>
+        <div class="iws-content">
+          <img
+            src="/assets/icon/icon/industries icon/food delivery.svg"
+            alt="food-delivery"
+          />
+          <span>Food-Delivery</span>
+        </div>
+        <div class="iws-content">
+          <img
+            src="/assets/icon/icon/industries icon/real estate.svg"
+            alt="real-estate"
+          />
+          <span>Real-Estate</span>
+        </div>
+      </div>
+    
+      <div class="iws-sub-content">
+        <img style="width:100%"
+          src="\assets\icon\icon\industries icon\Untitled design (2).svg"
+          alt="industry-image"
+        />
+      </div>
+      <div class="iws-container">
+        <div class="iws-content">
+          <img src="/assets/icon/icon/industries icon/cab.svg" alt="cab" />
+          <span>Cab Services</span>
+        </div>
+        <div class="iws-content">
+          <img src="/assets/icon/icon/industries icon/cafe 2.svg" alt="Cafes" />
+          <span>Cafes & Restaurants</span>
+        </div>
+        <div class="iws-content">
+          <img
+            src="\assets\icon\icon\industries icon\ecommerce.svg "
+            alt="E-commerce"
+          />
+          <span>E-commerce</span>
+        </div>
+        <div class="iws-content">
+          <img
+            src="/assets/icon/icon/industries icon/tour.svg"
+            alt="Tour & Travels"
+          />
+          <span>Tour & Travels</span>
+        </div>
+
+        <div class="iws-content">
+          <img
+            src="/assets/icon/icon/industries icon/hospital.svg"
+            alt="Hospital"
+          />
+          <span>Hospital</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="question-main-container">
+    <div class="question-container">
+      <h2>
+        Common few queries are answered here related to website design and
+        development
+      </h2>
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let item of question">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ item.ques }}
+              <!-- Question displayed in the header -->
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>{{ item.ans }}</p>
+          <!-- Answer displayed when expanded -->
+        </mat-expansion-panel>
+      </mat-accordion>
     </div>
   </section>
 
