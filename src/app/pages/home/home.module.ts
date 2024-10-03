@@ -6,7 +6,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { MatExpansionModule } from '@angular/material/expansion';
-
+import { VideoModalComponent } from 'src/app/video-modal/video-modal.component';
 const routes: Routes = [
   {
     path: '',
@@ -21,6 +21,7 @@ const routes: Routes = [
     MatTooltipModule,
     CdkAccordionModule,
     MatExpansionModule,
+    VideoModalComponent
   ],
   declarations: [HomeComponent],
 })

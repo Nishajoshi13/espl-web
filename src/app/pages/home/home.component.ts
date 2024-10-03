@@ -1,14 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { Router } from '@angular/router';
-
+import { Router } from '@angular/router'
+import { MatDialog } from '@angular/material/dialog';
+import { VideoModalComponent } from 'src/app/video-modal/video-modal.component';
 
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private router: Router) {}
+
+
+  constructor(private router: Router ,private dialog:MatDialog) {}
+
+  openVideoModal(videoCode:string) {
+     const  videoUrl = 'https://www.youtube.com/embed/BMxD6hwMfWk?autoplay=1&mute=1';
+    this.dialog.open(VideoModalComponent, {
+      data: { videoUrl: videoUrl },
+      width: '800px', 
+      height: '450px', 
+    });
+
+  }
+ 
 
   navigateTo(route: string) {
     this.router.navigate(['/portfolio'], { fragment: route });
@@ -34,12 +48,12 @@ export class HomeComponent implements OnInit {
     {
       img: "/assets/icon/icon/our services 48x48/Frontend.png",
       title: 'Frontend Devlopment',
-      desc: ` Creates the user interface and experience of websites or apps using HTML, CSS, and JavaScript.`,
+      desc: `Creates user interfaces for websites and apps with HTML, CSS, and JavaScript.`,
     },
     {
       img: '/assets/icon/icon/our services 48x48/Backend.png',
       title: 'Backend Devlopment',
-      desc: ` Manages server-side logic, databases, and core functions using languages like  Node.js.`,
+      desc: `Manages server-side logic, databases, and core functions using languages like  Node.js.`,
     },
     {
       img: '/assets/icon/icon/our services 48x48/api.png',
@@ -49,12 +63,12 @@ export class HomeComponent implements OnInit {
     {
       img: '/assets/icon/icon/our services original size/mobile.svg',
       title: 'Mobile App Devlopment',
-      desc: `Create, impress & lead. Our mobile app services excel, helping you stand out and succeed.`,
+      desc: `Our mobile app services excel, helping you stand out and succeed.`,
     },
     {
       img: '/assets/icon/icon/our services 48x48/hire resource from us.png',
       title: 'Hire a dedicate resource',
-      desc: `Work with us to shape a professional offshore team. Together, we'll bring your dream project to existence.`,
+      desc: `Build a professional offshore team with us to realize your dream project.`,
     },
     {
       img: '/assets/icon/icon/our services 48x48/wordpress.png',
@@ -63,18 +77,18 @@ export class HomeComponent implements OnInit {
     },
     {
       img: '/assets/icon/icon/our services original size/magento.png',
-      title: 'Magento CMS Devlopment Services',
-      desc: `  Builds and customizes eCommerce stores using Magento for efficient management and scalability.`,
+      title: 'Magento Devlopment Services',
+      desc: `Customizes eCommerce stores for efficiency and scalability.`,
     },
     {
       img: '/assets/icon/icon/our services 48x48/ai.png',
       title: 'AI/ML',
-      desc: `Develops intelligent systems using Artificial Intelligence and Machine Learning to automate tasks, analyze data, and provide insights.`,
+      desc: 'Creates systems to automate tasks and analyze data with AI and Machine Learning.',
     },
     {
       img: '/assets/icon/icon/our services 48x48/Q-A.png',
       title: 'Q/A Testing',
-      desc: ` Ensures software quality by identifying and fixing bugs through systematic testing processes.`,
+      desc: `Ensures software quality by identifying and fixing bugs through systematic testing.`,
     },
   ];
 

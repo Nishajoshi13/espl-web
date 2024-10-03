@@ -19,14 +19,6 @@ section {
   display: inline-block;
   position: relative;
 }
-.transparent-btn {
-  border: 1px solid !important;
-  background-color: #1a214d;
-  height: 50px;
-  width: 200px;
-  position: relative;
-  overflow: hidden;
-}
 .heading {
   position: relative;
 }
@@ -40,17 +32,53 @@ section {
   position: absolute; 
   opacity:1;
   visibility: visible;
-  animation: move 1.3s linear forwards;
+  animation: move 2s linear forwards;
   
 }
+.transparent-btn {
+  border: 1px solid !important;
+  background: linear-gradient(325deg, #152c8b, #a31b16);
+  height: 50px;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s; /* Added to ensure smooth transition */
+}
+.transparent-btn:hover {
+transform: scale(1.1);
+transition-property: transform;
+transition-duration: 0.3s;
+}
 
+.transparent-btn::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.4);
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%; 
+  transform: skew(45deg);
+  transition: left 0.5s ease-in-out;
+}
+.transparent-btn:hover::before {
+  left: 113%; 
+}
+
+.transparent-btn::before {
+  transition: left 0.5s ease-in-out;
+}
 @keyframes move {
   0% {
     left: -0%;
     opacity: 1;
   }
   100% {
-    left: 74%;
+    left: 75%;
+    opacity: 1;
+  }
+  100% {
+    left: 85%;
     opacity: 1;
   }
   100% {
@@ -58,14 +86,6 @@ section {
     opacity: 0; /* Fade out instantly at the end of the movement */
     visibility: hidden; /* Make it hidden immediately */
 }
-}
-.transparent-btn:hover {
-  transform: translateY(+25%);
-  --transition-duration: 500ms;
-  --transition-easing: ease-out;
-  color: var(--foreground-color);
-  transition: transform var(--transition-duration) var(--transition-easing);
-  overflow: hidden;
 }
 .main-container {
   h1 {
@@ -244,12 +264,11 @@ mat-card-content {
 .what-we-do,
 .tech-icons-wrapper {
   h1 {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 35px;
     line-height: 1.1em;
     padding-right: 0;
     padding-bottom: 0;
-    // border-left: 2px solid #bb3624;
     width: fit-content;
     margin-bottom: 24px;
     padding-left: 10px;
@@ -263,6 +282,25 @@ mat-card-content {
 }
 .who-we-are p {
   font-size: 17px;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 25.25%;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mask-youtube.video-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer; 
 }
 .contact-us-banner {
   padding: 0;
@@ -286,16 +324,19 @@ mat-card-content {
   flex: 1 1 300px;
   margin: 10px;
   max-width: 270px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   border-radius: 15px;
   box-shadow: 0 4px 6px -1px #e1e7ef, 0 2px 4px -2px #e1e7ef;
   transition: 0.3s;
+  transition: background-color 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-5px) scale(1.005) translateZ(0);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: #f5f5f5; 
 }
 .excard {
   cursor: pointer;
@@ -331,7 +372,23 @@ mat-card-title {
 mat-card-content {
   font-size: 0.9em;
   margin-bottom: 15px;
+  animation-name: fadeInDown; /* Apply the animation */
+  animation-duration: 2s; /* Duration of the animation */
+  animation-fill-mode: forwards; /* Retain the final state of the animation */
+  
 }
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Move up */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
 button {
   margin-top: 10px;
 }

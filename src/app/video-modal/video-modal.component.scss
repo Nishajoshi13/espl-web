@@ -1,0 +1,44 @@
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-container {
+    position: relative;
+    display: flex; // If modal content requires flex, this can stay
+    flex-direction: column; // Optional: Controls layout direction for modal content
+  }
+  
+  .close-icon {
+    position: absolute;
+    top: 10px; // Adjust to position it at the desired height
+    right: 10px; // Adjust to position it at the desired width
+    z-index: 10; // Ensure it appears above other content
+    background: transparent; // Optional: Make sure the button background is transparent
+  }
+  .modal-container {
+  position: relative; /* Ensure that absolute positioning works correctly */
+}
+.video-content {
+  padding: 0; /* Remove padding to ensure full use of space */
+}
+
+.embed-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+}
+
+.embed-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+  
+  
+
+  
