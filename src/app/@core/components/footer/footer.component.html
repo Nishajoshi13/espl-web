@@ -1,51 +1,9 @@
-<!-- <section> -->
- <!-- <div class="carousel-container">
-  <div class="carousel-wrapper" [style.transform]="'translateX(' + translateX + 'px)'">
-    <div class="carousel-item" *ngFor="let item of items">
-      <img style="height:70px;width:90px" [src]="item.image" [alt]="item.alt" />
-    </div>
-  </div>
-</div> -->
-<!-- <section>
-  <div class="carousel-container">
-    <div *ngFor="let item of items; let i = index" class="carousel-item" [ngClass]="{ 'active': currentIndex === i }">
-      <img style="height:70px;width:90px" [src]="item.image" [alt]="item.alt" />
-    </div>
-  </div>
-</section> -->
-
-  <!-- </section> -->
-  <!-- <section>
-    <div class="carousel-container">
-      <div class="carousel-wrapper">
-        <div class="carousel-item" *ngFor="let item of items; let i = index" [ngClass]="{ 'active': currentIndex === i }">
-          <img style="height:70px;width:90px" [src]="item.image" [alt]="item.alt" />
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <section>
-    <div class="carousel-container">
-      <div class="carousel-wrapper">
-        <div class="carousel-item" *ngFor="let item of items">
-          <img style="height:80px;width:200px"[src]="item.image" [alt]="item.alt" />
-        </div>
-        <!-- Duplicate items to create the infinite effect -->
-        <div class="carousel-item" *ngFor="let item of items">
-          <img style="height:80px;width:200px" [src]="item.image" [alt]="item.alt" />
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  
-   
 <footer>
   <div class="flex-space-between main-container">
     <div>
-      <div>We Entangle With You</div>
+      <div><h2>We Entangle With You</h2></div>
       <div class="ft-desc">
-        Develop your business with our software solutions.
+        <p> Develop your business with our software solutions.</p>
       </div>
       <div class="social-btns-wrapper">
         <a
@@ -72,7 +30,7 @@
 
     <div class="ft-nav-wrapper">
       <div *ngFor="let item of navItems">
-        <a
+        <a   style="font-size:19px; color: #ffffff;"
           [routerLink]="[item.url]"
           [routerLinkActive]="'active'"
           [routerLinkActiveOptions]="{ exact: true }"
@@ -103,41 +61,9 @@
           </ng-container>
         </div>
       </div>
-      <div  >
-      <div
-      class="clutch-widget"style=" width:270px;"
-      data-url="https://widget.clutch.co"
-      data-widget-type="7"
-      data-height="65"
-      data-nofollow="true"
-      data-expandifr="true"
-      data-clutchcompany-id="2415738"
-    ></div>
-    <div 
-      class="goodfirm-widget"
-      data-widget-type="goodfirms-widget-t4"
-      data-widget-pattern="simple-basic"
-      data-height="120"
-      data-company-id="158764"
-      
-    ></div>
-  
-    <div>
-      <a
-        target="_blank"
-        href="https://www.topdevelopers.co/directory/ecommerce-developers"
-        ><img
-          src="https://www.topdevelopers.co/assets/badges/app-2024/Ecommerce/badge-top-ecommerce-developers-2024.png"
-          alt="eCommerce Development Companies"
-          title="eCommerce Development Companies"
-          style="height: 80px; width: 75px"
-      /></a>
     </div>
   </div>
-    </div>
-    
-  </div>
- 
+
   <div class="ft-bottom main-container">
     <div>
       Copyright© 2024. <span class="blue-text"> Entangle </span> All rights

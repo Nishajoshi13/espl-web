@@ -1,0 +1,30 @@
+<div class="carousel-container">
+    <div class="carousel-wrapper">
+      <div class="carousel-item" *ngFor="let item of repeatedItems">
+        <div *ngIf="item.type === 'clutch'" class="clutch-widget"
+             [attr.data-url]="item.content.url"
+             [attr.data-widget-type]="item.content.widgetType"
+             [attr.data-height]="item.content.height"
+             [attr.data-nofollow]="true"
+             [attr.data-expandifr]="true"
+             [attr.data-clutchcompany-id]="item.content.companyId"
+             [style.width]="item.content.width"></div>
+  
+        <div *ngIf="item.type === 'goodfirm'" class="goodfirm-widget"
+             [attr.data-widget-type]="item.content.widgetType"
+             [attr.data-widget-pattern]="item.content.pattern"
+             [attr.data-height]="item.content.height"
+             [attr.data-company-id]="item.content.companyId"></div>
+  
+        <div *ngIf="item.type === 'topdevelopers'">
+          <a [href]="item.content.link" target="_blank">
+            <img [src]="item.content.imgSrc"
+                 [alt]="item.content.imgAlt"
+                 [title]="item.content.imgTitle"
+                 style="height: 80px; width: 75px" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

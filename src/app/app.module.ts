@@ -4,17 +4,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VideoModalComponent } from './video-modal/video-modal.component';
-// import { VideoModalService } from './video-modal.service';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import {  MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,
+  
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     VideoModalComponent,
-    MatDialogModule
+    MatDialogModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,25 @@
+.carousel-container {
+    overflow: hidden;
+    width: 100%; /* Adjust as needed */
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    animation: scroll-left 3s linear infinite;
+  }
+  
+  .carousel-item {
+    margin-right:85px;
+    min-width: 300px;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Move by half the total width of the items */
+    }
+  }
+  

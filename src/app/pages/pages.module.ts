@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { SharedModule } from '@core/shared.module';
 import { PagesComponent } from './pages.component';
+import { WidgetCarouselComponent } from '../widget-carousel/widget-carousel.component';
 
 const routes: Routes = [
   {
@@ -114,6 +115,7 @@ const routerOptions: ExtraOptions = {
 };
 @NgModule({
   imports: [SharedModule, RouterModule.forChild(routes)],
-  declarations: [PagesComponent],
+  declarations: [PagesComponent, WidgetCarouselComponent],
+  exports: [],
 })
 export class PagesModule {}

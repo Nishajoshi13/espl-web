@@ -1,5 +1,6 @@
 import { Component, OnInit ,} from '@angular/core';
 import { interval } from 'rxjs';
+import { WidgetCarouselComponent } from 'src/app/widget-carousel/widget-carousel.component';
 
 @Component({
   selector: 'app-footer',
@@ -8,19 +9,8 @@ import { interval } from 'rxjs';
 })
 export class FooterComponent implements OnInit {
   currentIndex = 0;
-  // translateX = 0;
   previousIndex = 0;
   interval:any;
-  items= [
-   { image:'/assets/images/tech-icons/angular2.png',alt: 'Image 1'},
-    {image:'/assets/images/tech-icons/sql-server.png',alt: 'Image 2'},
-    {image:'/assets/images/tech-icons/text.webp',alt: 'Image 3'},
-    {image:'/assets/images/tech-icons/wordpress.png',alt: 'Image 4'},
-    {image:'/assets/images/tech-icons/sql-server.png',alt: 'Image 5'},
-    {image:'/assets/images/tech-icons/text.webp',alt: 'Image 6'},
-    {image:'/assets/images/tech-icons/angular2.png',alt: 'Image 7'},
-    {image:'/assets/images/tech-icons/wordpress.png',alt: 'Image 8'},
-  ];
   navItems = [
     {
       title: 'Services',
@@ -73,27 +63,8 @@ export class FooterComponent implements OnInit {
  
   
   ngOnInit(): void {
-    this.startCarousel();
  }
-//  startCarousel() {
-  // this.interval=setInterval(() => {
-  //   this.currentIndex = (this.currentIndex + 1) % this.items.length;
-  //   this.translateX = -this.currentIndex * 100; // Move the carousel
-  // }, 300); // Change slide every 3 seconds
-//  }
 
-// startCarousel() {
-//   this.interval = setInterval(() => {
-//     this.currentIndex = (this.currentIndex + 1) % this.items.length;
-//   }, 3000); // Change every 3 seconds
-// }
-
-startCarousel() {
-  this.interval = setInterval(() => {
-    this.previousIndex = this.currentIndex;
-    this.currentIndex = (this.currentIndex + 1) % this.items.length;
-  }, 3000); // Change every 3 seconds
-}
  }
 
 

@@ -1,108 +1,33 @@
-// .carousel-container {
-//   overflow: hidden;
-//   width: 100%;
-//   position: relative;
-// }
-
-// .carousel-wrapper {
-//   display: flex;
-//   transition: transform 0.5s ease;
-//   animation: scroll 10s linear infinite;
-//   // animation:loop-scroll 10s linear infinite; 
-//   height:90px;
-// }
-// @keyframes scroll {
-//   0% {
-//     transform: translateX(0); /* Start position */
-//   }
-//   100% {
-//     transform: translateX(-50%); /* Move to show half of the duplicated items */
-//   }
-// }
-// .carousel-item {
-//   min-width: 20%;
-//   box-sizing: border-box;
-// }
-// 
-// .carousel-container {
-//   position: relative;
-//   width: 100%; /* Full width of the container */
-//   height: 90px; /* Set height based on image height */
-//   overflow: hidden;
-// }
-
-// .carousel-item {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   opacity: 0;
-//   transition: opacity 1s ease-in-out; /* Smooth fade transition */
-// }
-
-// .carousel-item.active {
-//   opacity: 1; /* The active item will be fully visible */
-// }
-// 
-.carousel-container {
-  overflow: hidden; /* Hide overflow to prevent items from showing outside the container */
-  position: relative;
-}
-
-.carousel-wrapper {
-  display: flex;
-  animation: scroll 30s linear infinite; /* Smooth, continuous animation */
-  // width: calc(200%); /* Twice the width to accommodate the duplicated items */
-}
-
-.carousel-item {
-  flex: 0 0 auto; /* Prevent shrinking or growing */
-  width: 20%; /* Adjust based on the number of items you want visible */
-  box-sizing: border-box;
-}
-
-.carousel-item img {
-  width: 100%; /* Ensure the image fills the carousel item */
-  height: 150px; /* Adjust height to match the container */
-  object-fit: cover; /* Keep image aspect ratio */
-}
-
-/* Keyframe for smooth scrolling */
-@keyframes scroll {
-  0% {
-    transform: translateX(0); /* Start from the beginning */
-  }
-  100% {
-    transform: translateX(-100%); /* Move to the left by 100% */
-  }
-}
-
 footer {
-  background:#1a214d;
+  background: #1a214d;
   color: #fff;
   padding: 24px;
   padding-bottom: 16px;
   letter-spacing: 1px;
 }
+
 .main-container {
   padding: 14px;
   margin-top: 0;
   align-items: baseline;
-  max-width: 1280px;
+  h2{
+ font-size: 24px;
+ font-weight: 400;
+  }
+  p{
+      font-weight: 400;
+      font-size: 13px;
 }
-
 .main-logo {
   height: 50px;
   width: 150px;
 }
-
 .ft-desc {
   font-size: 12px;
   font-weight: 300;
   width: 200px;
   margin-top: 10px;
 }
-
 .social-btns-wrapper {
   gap: 10px;
   display: flex;
@@ -113,36 +38,32 @@ footer {
   }
 }
 .ft-nav-wrapper {
-  // width: 60%;
   display: flex;
- grid-gap:20px;
+  grid-gap: 25px;
   a {
-    color: #a1b0be;
-    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 14px;
   }
 }
-
 .ft-bottom {
   padding-bottom: 0;
   font-size: 12px;
   font-weight: 100;
 }
-
 .blue-text {
   color: cornflowerblue !important;
 }
-
 .location {
   margin-top: 20px;
   > div {
     margin-bottom: 6px;
   }
   p {
-    font-size: 12px;
-    font-weight: 200;
+    font-size: 13px;
+    font-weight: 400;
   }
 }
-
 .ft-nav-subpoints {
   margin-top: 8px;
   a,
@@ -170,4 +91,5 @@ footer {
       margin-bottom: 10px;
     }
   }
+}
 }
