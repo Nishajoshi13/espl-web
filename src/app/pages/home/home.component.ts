@@ -103,7 +103,7 @@ export class HomeComponent implements OnInit {
       tag: 'wordpress',
     },
     { icon: `${this.techIconsUrl}/shopify.svg`, title: 'Shopify', tag: '' },
-    { icon: `${this.techIconsUrl}/.net.png`, title: '.net', tag: '' },
+    { icon: `${this.techIconsUrl}/dotnet.png`, title: '.net', tag: '' },
     { icon: `${this.techIconsUrl}/Python.png`, title: 'Python', tag: '' },
   ];
   frontendIcons = [
