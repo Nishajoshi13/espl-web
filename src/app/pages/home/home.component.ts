@@ -117,7 +117,7 @@ export class HomeComponent implements OnInit {
     { icon: `${this.techIconsUrl}/html.svg`, title: 'Html', tag: '' },
     { icon: `${this.techIconsUrl}/css2.svg`, title: 'CSS', tag: '' },
     { icon: `${this.techIconsUrl}/sass.svg`, title: 'Scss', tag: '' },
-    { icon: `${this.techIconsUrl}/Bootstrap.png`, title: 'BootStrap', tag: '' },
+    { icon: `${this.techIconsUrl}/bootstrap.svg`, title: 'BootStrap', tag: '' },
     { icon: `${this.techIconsUrl}/swift.png`, title: 'Swift', tag: '' },
   ];
   devopsIcons = [
@@ -127,7 +127,7 @@ export class HomeComponent implements OnInit {
       title: 'Kubernetes',
       tag: '',
     },
-    { icon: `${this.techIconsUrl}/openshift.png`, title: 'Open shift', tag: '' },
+    { icon: `${this.techIconsUrl}/open.svg`, title: 'Open shift', tag: '' },
     
   ];
   databaseIcons = [
@@ -137,7 +137,7 @@ export class HomeComponent implements OnInit {
    
   ];
   cloudProvidersIcons = [
-    { icon: `${this.techIconsUrl}/Aws.png`, title: 'AWS', tag: '' },
+    { icon: `${this.techIconsUrl}/aws.png`, title: 'AWS', tag: '' },
     { icon: `${this.techIconsUrl}/gcp.png`, title: 'Gcp', tag: '' },
     
   ];
