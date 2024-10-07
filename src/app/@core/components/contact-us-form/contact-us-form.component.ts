@@ -86,7 +86,8 @@ export class ContactUsFormComponent implements OnInit {
 
     const $serviceKey = 'service_ai7j4rw';
     const $templateKey = 'template_ovw9s7e';
-
+      
+    console.log($serviceKey)
     emailjs.send($serviceKey, $templateKey, this.form.value, $options).then(
       () => {
         this.processing = false;

@@ -103,9 +103,10 @@ export class ContactBoxComponent {
 
     const $serviceKey = 'service_ai7j4rw';
     const $templateKey = 'template_ovw9s7e';
-
+    console.log($serviceKey)
     emailjs.send($serviceKey, $templateKey, form, $options).then(
       () => {
+       
         Swal.fire({
           title: 'Thanks for your interest!',
           text: 'We will contact you soon.',
