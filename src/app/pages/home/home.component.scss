@@ -531,7 +531,7 @@ button {
           background 3s infinite alternate ease-in-out;
         width: 86px;
         height: 86px;
-        background: linear-gradient(284deg, #1a214d, #bb3624);
+        background: linear-gradient(227deg, #1a214d, #bb3624);
         background-size: 400% 400%;
         position: relative;
         overflow: hidden;
@@ -715,6 +715,7 @@ button {
   mat-panel-title {
     border-bottom: 1px solid #252525;
     font-family: Gilroy-Medium;
+    line-height: 1;
   }
   mat-expansion-panel{
     padding-top: 10px;
