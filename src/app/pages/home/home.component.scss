@@ -19,9 +19,7 @@ section {
   display: inline-block;
   position: relative;
 }
-.heading {
-  position: relative;
-}
+
 .heading::before {
   content: "";
   background: rgba(255, 255, 255, 0.4); 
@@ -35,9 +33,17 @@ section {
   animation: move 2s linear forwards;
   
 }
+@media(max-width:770px){
+  .heading::before {
+    content: "";
+    width: 10%; 
+    height: 36%;
+    top: 10%; 
+  }
+}
 .transparent-btn {
   border: 1px solid !important;
-  background: linear-gradient(325deg, #152c8b, #a31b16);
+  background: linear-gradient(2845deg, #1a214d,  #bb3624);
   height: 50px;
   width: 200px;
   position: relative;
@@ -167,6 +173,11 @@ transition-duration: 0.3s;
   margin: auto 10px;
 }
 @media screen and (max-width: 960px) {
+  .icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .tech-icons {
     flex-direction: column;
   }
@@ -194,7 +205,7 @@ transition-duration: 0.3s;
     font-size: 18px;
     letter-spacing: normal;
     color: rgba(48, 49, 51, 0.9);
-    font-weight: 500;
+    font-weight: 400;
     margin: 4px 0 8px;
   }
   > div:last-child {
@@ -232,20 +243,27 @@ mat-card-content {
   }
 }
 @media (min-width: 960px) {
+ 
   .video-container {
-    width: 500px;
+    width:500px;
+    height:100px;
     flex: none;
   }
+}
+@media (max-width: 900px) {
+  .who-we-aremain-container {
+    flex-direction: column;
+  }
+  .video-container{
+    width:100%;
+    height:300px;
+  }
+ 
 }
 .wwd-heading {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (max-width: 960px) {
-  .who-we-aremain-container {
-    flex-direction: column;
-  }
 }
 .wwd-content {
   display: flex;
@@ -333,7 +351,7 @@ mat-card-content {
 }
 
 .card:hover {
-  transform: translateY(-5px) scale(1.005) translateZ(0);
+  // transform: translateY(-5px) scale(1.005) translateZ(0);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     background-color: #f5f5f5; 
@@ -457,7 +475,7 @@ button {
   margin-bottom: 60px;
   h2 {
     padding-top: 52px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 40px;
     line-height: 48px;
   }
@@ -513,7 +531,7 @@ button {
           background 3s infinite alternate ease-in-out;
         width: 86px;
         height: 86px;
-        background: linear-gradient(240deg, #152c8b, #a31b16);
+        background: linear-gradient(284deg, #1a214d, #bb3624);
         background-size: 400% 400%;
         position: relative;
         overflow: hidden;
@@ -592,30 +610,62 @@ button {
     padding-bottom: 56px;
   }
 }
-.iws-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  img {
-    width: 70px;
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 0.3s ease
+@media(min-width:1080px){
+  .iws-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    img {
+      width: 70px;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.3s ease
+    }
+  }
+  .iws-content {
+    transition: transform 0.3s ease; 
+  }
+  .iws-content:hover {
+    transform: scale(1.2);
+  }
+  .iws-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-weight: 400;
+    }
   }
 }
-.iws-content {
-  transition: transform 0.3s ease; 
-}
-.iws-content:hover {
-  transform: scale(1.2);
-}
-.iws-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  span {
-    font-weight: 400;
+@media(max-width:770px){
+  .iws-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    img {
+      width: 35px;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.3s ease
+    }
+  }
+  .iws-content {
+    transition: transform 0.3s ease; 
+  }
+  .iws-content:hover {
+    transform: scale(1.2);
+  }
+  .iws-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    span {
+      font-weight: 400;
+      font-size: 12px;
+    }
   }
 }
 
@@ -666,4 +716,14 @@ button {
     border-bottom: 1px solid #252525;
     font-family: Gilroy-Medium;
   }
+  mat-expansion-panel{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    p {
+      padding-top: 14px;
+      padding-bottom: 8px;
+    }
+  }
 }
+
+

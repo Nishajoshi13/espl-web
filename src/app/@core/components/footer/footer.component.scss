@@ -75,7 +75,8 @@ footer {
     color: #fff;
   }
 }
-@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 770px) {
   .main-container {
     padding: 0;
   }
@@ -91,5 +92,30 @@ footer {
       margin-bottom: 10px;
     }
   }
-}
+  .flex-space-between main-container{
+    display:none;
+  }
+  .location{
+    text-align: center;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ft-nav-wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .social-btns-wrapper {
+    gap: 18px !important;
+    display: flex;
+    margin-top: 14px;
+    img {
+      width: 27px!important;
+      border-radius: 50%;
+    }
+  }
 }

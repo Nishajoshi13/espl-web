@@ -1,9 +1,10 @@
 .background {
-  background-image: url('/assets/images/general/popup.avif');
+  // background-image: url('/assets/images/general/popup.avif');
+  // background: linear-gradient(105deg, #96a7eb, #ebc0be);
 }
 
 .container {
-  padding: 60px 100px 60px 100px ;
+  // padding: 60px 100px 60px 100px ;
 }
 @media (max-width: 770px) {
   .container{
@@ -16,6 +17,7 @@
   font-weight: 550;
   font-size: 25px;
   text-align: center;
+  padding-top: 10px;
 }
 
 @media (max-width: 770px) {
@@ -50,14 +52,16 @@
   flex:1;
   align-content: center;
   justify-content: center;
+  background: linear-gradient(284deg, #1a214d, #bb3624)!important;
+  color:white;
 }
 
 .cross {
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
   padding: 20px 20px 0 0;
 }
-
 @media (max-width:770px) {
   .cross{
     padding:15px 15px 0 0;
@@ -66,3 +70,4 @@
 .top {
   display: flex;
 }
+

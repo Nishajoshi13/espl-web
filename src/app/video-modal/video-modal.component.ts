@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [CommonModule, MatDialogModule, MatIconModule],
   templateUrl: './video-modal.component.html',
-  styleUrls: ['./video-modal.component.scss'], // Corrected to `styleUrls` instead of `styleUrl`
+  styleUrls: ['./video-modal.component.scss'], 
 })
 export class VideoModalComponent {
   videoUrl: SafeResourceUrl;
@@ -24,6 +24,7 @@ export class VideoModalComponent {
   }
 
   close() {
-    this.dialogRef.close(); // Corrected to `this.dialogRef.close()`
+    this.dialogRef.close(); 
   }
+  
 }

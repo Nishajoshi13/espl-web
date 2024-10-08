@@ -19,6 +19,7 @@ import Swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { merge } from 'rxjs';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   standalone: true,
@@ -51,7 +52,7 @@ export class ContactBoxComponent {
   connectButton: boolean = false;
   mailError = '';
   nameError = '';
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private dialogRef: MatDialogRef<ContactBoxComponent>) {
     merge(this.email.statusChanges, this.email.valueChanges)
       .pipe(takeUntilDestroyed())
       .subscribe(() => this.updateMailError());
@@ -82,9 +83,13 @@ export class ContactBoxComponent {
   isFormValid(): boolean {
     return this.firstName.valid && this.email.valid;
   }
-
   sendEmail(e: Event) {
     e.preventDefault();
+    if (!this.isFormValid()) {
+      console.log('Form is invalid, submission prevented.');
+      this.firstName && this.email.markAllAsTouched();
+      return;
+    }
     const $options = {
       publicKey: environment.emailJsPublicKey,
       blockHeadless: true,
@@ -112,7 +117,12 @@ export class ContactBoxComponent {
           text: 'We will contact you soon.',
           icon: 'success',
           confirmButtonColor: '#1483f8',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            this.closeDialog(); 
+          }
         });
+      
         this.email.reset('');
         this.firstName.reset('');
       },
@@ -129,5 +139,8 @@ export class ContactBoxComponent {
         this.firstName.reset('');
       }
     );
+  }
+  closeDialog(): void {
+    this.dialogRef.close(); // Closes the dialog
   }
 }
