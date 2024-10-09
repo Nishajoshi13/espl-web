@@ -1,6 +1,6 @@
 <div class="carousel-container">
     <div class="carousel-wrapper">
-      <div class="carousel-item" *ngFor="let item of repeatedItems">
+      <div class="carousel-item" *ngFor="let item of items">
         <div *ngIf="item.type === 'clutch'" class="clutch-widget"
              [attr.data-url]="item.content.url"
              [attr.data-widget-type]="item.content.widgetType"
@@ -8,7 +8,7 @@
              [attr.data-nofollow]="true"
              [attr.data-expandifr]="true"
              [attr.data-clutchcompany-id]="item.content.companyId"
-             [style.width]="item.content.width"></div>
+            ></div>
   
         <div *ngIf="item.type === 'goodfirm'" class="goodfirm-widget"
              [attr.data-widget-type]="item.content.widgetType"

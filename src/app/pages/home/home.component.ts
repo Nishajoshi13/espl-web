@@ -119,6 +119,8 @@ export class HomeComponent implements OnInit {
     { icon: `${this.techIconsUrl}/sass.svg`, title: 'Scss', tag: '' },
     { icon: `${this.techIconsUrl}/bootstrap.svg`, title: 'BootStrap', tag: '' },
     { icon: `${this.techIconsUrl}/swift.png`, title: 'Swift', tag: '' },
+    { icon: `${this.techIconsUrl}/hybrid.png`, title: 'Hybrid', tag: '' },
+    { icon: `${this.techIconsUrl}/capacitor.jpg`, title: 'Capacitor', tag: '' },
   ];
   devopsIcons = [
     { icon: `${this.techIconsUrl}/docker.svg`, title: 'Docker', tag: '' },

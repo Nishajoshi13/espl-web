@@ -7,8 +7,17 @@ export const environment = {
   apiBaseUrl: 'https://entanglesoftware.com/api',
   emailJsPublicKey: 'y3kLYt5hqOwZvoUBg',
   emailServiceId: 'service_ai7j4rw',
+  firebaseConfig : {
+  apiKey: "AIzaSyAIdoanfbMKUNyVye-Br6lMuaAKKMZ4iLY",
+  authDomain: "espl-website-3b854.firebaseapp.com",
+  databaseURL: "https://espl-website-3b854-default-rtdb.firebaseio.com",
+  projectId: "espl-website-3b854",
+  storageBucket: "espl-website-3b854.appspot.com",
+  messagingSenderId: "539993972584",
+  appId: "1:539993972584:web:9ac2170c8d9106528580dd",
+  measurementId: "G-HXTJCFDX8K"
+}
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

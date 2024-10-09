@@ -34,6 +34,11 @@
         }
       </mat-form-field>
     </div>
+    <label>
+      <input type="checkbox" [formControl]="preference" name="preference" />
+      Save Preference
+    </label>
+    <p>{{message}}</p>
     <div class="outer-container">
       <div class="button-container">
         <button  

@@ -7,14 +7,11 @@ import { Component, OnInit,AfterViewInit,ElementRef, ViewChild  } from '@angular
 })
 export class WidgetCarouselComponent implements OnInit {
  ngOnInit(): void {}
-
-
-
    items = [
      {
        type: 'clutch',
        content: {
-         width: '270px',
+        //  width: '270px',
          url: 'https://widget.clutch.co',
          widgetType: '7',
          height: '65',
@@ -40,9 +37,7 @@ export class WidgetCarouselComponent implements OnInit {
        }
      }
    ];
- 
-   // Double the items for a continuous effect
-   repeatedItems = [...this.items, ...this.items];
+  //  repeatedItems = [...this.items, ...this.items];
  }
  
   

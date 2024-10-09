@@ -7,7 +7,7 @@
           <label>First Name<span>*</span></label>
           <mat-form-field appearance="outline">
             <input matInput [formControl]="firstName" />
-            <mat-error *ngIf="message.invalid">{{
+            <mat-error *ngIf="firstName.hasError('required')">{{
               "This field is required"
             }}</mat-error>
           </mat-form-field>
@@ -22,7 +22,7 @@
           <label>Email Address<span>*</span></label>
           <mat-form-field appearance="outline">
             <input matInput [formControl]="email" />
-            <mat-error *ngIf="email.invalid">{{
+            <mat-error *ngIf="email.invalid && email.touched">{{
               "Please enter valid email"
             }}</mat-error>
           </mat-form-field>
@@ -31,7 +31,7 @@
           <label>Contact No<span>*</span></label>
           <mat-form-field appearance="outline">
             <input matInput [formControl]="contactNo" />
-            <mat-error *ngIf="contactNo.invalid">{{
+            <mat-error *ngIf="contactNo.invalid && contactNo.touched">{{
               "Please enter valid phone number"
             }}</mat-error>
           </mat-form-field>
@@ -42,7 +42,7 @@
             <mat-form-field appearance="outline">
               <textarea matInput placeholder="Comment" [formControl]="message">
               </textarea>
-              <mat-error *ngIf="message.invalid">{{
+              <mat-error *ngIf="message.invalid && message.touched">{{
                 "This field is required"
               }}</mat-error>
             </mat-form-field>
@@ -50,10 +50,10 @@
         </div>
         <button
           mat-raised-button
-          [color]="'primary'"
+           class="button"
           (click)="sendEmail($event)"
           class="blue-btn"
-          [disabled]="form.invalid || processing"
+         
         >
           Send
         </button>

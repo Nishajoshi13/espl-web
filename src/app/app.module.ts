@@ -5,7 +5,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VideoModalComponent } from './video-modal/video-modal.component';
 import {  MatDialogModule } from '@angular/material/dialog';
-
+import { AngularFireModule } from '@angular/fire/compat'; // Import compatibility module
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AppComponent,
@@ -17,7 +19,8 @@ import {  MatDialogModule } from '@angular/material/dialog';
     BrowserAnimationsModule,
     VideoModalComponent,
     MatDialogModule,
-  
+    AngularFireModule.initializeApp(environment.firebaseConfig), // Initialize Firebase
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

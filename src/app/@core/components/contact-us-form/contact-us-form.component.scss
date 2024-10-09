@@ -60,7 +60,7 @@
   h2 {
     text-align: center;
     font-weight: 500;
-    margin-bottom: 42px;
+    margin-bottom: 10px;
   }
   .form-row {
     gap: 6%;
@@ -118,4 +118,33 @@
     }
   }
 }
+// .mat-mdc-form-field-subscript-wrapper {
+//   min-height: 0; /* Reduce any potential minimum height */
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .mat-mdc-form-field-hint-wrapper {
+//   display: none; /* Hide the hint-wrapper when empty */
+// }
+
+// .mat-mdc-form-field-hint-wrapper.ng-star-inserted {
+//   display: block; /* Only show when inserted (when there is content) */
+// }
+
+// .mat-mdc-form-field-hint-spacer {
+//   display: none; /* Hide the hint-spacer if not used */
+// }
+.mat-mdc-raised-button:not(:disabled) {
+ 
+    font-weight: 500;
+    font-size:18px;
+    flex:1;
+    align-content: center;
+    justify-content: center;
+    background: linear-gradient(284deg, #1a214d, #bb3624)!important;
+    color:white;
+  }
+
+
 

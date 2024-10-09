@@ -20,6 +20,8 @@ import { HttpClient } from '@angular/common/http';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { merge } from 'rxjs';
 import { MatDialogRef } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { PreferenceService } from 'src/app/preference.service';
 
 @Component({
   standalone: true,
@@ -31,6 +33,7 @@ import { MatDialogRef } from '@angular/material/dialog';
     MatButtonModule,
     MatDialogClose,
     MatIconModule,
+    FormsModule,
   ],
   templateUrl: './contact-box.component.html',
   styleUrl: './contact-box.component.scss',
@@ -44,6 +47,8 @@ import { MatDialogRef } from '@angular/material/dialog';
   ],
 })
 export class ContactBoxComponent {
+  message: string = '';
+  preference = new FormControl(false, Validators.requiredTrue);
   email = new FormControl('', [Validators.required, Validators.email]);
   firstName = new FormControl('', [
     Validators.required,
@@ -52,7 +57,11 @@ export class ContactBoxComponent {
   connectButton: boolean = false;
   mailError = '';
   nameError = '';
-  constructor(private http: HttpClient, private dialogRef: MatDialogRef<ContactBoxComponent>) {
+  constructor(
+    private http: HttpClient,
+    private dialogRef: MatDialogRef<ContactBoxComponent>,
+    private pfSvc: PreferenceService
+  ) {
     merge(this.email.statusChanges, this.email.valueChanges)
       .pipe(takeUntilDestroyed())
       .subscribe(() => this.updateMailError());
@@ -81,15 +90,22 @@ export class ContactBoxComponent {
   }
 
   isFormValid(): boolean {
-    return this.firstName.valid && this.email.valid;
+    return this.firstName.valid && this.email.valid && this.preference.valid;
   }
   sendEmail(e: Event) {
     e.preventDefault();
     if (!this.isFormValid()) {
-      console.log('Form is invalid, submission prevented.');
-      this.firstName && this.email.markAllAsTouched();
+      this.message = 'Form is invalid, submission prevented.';
+      this.firstName && this.email && this.preference.markAllAsTouched();
       return;
     }
+    const preference=this.preference.value!;
+    const firstName=this.firstName.value!;
+    const email=this.email.value!;
+    
+
+    this.pfSvc.savePreference(firstName,email,preference)
+    
     const $options = {
       publicKey: environment.emailJsPublicKey,
       blockHeadless: true,
@@ -108,10 +124,9 @@ export class ContactBoxComponent {
 
     const $serviceKey = 'service_ai7j4rw';
     const $templateKey = 'template_ovw9s7e';
-    console.log($serviceKey)
+    console.log($serviceKey);
     emailjs.send($serviceKey, $templateKey, form, $options).then(
       () => {
-       
         Swal.fire({
           title: 'Thanks for your interest!',
           text: 'We will contact you soon.',
@@ -119,10 +134,10 @@ export class ContactBoxComponent {
           confirmButtonColor: '#1483f8',
         }).then((result) => {
           if (result.isConfirmed) {
-            this.closeDialog(); 
+            this.closeDialog();
           }
         });
-      
+
         this.email.reset('');
         this.firstName.reset('');
       },
