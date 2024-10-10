@@ -5,11 +5,11 @@
       <div class="heading">
         <h4 style="font-size: xxx-large">we entangle with you</h4>
         <h3>Develop effective plans to move your customers' behaviour.</h3>
-        <a [routerLink]="['/contact-us']">
-          <button class="transparent-btn">
+        <!-- <a [routerLink]="['/home']" > -->
+          <button (click)="navigateToContact()"class="transparent-btn">
             Get in Touch
           </button>
-        </a>
+        <!-- </a> -->
       </div>
     </div>
   </div>
@@ -261,11 +261,11 @@
             src="/assets/icon/icon/industries icon/hotel management.svg"
             alt="hotels"
           />
-          <span>Hotel And Management</span>
+          <span>Hotel & Management</span>
         </div>
         <div class="iws-content">
           <img src="/assets/icon/icon/industries icon/finance.svg" alt="bank" />
-          <span>Bank And Finance Solutions</span>
+          <span>Bank & Finance<br> Solutions</span>
         </div>
         <div class="iws-content">
           <img
@@ -295,8 +295,10 @@
           src="\assets\icon\icon\industries icon\Untitled design (2).svg"
           alt="industry-image"
         />
+
       </div>
       <div class="iws-container">
+        <div class="content">
         <div class="iws-content">
           <img src="/assets/icon/icon/industries icon/cab.svg" alt="cab" />
           <span>Cab Services</span>
@@ -327,7 +329,11 @@
           />
           <span>Hospital</span>
         </div>
+
       </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -352,7 +358,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="contact-us">
     <div class="contact-us-banner">
       <div class="overlay"></div>
       <app-contact-us-form></app-contact-us-form>

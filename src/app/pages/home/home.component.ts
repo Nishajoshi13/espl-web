@@ -22,6 +22,18 @@ export class HomeComponent implements OnInit {
     });
 
   }
+  navigateToContact() {
+    this.router.navigate(['/home']).then(() => {
+      setTimeout(() => {
+        const element = document.getElementById('contact-us');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' }); 
+        } else {
+          console.error("Element with ID 'contact-us' not found!");
+        }
+      }, 100); 
+    });
+  }
  
 
   navigateTo(route: string) {

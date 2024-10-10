@@ -7,7 +7,7 @@ import { VideoModalComponent } from './video-modal/video-modal.component';
 import {  MatDialogModule } from '@angular/material/dialog';
 import { AngularFireModule } from '@angular/fire/compat'; // Import compatibility module
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent,
