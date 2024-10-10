@@ -18,6 +18,10 @@ section {
 .heading {
   display: inline-block;
   position: relative;
+  h4{
+    font-size:50px;
+    line-height: normal;
+  }
 }
 
 .heading::before {
@@ -33,12 +37,12 @@ section {
   animation: move 2s linear forwards;
   
 }
-@media(max-width:770px){
+@media(max-width:996px){
   .heading::before {
     content: "";
     width: 10%; 
-    height: 36%;
-    top: 10%; 
+    height: 44%;
+    top: 7%; 
   }
 }
 .transparent-btn {
@@ -362,7 +366,7 @@ mat-card-content {
   transition: 0.3s;
   transition: background-color 0.3s ease;
 }
-@media(max-width:770px){
+@media(max-width:996px){
   .card{
     margin:15px;
   }
@@ -472,7 +476,7 @@ button {
     }
   }
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 996px) {
   .contact-us-banner {
     height: unset;
     margin-bottom: 0;
@@ -668,7 +672,7 @@ button {
     }
   }
 }
-@media(max-width:770px){
+@media(max-width:996px){
   .iws-container {
     display: flex;
     justify-content:center;
@@ -762,7 +766,7 @@ button {
     position: relative;
   }
 }
-@media (max-width: 770px) {
+@media (max-width: 996px) {
   .question-container {
     margin: 11px;
     padding-bottom: 20px;
