@@ -22,100 +22,188 @@
 .banner-wrapper {
   margin-bottom: 0px;
 }
-.section-1 {
+.main-container{
   display: flex;
-  justify-content: space-between;
-  :first-child {
-    margin-top: 20px;
-
-    p {
-      width: 64%;
-      margin-top: 8px;
-
-      strong {
-        font-size: 17px;
-      }
-      span {
-        font-size: 14px;
-      }
-    }
-  }
-  img {
-    display: block;
-    width: 40%;
-    margin-top: -40px;
-    z-index: 99;
-  }
-}
-
-.section-2 {
-  display: flex;
-  padding: 25px 0;
-  flex-wrap: wrap;
-  margin-top: 80px;
-  justify-content: space-between;
-  > div {
-    padding: 20px 0;
-    margin-bottom: 30px;
+  margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
     position: relative;
-    width: 45%;
-    h2 {
-      margin-bottom: 20px;
-      font-size: 20px;
-      text-transform: uppercase;
-      padding-left: 25px;
-      border-left: 3px solid #bb3624;
-      margin-top: 15px;
-    }
-
-    p {
-      font-weight: 300;
-      padding-left: 25px;
-    }
-  }
-}
-@media screen and (max-width: 960px) and (min-width: 800px) {
-  .section-1 {
-    :first-child {
-      margin-right: 5px;
-
-      p {
-        width: 92%;
-      }
-    }
-
-    img {
-      width: 50%;
-    }
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .section-1 {
-    display: block;
-    :first-child {
-      margin-right: 0;
-
-      p {
-        width: 100%;
-      }
-    }
-
-    img {
+    img{
+      height:500px!important;
       width: 100%;
-      margin: auto;
-      margin-top: 15px;
+    margin: 20px;
+    } 
+    .heading{
+      font-size: 60px;
+      .main-container{
+        display: flex;
+        margin-right: auto;
+          margin-left: auto;
+          margin-top: 40px;
+          position: relative;
+          img{
+            height:344px!important;
+          } 
+          .heading{
+            font-size: 60px;
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+            -webkit-text-stroke: 1px #a9b5c9;
+            top: -.5em;
+            display: inline-block;
+            line-height: 1;
+            z-index: 1;
+            position: absolute;
+            font-weight: 800;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: .3;
+            white-space: nowrap;
+            padding: 0 0.4em;
+            vertical-align: top;
+            left: 0;
+            right: 0;
+          }
+      }
+      .content{
+        margin:13px;
+        p{
+          margin-top: 1.85em;
+          font-size: 18px;
+          line-height: 1.875em;
+        }
+        ul {
+          list-style: none;
+          counter-reset: my-awesome-counter;
+        }
+        li {
+          font-weight: 400;
+          counter-increment: my-awesome-counter;
+          padding-left: 47px;
+          position: relative;
+      
+          &:before {
+            content: "\2713";
+            width: 28px;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 28px;
+            display: inline-block;
+            text-align: center;
+            background-color:#1a214d;
+            border-radius: 50%;
+            color:#ffffff;
+            left: 0;
+            position: absolute;
+            top: 0;
+          }
+        }
+      }
+      .text{
+        position: absolute;
+      }
+      font-family: Roboto, Arial, Helvetica, sans-serif;
+      -webkit-text-stroke: 1px #a9b5c9;
+      top: -.5em;
+      display: inline-block;
+      line-height: 1;
+      z-index: 1;
+      position: absolute;
+      font-weight: 800;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: .3;
+      white-space: nowrap;
+      padding: 0 0.4em;
+      vertical-align: top;
+      left: 0;
+      right: 0;
     }
+}
+.content{
+  p{
+    margin-top: 1.85em;
+    font-size: 18px;
+    line-height: 1.875em;
   }
-  .section-2 {
-    margin-top: 0;
+  ul {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+  }
+  li {
+    font-weight: 400;
+    counter-increment: my-awesome-counter;
+    padding-left: 47px;
+    position: relative;
+
+    &:before {
+      content: "\2713";
+      width: 28px;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 28px;
+      display: inline-block;
+      text-align: center;
+      background-color: hsla(0deg 3.2% 46.54% / 20%);
+      border-radius: 50%;
+      color:#1a214d;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
   }
 }
+.text{
+  position: relative;
+}
+// .transparent-btn {
+// //   position: relative; /* The parent element must have position relative for absolute positioning to work */
+// //   z-index: 1; /* Ensure the main content stays above the pseudo-element */
+// // }
 
-@media screen and (max-width: 650px) {
-  .section-2 {
-    > div {
-      width: 100%;
-    }
-  }
+// .transparent-btn::before {
+//   content: '';
+//   position: absolute;
+//   width: 260%; /* Extends the width beyond the container */
+//   height: 100%; /* Full height of the container */
+//   left: -145%; /* Moves it to the left */
+//   right: initial;
+//   top: 0;
+//   z-index: -1; /* Moves the pseudo-element behind the content */
+//   transform: translateX(50%); /* Moves it horizontally */
+//   background-color: linear-gradient(2845deg, #1a214d,  #bb3624); /* Example background color */
+// }
+.transparent-btn {
+  border: 1px solid !important;
+  background: linear-gradient(2845deg, #1a214d,  #bb3624);
+  height: 50px;
+  width: 200px;
+  font-size: 19px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s; /* Added to ensure smooth transition */
+}
+.transparent-btn:hover {
+transform: scale(1.1);
+transition-property: transform;
+transition-duration: 0.3s;
+}
+
+.transparent-btn::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.4);
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%; 
+  transform: skew(45deg);
+  transition: left 0.5s ease-in-out;
+}
+.transparent-btn:hover::before {
+  left: 113%; 
+}
+
+.transparent-btn::before {
+  transition: left 0.5s ease-in-out;
 }
