@@ -17,21 +17,21 @@
       <div class="content">
         <div class="text">
           <h2>
-            <span class="heading" style="font-weight: 500;">About</span>
+            <span class="heading" style="font-weight: 500">About</span>
             <span style="font-size: 37px; line-height: 1.3em"
               >Turning businesses into success through innovative IT
               solutions</span
             >
           </h2>
         </div>
-     
+
         <p>
           <span style="color: #0000ff"
             >Your trusted destination for exceptional mobile app and web
             development services.</span
           >
         </p>
-    
+
         <ul>
           <li>
             <p>
@@ -60,12 +60,103 @@
             </p>
           </li>
         </ul>
-          <a [routerLink]="['/contact-us']" >
-        <button class="transparent-btn">
-          Explore More
-        </button>
-          </a>
+        <a [routerLink]="['/contact-us']">
+          <button class="transparent-btn">Explore More</button>
+        </a>
       </div>
+    </div>
+  </section>
+  <!-- contactus -->
+  <section>
+    <div class="background">
+      <div class="overlay"></div>
+      <div class="main-content">
+        <div class="Content">
+          <h2>Ready to start your dream project?</h2>
+          <p>We have a TEAM to get you there.</p>
+        </div>
+        <div class="icon">
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              margin-top: 20px;
+              padding-bottom: 25px;
+            "
+          >
+            <img src="\assets\icon\icon\icon\icon\about us\calling-icon.png" />
+          </div>
+          <div class="contact-info">
+            >
+            <p>for support Call us 24/7</p>
+            <h3>+919470039388</h3>
+          </div>
+          <button class="transparent-btn" style="margin: 25px">
+            contact-us
+          </button>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- our expert team -->
+  <section>
+    <div class="main-container">
+      <img src="\assets\icon\icon\icon\icon\about us\about-us.png" />
+      <div class="content">
+        <div class="text">
+          <h2>
+            <span class="heading" style="font-weight: 500">Our Skills</span>
+            <span style="font-size: 37px; line-height: 1.3em"
+              >Our Expert Team</span
+            >
+          </h2>
+        </div>
+
+        <p style="margin-bottom: 20px">
+          <span
+            >Our experienced mobile app and web development team at Sieg
+            Partners stands as a dynamic force, equipped with a diverse set of
+            technology skills-set and a commitment to the innovation. With
+            expertise in both Android app and iOS app development technology
+            platforms, our mobile app developers brings years of experience to
+            the company, ensuring the delivery of exceptional results. We
+            combine technical expertise with creative insight. Our development
+            team consistently aligns its work with project requirements,
+            bringing client visions to life with quality coding and brilliant
+            user experience. experience.</span
+          >
+        </p>
+        <div *ngFor="let progress of progressBars">
+          <div class="progress">
+            <p style="margin-top: 9px; font-size: 14px; font-weight: 600">
+              {{ progress.text }}
+            </p>
+            <span class="progress-label">{{ progress.percentage }}%</span>
+          </div>
+          <mat-progress-bar
+            mode="determinate"
+            [value]="progress.percentage"
+          ></mat-progress-bar>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- meet our team -->
+  <section>
+    <div class="meet-our-team-container">
+      <h2>Meet the team at Entangle</h2>
+      <p>
+        ENTANGLE Web Studio is a leading web design firm, backed by a talented
+        team of professionals dedicated to delivering a superior custom web
+        design experience. Each member of our team specializes in their domain,
+        whether it’s custom website design, personalized eCommerce platforms, or
+        sophisticated web applications. With ENTANGLE, you can expect
+        consistently exceptional web solutions that earn awards. Our collective
+        expertise empowers us to build innovative tools for your endless
+        success.
+      </p>
+    </div>
   </section>
 </div>

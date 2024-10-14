@@ -43,25 +43,6 @@
           position: relative;
           img{
             height:344px!important;
-          } 
-          .heading{
-            font-size: 60px;
-            font-family: Roboto, Arial, Helvetica, sans-serif;
-            -webkit-text-stroke: 1px #a9b5c9;
-            top: -.5em;
-            display: inline-block;
-            line-height: 1;
-            z-index: 1;
-            position: absolute;
-            font-weight: 800;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: .3;
-            white-space: nowrap;
-            padding: 0 0.4em;
-            vertical-align: top;
-            left: 0;
-            right: 0;
           }
       }
       .content{
@@ -104,17 +85,11 @@
       font-family: Roboto, Arial, Helvetica, sans-serif;
       -webkit-text-stroke: 1px #a9b5c9;
       top: -.5em;
-      display: inline-block;
       line-height: 1;
-      z-index: 1;
       position: absolute;
       font-weight: 800;
-      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      opacity: .3;
-      white-space: nowrap;
-      padding: 0 0.4em;
-      vertical-align: top;
+      opacity: 0.3;
       left: 0;
       right: 0;
     }
@@ -143,9 +118,9 @@
       line-height: 28px;
       display: inline-block;
       text-align: center;
-      background-color: hsla(0deg 3.2% 46.54% / 20%);
+      background-color: #1a214d;
       border-radius: 50%;
-      color:#1a214d;
+      color:#fff;
       left: 0;
       position: absolute;
       top: 0;
@@ -155,23 +130,6 @@
 .text{
   position: relative;
 }
-// .transparent-btn {
-// //   position: relative; /* The parent element must have position relative for absolute positioning to work */
-// //   z-index: 1; /* Ensure the main content stays above the pseudo-element */
-// // }
-
-// .transparent-btn::before {
-//   content: '';
-//   position: absolute;
-//   width: 260%; /* Extends the width beyond the container */
-//   height: 100%; /* Full height of the container */
-//   left: -145%; /* Moves it to the left */
-//   right: initial;
-//   top: 0;
-//   z-index: -1; /* Moves the pseudo-element behind the content */
-//   transform: translateX(50%); /* Moves it horizontally */
-//   background-color: linear-gradient(2845deg, #1a214d,  #bb3624); /* Example background color */
-// }
 .transparent-btn {
   border: 1px solid !important;
   background: linear-gradient(2845deg, #1a214d,  #bb3624);
@@ -207,3 +165,149 @@ transition-duration: 0.3s;
 .transparent-btn::before {
   transition: left 0.5s ease-in-out;
 }
+.background {
+  position: relative;
+  height: 600px; /* Adjust to a specific height */
+  width: 100%;
+  background-image: url("/assets/icon/icon/icon/icon/about us/background-image.png");
+  background-size: cover; /* Make the background image cover the entire element */
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Dark transparent overlay */
+  z-index: 1; /* Ensures the overlay is above the image */
+}
+
+.main-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+}
+.main-content h2{
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+  }
+  .main-content p{
+    color: white;
+    font-weight:400;
+    font-size: 21px;
+  }
+
+.Content{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+.icon {
+  position: relative;
+  padding: 40px;
+  margin: 50px;
+}
+
+.icon img {
+  height: 59px;
+  width: 62px;
+  border-radius: 58px;
+  position: relative;
+  z-index: 1; /* Keep the icon above the "waves" */
+  animation: none;
+  /* No need for icon movement here */
+}
+
+/* Add the grey ring animation around the icon */
+.icon::before {
+  content: '';
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  animation: ring-wave-grey 2.0s infinite ease-in-out;
+}
+
+@keyframes ring-wave-grey {
+  0% {
+    box-shadow: 0 0 0 0 rgb(247, 247, 247); /* Light grey */
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(249, 240, 240, 0); /* Expands and fades out */
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(241, 237, 237, 0); /* Resets */
+  }
+}
+.contact-info{
+        text-transform: uppercase;
+  h3{
+    color:white;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+.progress-container {
+  margin-bottom: 20px;
+}
+
+.progress-bar-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+mat-progress-bar {
+  width: 100%;
+  height:20px;
+}
+
+.progress-label {
+  position: absolute;
+  right: 10px;
+  color:black; /* Adjust color for better visibility */
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.progress{
+  display: flex;
+}
+.meet-our-team-container{
+  h2{
+    font-size: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+p{
+  color: #1b1b1b;
+  text-align: center;
+  font-size: 18px !important;
+  line-height: 30px !important;
+  max-width: 900px;
+  margin: 0 auto 80px;
+  line-height: 1.36em;
+}
+}
+
+
+
