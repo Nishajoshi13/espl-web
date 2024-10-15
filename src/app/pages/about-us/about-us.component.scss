@@ -404,11 +404,15 @@ mat-card {
   }
   .custom-card{
     height:201px;
+   
   }
  }
  @media(max-width:500px){
   .container-wrapper{
     height:404px;
+  }
+  .content-wrapper{
+    column-gap: 10px;
   }
  }
 
