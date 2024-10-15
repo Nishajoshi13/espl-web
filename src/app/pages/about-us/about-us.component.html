@@ -60,7 +60,7 @@
     </div>
   </section>
   <!-- contactus -->
-  <section>
+  <section >
     <div class="background">
       <div class="overlay"></div>
       <div class="main-content">
@@ -84,9 +84,11 @@
             <p>for support Call us 24/7</p>
             <h3>+919470039388</h3>
           </div>
+          <a [routerLink]="['/contact-us']">
           <button class="transparent-btn" style="margin: 25px">
             contact-us
           </button>
+        </a>
         </div>
       </div>
     </div>
@@ -108,7 +110,7 @@
 
         <p style="margin-bottom: 20px">
           <span
-            >Our experienced mobile app and web development team at Sieg
+            >Our experienced mobile app and web development team at Entangle
             Partners stands as a dynamic force, equipped with a diverse set of
             technology skills-set and a commitment to the innovation. With
             expertise in both Android app and iOS app development technology
@@ -150,6 +152,42 @@
         expertise empowers us to build innovative tools for your endless
         success.
       </p>
+    </div>
+    <div class="card-container">
+      <mat-card class="display-card"*ngFor="let card of cards">
+        <div>
+          <img style="width: 250px" [src]="card.img" />
+        </div>
+        <div style="background-color: #1a214d">
+          <mat-card-title>{{ card.title }}</mat-card-title>
+        </div>
+      </mat-card>
+    </div>
+  </section>
+  <section  #counter id="counter"  style="margin-bottom: 90px;
+  margin-top: 65px;" >
+    <div class="container-wrapper">
+      <div class=" container-overlay"></div>
+      <div class="content-wrapper">
+        <mat-card class="custom-card">
+          <div class="details">
+            <h1>{{ currentNumber }}+</h1>
+            <span>Satisfied client</span>
+          </div>
+        </mat-card>
+        <mat-card class="custom-card">
+          <div class="details">
+            <h1>{{ currentNumber }}%</h1>
+            <span>Satisfied client</span>
+          </div>
+        </mat-card>
+        <mat-card class="custom-card">
+          <div class="details">
+            <h1>3+</h1>
+            <span>Years of experience</span>
+          </div>
+        </mat-card>
+      </div>
     </div>
   </section>
 </div>

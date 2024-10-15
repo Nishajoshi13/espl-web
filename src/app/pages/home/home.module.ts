@@ -7,6 +7,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { VideoModalComponent } from 'src/app/video-modal/video-modal.component';
+import { WidgetCarouselComponent } from 'src/app/widget-carousel/widget-carousel.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,6 @@ const routes: Routes = [
     VideoModalComponent,
     
   ],
-  declarations: [HomeComponent],
+  declarations: [HomeComponent,WidgetCarouselComponent],
 })
 export class HomeModule {}

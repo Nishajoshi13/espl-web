@@ -4,6 +4,7 @@ import { Router } from '@angular/router'
 import { MatDialog } from '@angular/material/dialog';
 import { VideoModalComponent } from 'src/app/video-modal/video-modal.component';
 
+
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
