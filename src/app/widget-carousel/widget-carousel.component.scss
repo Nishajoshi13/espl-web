@@ -6,6 +6,7 @@
   .carousel-wrapper {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     // animation: scroll-left 3s linear infinite;
   }
   
@@ -13,7 +14,14 @@
     margin-right:15px;
     // min-width: 300px;
   }
-  
+  @media(max-width:500px){
+    .carousel-wrapper{
+      padding-top: 17px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   @keyframes scroll-left {
     0% {
       transform: translateX(0);
@@ -22,4 +30,3 @@
       transform: translateX(-50%); 
     }
   }
-  

@@ -4,17 +4,10 @@ import {
   AfterViewInit,
   ElementRef,
   ViewChild,
+  QueryList,
+  ViewChildren
 } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
-import { catchError } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import Swal from 'sweetalert2';
+
 
 @Component({
   templateUrl: './about-us.component.html',
@@ -69,11 +62,15 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
       this.progressBars[index].percentage = newProgress;
     }
   }
-
-  ngOnInit() {}
+  progressValue = 0;
+  ngOnInit() {
+    
+  }
   @ViewChild('counter') counterElement!: ElementRef;
+  @ViewChildren('progressBarContainer') progressBarContainers!: QueryList<ElementRef>;
   ngAfterViewInit() {
     this.observeVisibility();
+    this.observeProgressBars();
   }
   startCounting() {
     const intervalTime = 50;
@@ -105,4 +102,36 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
 
     observer.observe(this.counterElement.nativeElement);
   }
+  observeProgressBars() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const progressBarElement = entry.target as HTMLElement;
+          const index = parseInt(progressBarElement.getAttribute('data-index')!, 10); 
+          this.increaseProgress(index);
+          observer.unobserve(entry.target); 
+        }
+      });
+    });
+  
+    this.progressBarContainers.forEach((progressBar, index) => {
+      progressBar.nativeElement.setAttribute('data-index', index.toString());
+      observer.observe(progressBar.nativeElement);
+    });
+  }
+  
+  increaseProgress(index: number) {
+    const targetValue = this.progressBars[index].percentage;
+    let currentValue = 0;
+  
+    const interval = setInterval(() => {
+      currentValue += 5;
+      this.progressBars[index].percentage = Math.min(currentValue, targetValue);
+  
+      if (currentValue >= targetValue) {
+        clearInterval(interval);
+      }
+    }, 30);
+  }
+  
 }

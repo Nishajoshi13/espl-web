@@ -343,7 +343,6 @@
         Common few queries are answered here related to website design and
         development
       </h2>
-      <mat-accordion>
         <mat-expansion-panel *ngFor="let item of question">
           <mat-expansion-panel-header>
             <mat-panel-title>
@@ -352,7 +351,6 @@
           </mat-expansion-panel-header>
           <p>{{ item.ans }}</p>
         </mat-expansion-panel>
-      </mat-accordion>
     </div>
   </section>
 
@@ -360,7 +358,7 @@
     <div class="contact-us-banner">
       <div class="overlay"></div>
       <app-contact-us-form></app-contact-us-form>
-      <app-widget-carousel></app-widget-carousel>
     </div>
+    <app-widget-carousel></app-widget-carousel>
   </section>
 </div>

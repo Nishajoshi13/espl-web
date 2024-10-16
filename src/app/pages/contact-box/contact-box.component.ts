@@ -95,8 +95,16 @@ export class ContactBoxComponent {
   sendEmail(e: Event) {
     e.preventDefault();
     if (!this.isFormValid()) {
-      this.message = 'Form is invalid, submission prevented.';
-      this.firstName && this.email && this.preference.markAllAsTouched();
+      // this.message = 'Form is invalid, submission prevented.';
+      this.firstName.markAllAsTouched();
+      this.email.markAllAsTouched();
+       this.preference.markAllAsTouched();
+      Swal.fire({
+        title: 'Invalid Form',
+        text: 'Please fill in all required fields correctly before submitting.',
+        icon: 'error',
+        confirmButtonColor: '#bb3624',
+      });
       return;
     }
     const preference=this.preference.value!;
@@ -156,6 +164,6 @@ export class ContactBoxComponent {
     );
   }
   closeDialog(): void {
-    this.dialogRef.close(); // Closes the dialog
+    this.dialogRef.close(); 
   }
 }

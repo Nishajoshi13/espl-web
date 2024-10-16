@@ -122,7 +122,7 @@
             user experience. experience.</span
           >
         </p>
-        <div *ngFor="let progress of progressBars">
+        <div *ngFor="let progress of progressBars"let i="index" #progressBarContainer >
           <div class="progress">
             <p style="margin-top: 9px; font-size: 14px; font-weight: 600">
               {{ progress.text }}
@@ -132,6 +132,7 @@
           <mat-progress-bar
             mode="determinate"
             [value]="progress.percentage"
+           
           ></mat-progress-bar>
         </div>
       </div>
@@ -155,7 +156,7 @@
     </div>
     <div class="card-container">
       <mat-card class="display-card"*ngFor="let card of cards">
-        <div>
+        <div  >
           <img style="width: 250px" [src]="card.img" />
         </div>
         <div style="background-color: #1a214d">
@@ -164,21 +165,20 @@
       </mat-card>
     </div>
   </section>
-  <section  #counter id="counter"  style="margin-bottom: 90px;
-  margin-top: 65px;" >
+  <section class="company-info" #counter id="counter" >
     <div class="container-wrapper">
       <div class=" container-overlay"></div>
       <div class="content-wrapper">
         <mat-card class="custom-card">
           <div class="details">
             <h1>{{ currentNumber }}+</h1>
-            <span>Satisfied client</span>
+            <span style="margin-left: 2px;margin-right: 3px;">Satisfied client</span>
           </div>
         </mat-card>
         <mat-card class="custom-card">
           <div class="details">
             <h1>{{ currentNumber }}%</h1>
-            <span>Satisfied client</span>
+            <span style="margin-left: 2px;margin-right: 3px;">Satisfied client</span>
           </div>
         </mat-card>
         <mat-card class="custom-card">

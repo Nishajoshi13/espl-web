@@ -248,16 +248,16 @@ export class HomeComponent implements OnInit {
       ans:"website design company have professional developer team and they execute the projects with proper plans and they have expert website developers and managers who ensures professionalism, reliability, and comprehensive support compared to freelancers.",
     },
     {
-      ques:" Why Entangle stands unique when compared with other website development companies in Bangalore?",
-      ans:"Entangle stands out from other website development companies in Bangalore because we focus on making websites that are special and just right for specific business needs. We listen carefully to what you want and work hard to make it happen. Our team is super skilled and helpful, always ready to answer your questions and solve any problems.",
+      ques:"How can I track the status of my website?",
+      ans:"We do provide a project management tool to monitor the project flow and task status.",
     },
     {
       ques:" Will Entangle help support website content Development?",
-      ans:"Yes, Apart from web designing and web development nexevo focuses on content like copywriting with proper seo standards which will make your website more online visiblity and engaging to customers which helps generating more leads.",
+      ans:"Yes, Apart from web designing and web development Emtangle focuses on content like copywriting with proper seo standards which will make your website more online visiblity and engaging to customers which helps generating more leads.",
     },
     {
-      ques:" What factors should I keep in mind before selecting a website comapny in Bangalore",
-      ans:"Before choosing a website company in Bangalore, consider factors such as expertise, pricing, communication, support, and client feedback.",
+      ques:" What security steps do Entangle take in web development Projects?",
+      ans:"Entangle gives importance to security measures for web development projects like SSL certificates, firewalls, regular updates, and secure coding practices.which will make your website 100% secured and well protected.",
     },
   ]
   ngOnInit() {}

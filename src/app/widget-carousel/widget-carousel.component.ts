@@ -14,7 +14,7 @@ export class WidgetCarouselComponent implements OnInit {
         //  width: '270px',
          url: 'https://widget.clutch.co',
          widgetType: '7',
-         height: '65',
+         height: '60',
          companyId: '2415738'
        }
      },
@@ -23,8 +23,10 @@ export class WidgetCarouselComponent implements OnInit {
        content: {
          widgetType: 'goodfirms-widget-t4',
          pattern: 'simple-basic',
-         height: '120',
-         companyId: '158764'
+         height: '100',
+         companyId: '158764',
+         width:125,
+         
        }
      },
      {

@@ -397,6 +397,16 @@ mat-card-content {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
+@media(max-width:500px){
+  .tech-icons{
+    .excard{
+      flex: 1 1 0px!important;
+     
+    }
+  }
+  
+     
+}
 .card-icon {
   padding-top: 20px;
   width: 60px;
@@ -636,7 +646,6 @@ button {
     padding-bottom: 56px;
   }
 }
-@media(min-width:1080px){
   .iws-container {
     display: flex;
     justify-content:center;
@@ -671,12 +680,12 @@ button {
       font-weight: 400;
     }
   }
-}
 @media(max-width:996px){
   .iws-container {
     display: flex;
     justify-content:center;
     align-items: center;
+    gap:14px;
     img {
       width: 35px;
       display: inline-block;
@@ -687,7 +696,7 @@ button {
   .content{
     display: flex;
     justify-content: center;
-    gap:14px;
+    gap:7px;
   }
   .iws-content {
     transition: transform 0.3s ease; 
@@ -707,8 +716,9 @@ button {
     }
   }
 }
-
 .question-main-container {
+  margin-right: 100px;
+  margin-left: 100px;
   h2 {
     font-weight: 400;
     font-size: 35px;
@@ -718,72 +728,70 @@ button {
     text-align: center;
   }
 }
-.mat-expansion-panel {
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  overflow: hidden;
-}
-
-.mat-expansion-panel-content {
-  transition: opacity 0.3s ease-in-out;
-}
-
-/* Optional: To control the opacity when the panel is closed */
-.mat-expansion-panel.ng-closed .mat-expansion-panel-content {
-  opacity: 0;
-}
-
-.mat-expansion-panel.ng-open .mat-expansion-panel-content {
-  opacity: 1;
-}
-
-
-@media (min-width: 1080px) {
-  .question-main-container {
-    margin-right: 100px;
-    margin-left: 100px;
-  }
   .question-container {
     margin-right: 100px;
     margin-left: 100px;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
   mat-expansion-panel {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     p {
       padding-top: 20px;
       padding-bottom: 16px;
     }
   }
   mat-panel-title {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 35px;
-    padding: 10px 55px 20px 0px;
-    margin-top: 20px;
+    font-weight: 300;
+    font-size: 20px;
+    // line-height: 35px;
+    // padding: 10px 55px 20px 0px;
+    // margin-top: 20px;
     border-bottom: 1px solid #252525;
     font-family: Gilroy-Medium;
     position: relative;
   }
-}
-@media (max-width: 996px) {
+
+
+
+@media (max-width:500px) {
+  .question-main-container{
+    margin-left: 10px;
+    margin-right: 10px;
+    h2{
+      font-weight: 400;
+      font-size: 22px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+  }
   .question-container {
     margin: 11px;
     padding-bottom: 20px;
+    margin-right: 0px;
+    margin-left: 0px; 
+    h2{
+      font-weight:400; 
+      font-size: 25px;
+  
+    }
   }
   mat-panel-title {
     border-bottom: 1px solid #252525;
     font-family: Gilroy-Medium;
     line-height: 1;
+    font-weight: 200;
+    font-size: 18px;
   }
   mat-expansion-panel{
     padding-top: 10px;
     padding-bottom: 10px;
-    p {
-      padding-top: 14px;
-      padding-bottom: 8px;
-    }
   }
+}
+::ng-deep mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none !important; 
 }
 ::ng-deep .mat-mdc-form-field-bottom-align::before {
   content: none !important;

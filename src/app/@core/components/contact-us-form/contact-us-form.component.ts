@@ -70,9 +70,28 @@ export class ContactUsFormComponent implements OnInit {
         });
     }
   }
-
+  isFormValid(): boolean {
+    return this.firstName.valid && this.email.valid && this.message.valid && this.contactNo.valid;
+  }
+  Message: string = '';
   sendEmail(e: Event) {
     e.preventDefault();
+    if (!this.isFormValid()) {
+      this.Message = 'Form is invalid, submission prevented.';
+      this.firstName.markAllAsTouched(); 
+      this.email.markAllAsTouched();
+      this.message.markAllAsTouched();
+      this.contactNo.markAllAsTouched();
+
+      Swal.fire({
+        title: 'Invalid Form',
+        text: 'Please fill in all required fields correctly before submitting.',
+        icon: 'error',
+        confirmButtonColor: '#bb3624',
+      });
+
+      return;
+    }
     const $options = {
       publicKey: environment.emailJsPublicKey,
       blockHeadless: true,
@@ -87,7 +106,7 @@ export class ContactUsFormComponent implements OnInit {
     const $serviceKey = 'service_ai7j4rw';
     const $templateKey = 'template_ovw9s7e';
       
-    console.log($serviceKey)
+   
     emailjs.send($serviceKey, $templateKey, this.form.value, $options).then(
       () => {
         this.processing = false;
