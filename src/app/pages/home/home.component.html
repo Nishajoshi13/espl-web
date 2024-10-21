@@ -6,9 +6,9 @@
         <h4>we entangle with you</h4>
         <h3>Develop effective plans to move your customers' behaviour.</h3>
         <!-- <a [routerLink]="['/home']" > -->
-          <button (click)="navigateToContact()"class="transparent-btn">
-            Get in Touch
-          </button>
+        <button (click)="navigateToContact()" class="transparent-btn">
+          Get in Touch
+        </button>
         <!-- </a> -->
       </div>
     </div>
@@ -28,24 +28,24 @@
         opportunities for growth and success
       </p>
     </div>
-<div class="video-container" (click)="openVideoModal('BMxD6hwMfWk')">
-  <iframe
-  id="video"
-    width="100%"
-    height="315"
-    src="https://www.youtube.com/embed/BMxD6hwMfWk?rel=0&autoplay=1&mute=1&loop=1&playlist=BMxD6hwMfWk" 
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-  <div class="mask-youtube video-btn"></div>
-</div>
+    <div class="video-container" (click)="openVideoModal('BMxD6hwMfWk')">
+      <iframe
+        id="video"
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/BMxD6hwMfWk?rel=0&autoplay=1&mute=1&loop=1&playlist=BMxD6hwMfWk"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <div class="mask-youtube video-btn"></div>
+    </div>
   </section>
   <section class="main-container">
     <div class="what-we-do" style="margin-bottom: 20px">
       <div class="wwd-content">
-        <img class="wwd-content-image"src="assets/images/general/home-2.jpg"  />
+        <img class="wwd-content-image" src="assets/images/general/home-2.jpg" />
         <div class="desc">
           <h1>What we do</h1>
           <p>
@@ -73,8 +73,10 @@
           <div class="card-icon">
             <img style="width: 50px; height: 50px" [src]="item.img" />
           </div>
-          <mat-card-title >{{ item.title }}</mat-card-title>
-          <mat-card-content style="font-weight:100;">{{ item.desc }}</mat-card-content>
+          <mat-card-title>{{ item.title }}</mat-card-title>
+          <mat-card-content style="font-weight: 100">{{
+            item.desc
+          }}</mat-card-content>
         </mat-card>
       </div>
     </div>
@@ -188,36 +190,39 @@
       </div>
 
       <div class="tech-icons" style="padding-top: 5px">
-      <mat-card class="excard" (click)="navigateTo('')">
-        <div class="column">
-          <div class="icons">
-            <div class="icon-item" *ngFor="let item of cloudProvidersIcons">
-              <ng-container *ngIf="item.tag.length > 0; else noTooltip">
-                <div
-                  matTooltip="{{ item.title }} Products"
-                  [matTooltipPosition]="'above'"
-                  (click)="navigateTo(item.tag)"
-                >
-                  <img [src]="item.icon" />
-                </div>
-              </ng-container>
-              <ng-template #noTooltip>
-                <div (click)="navigateTo(item.tag)">
-                  <img [src]="item.icon" />
-                </div>
-              </ng-template>
-
-              <p>{{ item.title }}</p>
-            </div>
-          </div>
-          <h2 class="section-header">Cloud Providers</h2>
-        </div>
-      </mat-card>
-      
         <mat-card class="excard" (click)="navigateTo('')">
           <div class="column">
             <div class="icons">
-              <div class="icon-item" *ngFor="let item of hybridApplicationIcons">
+              <div class="icon-item" *ngFor="let item of cloudProvidersIcons">
+                <ng-container *ngIf="item.tag.length > 0; else noTooltip">
+                  <div
+                    matTooltip="{{ item.title }} Products"
+                    [matTooltipPosition]="'above'"
+                    (click)="navigateTo(item.tag)"
+                  >
+                    <img [src]="item.icon" />
+                  </div>
+                </ng-container>
+                <ng-template #noTooltip>
+                  <div (click)="navigateTo(item.tag)">
+                    <img [src]="item.icon" />
+                  </div>
+                </ng-template>
+
+                <p>{{ item.title }}</p>
+              </div>
+            </div>
+            <h2 class="section-header">Cloud Providers</h2>
+          </div>
+        </mat-card>
+
+        <mat-card class="excard" (click)="navigateTo('')">
+          <div class="column">
+            <div class="icons">
+              <div
+                class="icon-item"
+                *ngFor="let item of hybridApplicationIcons"
+              >
                 <ng-container *ngIf="item.tag.length > 0; else noTooltip">
                   <div
                     matTooltip="{{ item.title }} Products"
@@ -239,7 +244,7 @@
             <h2 class="section-header">Hybrid Application</h2>
           </div>
         </mat-card>
-    </div>
+      </div>
     </div>
   </section>
 
@@ -257,7 +262,7 @@
         <div class="grid-container">
           <div
             class="grid-content"
-            *ngFor="let item of whychooseus; let i = index"
+            *ngFor="let item of whyChooseUs; let i = index"
             [ngClass]="{ 'left-side': i % 2 === 0, 'right-side': i % 2 !== 0 }"
             [ngClass]="{ 'row-reverse': (i + 1) % 2 === 0 }"
           >
@@ -286,7 +291,7 @@
           <span>Wine Trading Solutions</span>
         </div>
         <div class="iws-content">
-          <img 
+          <img
             src="/assets/icon/icon/industries icon/hotel management.svg"
             alt="hotels"
           />
@@ -294,7 +299,10 @@
         </div>
         <div class="iws-content">
           <img src="/assets/icon/icon/industries icon/finance.svg" alt="bank" />
-          <span>Bank & Finance<br> Solutions</span>
+          <span
+            >Bank & Finance<br />
+            Solutions</span
+          >
         </div>
         <div class="iws-content">
           <img
@@ -318,51 +326,43 @@
           <span>Real-Estate</span>
         </div>
       </div>
-    
-      <div class="iws-sub-content">
-        <img style="width:100%"
-          src="\assets\icon\icon\industries icon\Untitled design (2).svg"
-          alt="industry-image"
-        />
-
-      </div>
       <div class="iws-container">
         <div class="content">
-        <div class="iws-content">
-          <img src="/assets/icon/icon/industries icon/cab.svg" alt="cab" />
-          <span>Cab Services</span>
-        </div>
-        <div class="iws-content">
-          <img src="/assets/icon/icon/industries icon/cafe 2.svg" alt="Cafes" />
-          <span>Cafes & Restaurants</span>
-        </div>
-        <div class="iws-content">
-          <img
-            src="\assets\icon\icon\industries icon\ecommerce.svg "
-            alt="E-commerce"
-          />
-          <span>E-commerce</span>
-        </div>
-        <div class="iws-content">
-          <img
-            src="/assets/icon/icon/industries icon/tour.svg"
-            alt="Tour & Travels"
-          />
-          <span>Tour & Travels</span>
-        </div>
+          <div class="iws-content">
+            <img src="/assets/icon/icon/industries icon/cab.svg" alt="cab" />
+            <span>Cab Services</span>
+          </div>
+          <div class="iws-content">
+            <img
+              src="/assets/icon/icon/industries icon/cafe 2.svg"
+              alt="Cafes"
+            />
+            <span>Cafes & Restaurants</span>
+          </div>
+          <div class="iws-content">
+            <img
+              src="\assets\icon\icon\industries icon\ecommerce.svg "
+              alt="E-commerce"
+            />
+            <span>E-commerce</span>
+          </div>
+          <div class="iws-content">
+            <img
+              src="/assets/icon/icon/industries icon/tour.svg"
+              alt="Tour & Travels"
+            />
+            <span>Tour & Travels</span>
+          </div>
 
-        <div class="iws-content">
-          <img
-            src="/assets/icon/icon/industries icon/hospital.svg"
-            alt="Hospital"
-          />
-          <span>Hospital</span>
+          <div class="iws-content">
+            <img
+              src="/assets/icon/icon/industries icon/hospital.svg"
+              alt="Hospital"
+            />
+            <span>Hospital</span>
+          </div>
         </div>
-
       </div>
-
-      </div>
-
     </div>
   </section>
 
@@ -372,14 +372,14 @@
         Common few queries are answered here related to website design and
         development
       </h2>
-        <mat-expansion-panel *ngFor="let item of question">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{ item.ques }}
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>{{ item.ans }}</p>
-        </mat-expansion-panel>
+      <mat-expansion-panel *ngFor="let item of questions">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ item.ques }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{ item.ans }}</p>
+      </mat-expansion-panel>
     </div>
   </section>
 
