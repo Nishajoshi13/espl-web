@@ -10,11 +10,11 @@
              [attr.data-clutchcompany-id]="item.content.companyId"
             ></div>
   
-        <div *ngIf="item.type === 'goodfirm'" class="goodfirm-widget"
+        <!-- <div *ngIf="item.type === 'goodfirm'" class="goodfirm-widget"
              [attr.data-widget-type]="item.content.widgetType"
              [attr.data-widget-pattern]="item.content.pattern"
              [attr.data-height]="item.content.height"
-             [attr.data-company-id]="item.content.companyId"></div>
+             [attr.data-company-id]="item.content.companyId"></div> -->
   
         <div *ngIf="item.type === 'topdevelopers'">
           <a [href]="item.content.link" target="_blank">

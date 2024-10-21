@@ -18,17 +18,17 @@ export class WidgetCarouselComponent implements OnInit {
          companyId: '2415738'
        }
      },
-     {
-       type: 'goodfirm',
-       content: {
-         widgetType: 'goodfirms-widget-t4',
-         pattern: 'simple-basic',
-         height: '100',
-         companyId: '158764',
-         width:125,
+    //  {
+    //    type: 'goodfirm',
+    //    content: {
+    //      widgetType: 'goodfirms-widget-t4',
+    //      pattern: 'simple-basic',
+    //      height: '100',
+    //      companyId: '158764',
+    //      width:125,
          
-       }
-     },
+    //    }
+    //  },
      {
        type: 'topdevelopers',
        content: {

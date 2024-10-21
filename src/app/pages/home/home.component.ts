@@ -50,8 +50,8 @@ export class HomeComponent implements OnInit {
     },
     {
       img: 'assets/images/general/mobile.svg',
-      title: 'Mobile Solutions',
-      desc: `We specialize in crafting high-performance native and hybrid mobile apps.`,
+      title: 'Digital Marketing',
+      desc: `Enhancing brand visibility and driving growth through smart digital marketing.`,
     },
     {
       img: 'assets/images/general/devops-icon.png',
@@ -60,13 +60,13 @@ export class HomeComponent implements OnInit {
     },
     {
       img: "/assets/icon/icon/our services 48x48/Frontend.png",
-      title: 'Frontend Devlopment',
-      desc: `Creates user interfaces for websites and apps with HTML, CSS, and JavaScript.`,
+      title: 'Hybrid App Devlopment',
+      desc: `Creating high-performance hybrid apps for seamless user experiences across platforms.`,
     },
     {
       img: '/assets/icon/icon/our services 48x48/Backend.png',
-      title: 'Backend Devlopment',
-      desc: `Manages server-side logic, databases, and core functions using languages like  Node.js.`,
+      title: 'Shopify Devlopment',
+      desc: `Empowering eCommerce success with tailored Shopify solutions`,
     },
     {
       img: '/assets/icon/icon/our services 48x48/api.png',
@@ -132,8 +132,8 @@ export class HomeComponent implements OnInit {
     { icon: `${this.techIconsUrl}/sass.svg`, title: 'Scss', tag: '' },
     { icon: `${this.techIconsUrl}/bootstrap.svg`, title: 'BootStrap', tag: '' },
     { icon: `${this.techIconsUrl}/swift.png`, title: 'Swift', tag: '' },
-    { icon: `${this.techIconsUrl}/hybrid.png`, title: 'Hybrid', tag: '' },
-    { icon: `${this.techIconsUrl}/capacitor.jpg`, title: 'Capacitor', tag: '' },
+    // { icon: `${this.techIconsUrl}/hybrid.png`, title: 'Hybrid', tag: '' },
+    // { icon: `${this.techIconsUrl}/capacitor.jpg`, title: 'Capacitor', tag: '' },
   ];
   devopsIcons = [
     { icon: `${this.techIconsUrl}/docker.svg`, title: 'Docker', tag: '' },
@@ -154,7 +154,14 @@ export class HomeComponent implements OnInit {
   cloudProvidersIcons = [
     { icon: `${this.techIconsUrl}/aws.png`, title: 'AWS', tag: '' },
     { icon: `${this.techIconsUrl}/gcp.png`, title: 'Gcp', tag: '' },
+    { icon: `${this.techIconsUrl}/Azure.png`, title: 'Azure', tag: '' },
     
+  ];
+  hybridApplicationIcons = [
+     { icon: `${this.techIconsUrl}/capacitor.jpg`, title: 'Capacitor', tag: '' },
+    { icon: `${this.techIconsUrl}/scandipwa.png`, title: 'Scandipwa', tag: '' },
+    { icon: `${this.techIconsUrl}/ionic.png`, title: 'ionic', tag: '' },
+   
   ];
   customOptions: OwlOptions = {
     loop: true,

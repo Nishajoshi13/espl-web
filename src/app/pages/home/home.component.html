@@ -33,7 +33,7 @@
   id="video"
     width="100%"
     height="315"
-    src="https://www.youtube.com/embed/BMxD6hwMfWk?autoplay=1&mute=1"
+    src="https://www.youtube.com/embed/BMxD6hwMfWk?rel=0&autoplay=1&mute=1&loop=1&playlist=BMxD6hwMfWk" 
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -186,6 +186,8 @@
           </div>
         </mat-card>
       </div>
+
+      <div class="tech-icons" style="padding-top: 5px">
       <mat-card class="excard" (click)="navigateTo('')">
         <div class="column">
           <div class="icons">
@@ -211,6 +213,33 @@
           <h2 class="section-header">Cloud Providers</h2>
         </div>
       </mat-card>
+      
+        <mat-card class="excard" (click)="navigateTo('')">
+          <div class="column">
+            <div class="icons">
+              <div class="icon-item" *ngFor="let item of hybridApplicationIcons">
+                <ng-container *ngIf="item.tag.length > 0; else noTooltip">
+                  <div
+                    matTooltip="{{ item.title }} Products"
+                    [matTooltipPosition]="'above'"
+                    (click)="navigateTo(item.tag)"
+                  >
+                    <img [src]="item.icon" />
+                  </div>
+                </ng-container>
+                <ng-template #noTooltip>
+                  <div (click)="navigateTo(item.tag)">
+                    <img [src]="item.icon" />
+                  </div>
+                </ng-template>
+
+                <p>{{ item.title }}</p>
+              </div>
+            </div>
+            <h2 class="section-header">Hybrid Application</h2>
+          </div>
+        </mat-card>
+    </div>
     </div>
   </section>
 

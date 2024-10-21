@@ -498,7 +498,7 @@ button {
   text-align: center;
 }
 .wcu-main-container {
-  background-image: url("/assets/images/general/Why-choose-us.webp");
+  background-image: url("/assets/images/general/Why-choose-us-webp.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -607,7 +607,8 @@ button {
     background-position: 100% 50%;
   }
 }
-@media (max-width: 768px) {
+/* Mobile View (up to 686px) */
+@media (max-width:770px) {
   .grid-container {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -617,14 +618,14 @@ button {
     box-sizing: border-box;
     width: 100%;
   }
-  .why-choose-us-container {
-    .h2 {
-      margin-bottom: 10px;
-      padding-top: 10px;
-    }
+  .why-choose-us-container h2 {
+    margin-bottom: 10px;
+    padding-top: 10px;
   }
 }
-@media (min-width: 1080px) {
+
+/* Tablet View (from 770px and above) */
+@media (min-width: 996px) {
   .wcu-main-container {
     height: 100vh;
   }
@@ -634,9 +635,16 @@ button {
   }
   .even-child .title,
   .even-child .grid-desc {
+    text-align: right !important;
+  }
+}
+@media (min-width: 770px) {
+  .even-child .title,
+  .even-child .grid-desc {
     text-align: right;
   }
 }
+
 .Industry-we-serve-main-container {
   h2 {
     font-weight: 400;
