@@ -40,19 +40,19 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
 
   cards = [
     {
-      img: '/assets/icon/icon/icon/icon/about us/human.webp',
+      img: '/assets/images/about-us/human.webp',
       title: 'CEO',
     },
     {
-      img: '/assets/icon/icon/icon/icon/about us/human.webp',
+      img: '/assets/images/about-us/human.webp',
       title: 'CEO',
     },
     {
-      img: '/assets/icon/icon/icon/icon/about us/human.webp',
+      img: '/assets/images/about-us/human.webp',
       title: 'CEO',
     },
     {
-      img: '/assets/icon/icon/icon/icon/about us/human.webp',
+      img: '/assets/images/about-us/human.webp',
       title: 'CEO',
     },
   ];
