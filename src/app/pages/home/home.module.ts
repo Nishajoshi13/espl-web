@@ -8,6 +8,7 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { VideoModalComponent } from 'src/app/video-modal/video-modal.component';
 import { WidgetCarouselComponent } from 'src/app/widget-carousel/widget-carousel.component';
+import { IndustryWeServeComponent } from "../../industry-we-serve/industry-we-serve.component";
 
 const routes: Routes = [
   {
@@ -24,8 +25,8 @@ const routes: Routes = [
     CdkAccordionModule,
     MatExpansionModule,
     VideoModalComponent,
-    
-  ],
+    IndustryWeServeComponent
+],
   declarations: [HomeComponent,WidgetCarouselComponent],
 })
 export class HomeModule {}
