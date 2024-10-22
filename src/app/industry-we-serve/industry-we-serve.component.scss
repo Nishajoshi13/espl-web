@@ -1,0 +1,81 @@
+
+.heading{
+    display: flex;
+    justify-content: center;
+    h2{
+        font-weight: 400;
+        font-size: 35px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+}
+mat-grid-list {
+    margin-left: 224px;
+    margin-right: 224px;
+}
+mat-grid-title{
+    img{
+        width:30px;
+        height: 30px;
+    }
+}
+.description{
+    margin-left:10px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.transparent-btn {
+    border: 1px solid !important;
+    background: linear-gradient(2845deg, #1a214d, #bb3624);
+    height: 50px;
+    width: 200px;
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform 0.3s; /* Added to ensure smooth transition */
+  }
+  .transparent-btn:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.3s;
+  }
+  
+  .transparent-btn::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.4);
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transform: skew(45deg);
+    transition: left 0.5s ease-in-out;
+  }
+  .transparent-btn:hover::before {
+    left: 113%;
+  }
+  
+  .transparent-btn::before {
+    transition: left 0.5s ease-in-out;
+  }
+  @keyframes move {
+    0% {
+      left: -0%;
+      opacity: 1;
+    }
+    100% {
+      left: 75%;
+      opacity: 1;
+    }
+    100% {
+      left: 85%;
+      opacity: 1;
+    }
+    100% {
+      left: 100%;
+      opacity: 0; /* Fade out instantly at the end of the movement */
+      visibility: hidden; /* Make it hidden immediately */
+    }
+  }

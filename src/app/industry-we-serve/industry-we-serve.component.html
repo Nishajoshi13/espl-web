@@ -1,0 +1,19 @@
+
+<section>
+    <div>
+       <div  class="heading"><h2>Driving Innovation Across industry</h2></div> 
+    <mat-grid-list cols="5" rows='2'rowHeight="100px">
+        <mat-grid-tile *ngFor="let item of items">
+          <img [src]="item.image" alt="{{ item.description }}" style="width:30px; height: 30px;">
+          <div class="description">{{ item.description }}</div>
+        </mat-grid-tile>
+      </mat-grid-list>
+      
+    </div>
+    <div class="button">
+    <button (click)="navigateToContact()" class="transparent-btn">
+        Get in Touch
+      </button>
+    </div>
+</section>
+
