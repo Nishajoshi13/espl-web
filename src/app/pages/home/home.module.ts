@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '@core/shared.module';
 import { HomeComponent } from './home.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { CdkAccordionModule } from '@angular/cdk/accordion';
-import { MatExpansionModule } from '@angular/material/expansion';
 import { VideoModalComponent } from 'src/app/video-modal/video-modal.component';
 import { WidgetCarouselComponent } from 'src/app/widget-carousel/widget-carousel.component';
 import { IndustryWeServeComponent } from "../../industry-we-serve/industry-we-serve.component";
+import { OurServicesComponent } from "../../our-services/our-services.component";
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
+import { MatCardModule } from '@angular/material/card';
 
 const routes: Routes = [
   {
@@ -21,11 +23,13 @@ const routes: Routes = [
     SharedModule,
     RouterModule.forChild(routes),
     CarouselModule,
-    MatTooltipModule,
-    CdkAccordionModule,
-    MatExpansionModule,
     VideoModalComponent,
-    IndustryWeServeComponent
+    IndustryWeServeComponent,
+    MatTooltipModule,
+    MatCardModule,
+    MatExpansionModule,
+    CdkAccordionModule
+    // OurServicesComponent
 ],
   declarations: [HomeComponent,WidgetCarouselComponent],
 })

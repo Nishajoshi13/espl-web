@@ -1,11 +1,11 @@
 
 <section>
-    <div>
+    <div class="grid-container">
        <div  class="heading"><h2>Driving Innovation Across industry</h2></div> 
-    <mat-grid-list cols="5" rows='2'rowHeight="100px">
-        <mat-grid-tile *ngFor="let item of items">
-          <img [src]="item.image" alt="{{ item.description }}" style="width:30px; height: 30px;">
-          <div class="description">{{ item.description }}</div>
+    <mat-grid-list cols="4" rows='2'rowHeight="100px">
+        <mat-grid-tile   *ngFor="let item of industryWeServe; let i = index">
+          <img [src]="item.image"  style="width:40px; height: 40px;">
+          <div class="desc">{{ item.desc }}</div>
         </mat-grid-tile>
       </mat-grid-list>
       
@@ -15,5 +15,21 @@
         Get in Touch
       </button>
     </div>
+</section>
+<section>
+  <h1 class="main-container">Industry We Serve</h1>
+  <div class=" main-container industry-grid-container">
+
+ <mat-card  class="industry-card"*ngFor="let item of industry; let i = index">
+  <img  class="industry-content"[src]="item.image" >
+  <div class="description">{{ item.desc }}</div>
+  <div class="details">
+  <ul>
+    <li *ngFor="let detail of item.list">{{ detail }}</li>
+  </ul>
+</div>
+ </mat-card>
+ 
+</div>
 </section>
 

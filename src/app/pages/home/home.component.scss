@@ -101,7 +101,7 @@ section {
     font-weight: 400;
     font-size: 35px;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
   }
 }
@@ -112,7 +112,7 @@ section {
   box-shadow: none;
 
   > div:first-child {
-    letter-spacing: 1px;
+    // letter-spacing: 1px;
   }
   > :last-child {
     padding: 0 26px;
@@ -122,7 +122,7 @@ section {
     font-size: 17px;
     margin-bottom: 30px;
     font-weight: 100;
-    letter-spacing: 1px;
+    // letter-spacing: 1px;
 
     ~ div {
       margin-top: 50px;
@@ -231,35 +231,87 @@ mat-card-content {
     background: rgba(0, 0, 0, 0.2);
   }
 }
-.who-we-are {
+.who-we-are-main-container{
+  display: flex;
+    justify-content: center;
+}
+.who-we-are-main-container {
   display: flex;
   justify-content: space-between;
   div:first-child {
     p {
       font-weight: 100;
       letter-spacing: 1px;
+      font-size: 17px;
     }
   }
   img {
     width: 50%;
   }
 }
-@media (min-width: 960px) {
+.info{
+  display: flex;
+  justify-content: center;
+}
+.who-we-are{
+  display: flex;
+  justify-content: space-between;
+}
+.who-we-are-main-container{
+  h1{
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 1.1em;
+    padding-right: 0;
+    padding-bottom: 0;
+    width: fit-content;
+    margin-bottom: 24px;
+    padding-left: 10px;
+  }
+}
+
+@media (min-width:960px) {                                      
+  .who-we-are-main-container {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
   .video-container {
     width: 500px;
-    height: 100px;
+    height: 250px;
     flex: none;
   }
 }
-@media (max-width: 900px) {
-  .who-we-aremain-container {
+@media (max-width: 960px) {                                  
+  .who-we-are-main-container {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+  .info{
     flex-direction: column;
   }
   .video-container {
     width: 100%;
-    height: 300px;
+    height: 386px;
   }
 }
+.what-we-do{
+  h1{
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 1.1em;
+    padding-right: 0;
+    padding-bottom: 0;
+    width: fit-content;
+    margin-bottom: 24px;
+    padding-left: 10px;
+  }
+  p{
+    font-size: 17px;
+    margin-bottom: 30px;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+  }
 .wwd-heading {
   display: flex;
   justify-content: center;
@@ -290,27 +342,15 @@ mat-card-content {
     flex-direction: column-reverse;
   }
   .wwd-content-image {
-    height: 275px;
+    height: 386px;
     width: 100%;
   }
 }
-.who-we-are,
-.what-we-do,
-.tech-icons-wrapper {
-  h1 {
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 1.1em;
-    padding-right: 0;
-    padding-bottom: 0;
-    width: fit-content;
-    margin-bottom: 24px;
-    padding-left: 10px;
+.main-container{
+  h1{
+    display: flex;
+    justify-content: center;
   }
-}
-
-.who-we-are p {
-  font-size: 17px;
 }
 .video-container {
   position: relative;
@@ -365,7 +405,7 @@ mat-card-content {
     margin: 15px;
   }
 }
-@media (min-width: 1080px) {
+@media (min-width:770px) {
   .card {
     max-width: 270px;
   }
@@ -488,12 +528,17 @@ button {
   text-align: center;
 }
 .wcu-main-container {
-  background-image: url("/assets/images/general/Why-choose-us-webp.png");
+  background-image: url("/assets/icon/why-choose-us-icon/Background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(2, 18, 41, 0.84);
   background-blend-mode: overlay;
+}
+@media (min-width: 996px) {
+  .wcu-main-container {
+      height: 100vh;
+  }
 }
 .why-choose-us-content {
   color: #ffffff;
@@ -599,11 +644,26 @@ button {
     background-position: 100% 50%;
   }
 }
-/* Mobile View (up to 686px) */
-@media (max-width: 770px) {
+
+@media (max-width:770px) {
   .grid-container {
     grid-template-columns: 1fr;
     gap: 15px;
+
+  }
+  .left-side {
+    grid-column: 1;
+    text-align:left;
+  }
+  .right-side {
+    grid-column: 2;
+    text-align: right;
+  }
+  .even-child{
+    text-align: right;
+  }
+  .odd-child{
+    text-align:left;
   }
   .grid-content {
     text-align: center;
@@ -616,8 +676,19 @@ button {
   }
 }
 
-/* Tablet View (from 770px and above) */
-@media (min-width: 996px) {
+@media (min-width: 770px) {
+  .grid-container {
+    display: grid;
+    gap: 20px;
+    column-gap: 83px;
+    padding: 20px;
+  .grid-content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+   
   .wcu-main-container {
     height: 100vh;
   }
@@ -630,12 +701,15 @@ button {
     text-align: right !important;
   }
 }
+}
+}
 @media (min-width: 770px) {
   .even-child .title,
   .even-child .grid-desc {
     text-align: right;
   }
 }
+
 
 .Industry-we-serve-main-container {
   h2 {
@@ -752,7 +826,7 @@ mat-panel-title {
   position: relative;
 }
 
-@media (max-width: 500px) {
+@media (max-width:960px) {
   .question-main-container {
     margin-left: 10px;
     margin-right: 10px;

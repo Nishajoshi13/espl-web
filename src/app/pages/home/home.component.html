@@ -14,10 +14,10 @@
     </div>
   </div>
 
-  <section class="who-we-are main-container">
-    <div>
+  <section class=" main-container who-we-are-main-container">
+    <div class="info">
+    <div style="margin-bottom:30px">
       <h1 style="font-weight: 400">Who we are</h1>
-
       <p>
         We are a premier software development and consultancy firm dedicated to
         delivering robust software solutions that empower businesses like yours.
@@ -41,6 +41,7 @@
       ></iframe>
       <div class="mask-youtube video-btn"></div>
     </div>
+  </div>
   </section>
   <section class="main-container">
     <div class="what-we-do" style="margin-bottom: 20px">
@@ -65,8 +66,8 @@
         </div>
       </div>
     </div>
-
-    <h1>Our Services</h1>
+    
+     <h1>Our Services</h1>
     <div class="card-container">
       <div *ngFor="let item of developPlatforms">
         <mat-card class="card" style="flex: 1">
@@ -79,8 +80,10 @@
           }}</mat-card-content>
         </mat-card>
       </div>
-    </div>
-    <!--    tech icons-->
+   
+  </div>
+    <!-- <app-our-services></app-our-services> -->
+       <!-- tech icons -->
     <h1>Our Expertise</h1>
     <div class="tech-icons-wrapper">
       <div class="tech-icons">
@@ -246,7 +249,7 @@
         </mat-card>
       </div>
     </div>
-  </section>
+  </section> 
 
   <!-- why choose us -->
   <section>
@@ -266,7 +269,7 @@
             [ngClass]="{ 'left-side': i % 2 === 0, 'right-side': i % 2 !== 0 }"
             [ngClass]="{ 'row-reverse': (i + 1) % 2 === 0 }"
           >
-            <div [ngClass]="{ 'even-child': i % 2 === 0 }">
+            <div [ngClass]="{ 'even-child': i % 2 === 0, 'odd-child': i % 2 !== 0 }">
               <h3 class="title">{{ item.title }}</h3>
               <p class="grid-desc">{{ item.desc }}</p>
             </div>
@@ -305,4 +308,5 @@
     </div>
     <app-widget-carousel></app-widget-carousel>
   </section>
+ 
 </div>

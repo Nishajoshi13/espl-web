@@ -144,32 +144,32 @@ export class HomeComponent implements OnInit {
 
   whyChooseUs = [
     this.createWhyChooseUsItem(
-      '/assets/icon/icon/why choose us icon/it-expert (1).png',
+      '/assets/icon/why-choose-us-icon/it-expert (1).png',
       'PROFESSIONAL IT EXPERT',
       'Our team comprises of IT professionals well versed in latest technologies.'
     ),
     this.createWhyChooseUsItem(
-      '/assets/icon/icon/why choose us icon/customer.png',
+      '/assets/icon/why-choose-us-icon/customer.png',
       'FULLY CUSTOMIZED SERVICE',
       'Every service is customized to suit your needs.'
     ),
     this.createWhyChooseUsItem(
-      '/assets/icon/icon/why choose us icon/goal.png',
+      '/assets/icon/why-choose-us-icon/goal.png',
       'GOAL ORIENTED APPROACH',
       'Goal focused work to validate apt inclusions to submit the best design.'
     ),
     this.createWhyChooseUsItem(
-      '/assets/icon/icon/why choose us icon/track_record.png',
+      '/assets/icon/why-choose-us-icon/track_record.png',
       'PROVEN TRACK RECORD',
       'Unbeatable track record of 100% success rate due to our quality.'
     ),
     this.createWhyChooseUsItem(
-      '/assets/icon/icon/why choose us icon/delivery.png',
+      '/assets/icon/why-choose-us-icon/delivery.png',
       'ON TIME DELIVERY',
       'Work at a pace by our professionals ensures on-time delivery.'
     ),
     this.createWhyChooseUsItem(
-      '/assets/icon/icon/why choose us icon/support.png',
+      '/assets/icon/why-choose-us-icon/support.png',
       '24*7 SUPPORT',
       'Our IT experts are available 24x7 to help you in the best way possible.'
     ),
