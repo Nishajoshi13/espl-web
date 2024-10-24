@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,11 +8,10 @@ import {  MatDialogModule } from '@angular/material/dialog';
 import { AngularFireModule } from '@angular/fire/compat'; // Import compatibility module
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
-  declarations: [AppComponent,
-  
-  ],
+  declarations: [AppComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,7 +19,12 @@ import { environment } from '../environments/environment';
     VideoModalComponent,
     MatDialogModule,
     AngularFireModule.initializeApp(environment.firebaseConfig), // Initialize Firebase
-    AngularFireDatabaseModule,
+    AngularFireDatabaseModule, ServiceWorkerModule.register('ngsw-worker.js', {
+  enabled: !isDevMode(),
+  // Register the ServiceWorker as soon as the application is stable
+  // or after 30 seconds (whichever comes first).
+  registrationStrategy: 'registerWhenStable:30000'
+}),
   ],
   providers: [],
   bootstrap: [AppComponent],
