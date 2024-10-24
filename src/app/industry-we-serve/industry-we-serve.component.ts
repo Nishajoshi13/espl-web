@@ -63,7 +63,7 @@ export class IndustryWeServeComponent {
   this.createindustry(
     '/assets/icon/industries-we-Serve/health care.svg',
     ' Healthcare',
-    ['Hospital Management', 'Chiro Practice Solution', 'Telemedicine Solution', 'Clinical Solution', 'Laboratory Service'],
+    ['Hospital Management', 'Chiro Practice Solution', 'Telemedicine Solution',],
   ),
   this.createindustry(
     '/assets/icon/industries-we-Serve/winetrading.svg',
@@ -81,7 +81,7 @@ export class IndustryWeServeComponent {
     ['Banking Solutions', 'Payment Gateways', 'Cryptocurrency Solutions'],
   ),
   this.createindustry(
-    '/assets/icon/industries-we-Serve/fintech.svg',
+    '/assets/icon/industries-we-Serve/realestate.svg',
     ' Real Estate',
     ['Property Management', 'Sales and Marketing', 'Virtual Tours'],
   ),

@@ -294,6 +294,12 @@ mat-card-content {
     height: 386px;
   }
 }
+@media(max-width:500px){
+  .video-container {
+    width: 100%;
+    height: 250px;
+  }
+}
 .what-we-do{
   h1{
     font-weight: 400;
@@ -342,7 +348,13 @@ mat-card-content {
     flex-direction: column-reverse;
   }
   .wwd-content-image {
-    height: 386px;
+    height: 400px;
+    width: 100%;
+  }
+}
+@media(max-width:500px){
+  .wwd-content-image {
+    height: 250px;
     width: 100%;
   }
 }
