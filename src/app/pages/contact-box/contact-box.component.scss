@@ -86,3 +86,41 @@ button {
   display: flex;
 }
 
+.transparent-btn {
+  position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  height: 37px;
+  width: 169px;
+  text-transform: uppercase;
+  background-color: #bb3624;
+  border: none !important;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px 10px 10px 0px;
+}
+
+.transparent-btn::before {
+  content: "";
+  position: absolute;
+  width: 260%;
+  height: 100%;
+  left: -145%;
+  top: 0;
+  background-color: #1a214d;
+  -webkit-transform: skew(30deg);
+  transform: skew(30deg);
+  z-index: -1;
+  -webkit-transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.transparent-btn:hover::before {
+  -webkit-transform: skew(30deg) translateX(100%);
+  transform: skew(30deg) translateX(100%);
+}
+
+
+

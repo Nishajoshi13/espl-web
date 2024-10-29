@@ -5,15 +5,17 @@ import {
   ElementRef,
   ViewChild,
   QueryList,
-  ViewChildren
+  ViewChildren,
+  OnDestroy
 } from '@angular/core';
+
 
 
 @Component({
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss'],
 })
-export class AboutUsComponent implements OnInit, AfterViewInit {
+export class AboutUsComponent implements OnInit, AfterViewInit, OnDestroy {
   currentNumber: number = 0;
   targetNumber: number = 50;
   duration: number = 2000;
@@ -63,9 +65,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     }
   }
   progressValue = 0;
-  ngOnInit() {
-    
-  }
+  
   @ViewChild('counter') counterElement!: ElementRef;
   @ViewChildren('progressBarContainer') progressBarContainers!: QueryList<ElementRef>;
   ngAfterViewInit() {
@@ -133,5 +133,97 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
       }
     }, 30);
   }
-  
+  currentSlide = 0;
+autoSlideInterval: any;
+totalSlides: number = 0;
+cardAnimationClass: string[] = [];
+
+processes = [
+  { title: 'maintain',
+     img:'/assets/images/about-us/maintain.png', 
+    content: 'Content for Card 1' },
+    { title: 'maintain',
+      img:'/assets/images/about-us/maintain.png', 
+     content: 'Content for Card 1' },
+     { title: 'maintain',
+      img:'/assets/images/about-us/maintain.png', 
+     content: 'Content for Card 1' },
+     { title: 'maintain',
+      img:'/assets/images/about-us/maintain.png', 
+     content: 'Content for Card 1' },
+     { title: 'maintain',
+      img:'/assets/images/about-us/maintain.png', 
+     content: 'Content for Card 1' },
+     { title: 'maintain',
+      img:'/assets/images/about-us/maintain.png', 
+     content: 'Content for Card 1' },
+     { title: 'maintain',
+      img:'/assets/images/about-us/maintain.png', 
+     content: 'Content for Card 1' },
+     { title: 'maintain',
+      img:'/assets/images/about-us/maintain.png', 
+     content: 'Content for Card 1' },
+     { title: 'maintain',
+      img:'/assets/images/about-us/maintain.png', 
+     content: 'Content for Card 1' },
+];
+
+ngOnInit() {
+  this.totalSlides = this.processes.length;
+  // this.initializeAnimations();
+  // this.startAutoSlide();
+}
+
+ngOnDestroy() {
+  // this.stopAutoSlide();
+}
+
+// initializeAnimations() {
+//   this.cardAnimationClass = new Array(this.totalSlides).fill('slide-in');
+// }
+
+// startAutoSlide() {
+//   this.autoSlideInterval = setInterval(() => {
+//     this.updateSlide();
+//   }, 3000);
+// }
+
+// stopAutoSlide() {
+//   if (this.autoSlideInterval) {
+//     clearInterval(this.autoSlideInterval);
+//   }
+// }
+
+updateSlide() {
+  this.cardAnimationClass[this.currentSlide] = 'slide-out';
+  this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+
+  // setTimeout(() => {
+  //   this.cardAnimationClass = this.cardAnimationClass.map((_, index) =>
+  //     index === this.currentSlide ? 'slide-in' : 'slide-out'
+  //   );
+  // }, 500); // Delay to allow the slide-out to complete
+}
+
+goToSlide(index: number) {
+  this.currentSlide = index;
+  // this.initializeAnimations();
+}
+
+getDisplayedCards() {
+  const cardCount = 3;
+  const displayedCards = [];
+
+  for (let i = 0; i < cardCount; i++) {
+    const cardIndex = (this.currentSlide + i) % this.totalSlides;
+    displayedCards.push({
+      ...this.processes[cardIndex],
+      animation: this.cardAnimationClass[cardIndex]
+    });
+  }
+
+  return displayedCards;
+}
+
+
 }
