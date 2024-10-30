@@ -6,6 +6,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -13,10 +14,13 @@ const routes: Routes = [
   },
 ];
 @NgModule({
-  imports: [SharedModule, RouterModule.forChild(routes),MatProgressBarModule,
-    MatTabsModule,],
+  imports: [
+    SharedModule,
+    RouterModule.forChild(routes),
+    MatProgressBarModule,
+    MatTabsModule,
+   
+  ],
   declarations: [AboutUsComponent],
 })
-export class AboutUsModule {
-
-}
+export class AboutUsModule {}
