@@ -832,12 +832,10 @@ mat-expansion-panel {
 mat-panel-title {
   font-weight: 300;
   font-size: 20px;
-  // line-height: 35px;
-  // padding: 10px 55px 20px 0px;
-  // margin-top: 20px;
   border-bottom: 1px solid #252525;
-  font-family: Gilroy-Medium;
+  font-family: Gilroy;
   position: relative;
+  font-weight:400;
 }
 
 @media (max-width:960px) {

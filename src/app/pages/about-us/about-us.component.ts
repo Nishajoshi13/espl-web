@@ -253,11 +253,10 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     this.currentSlide = index;
     this.initializeAnimations();
   }
-
   getDisplayedCards() {
-    const cardCount = 3;
+    const cardCount = window.innerWidth <= 500 ? 1 : 3; // Show 1 card on mobile, 3 on larger screens
     const displayedCards = [];
-
+  
     for (let i = 0; i < cardCount; i++) {
       const cardIndex = (this.currentSlide + i) % this.totalSlides;
       displayedCards.push({
@@ -265,7 +264,8 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
         animation: this.cardAnimationClass[cardIndex],
       });
     }
-
+  
     return displayedCards;
   }
+  
 }

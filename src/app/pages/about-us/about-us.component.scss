@@ -31,8 +31,8 @@
   img {
     height: 500px;
     width: 100%;
-    margin-right: 20px;
-    margin-top: 70px;
+    // margin-right: 20px;
+    // margin-top: 70px;
     // margin: 20px;
   }
   .heading {
@@ -96,7 +96,7 @@
     }
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 770px) {
   .content {
     margin-top: 30px;
   }
@@ -143,13 +143,13 @@
   transform: skew(30deg) translateX(100%);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 770px) {
   .main-container {
     flex-direction: column;
     margin-top: 0px;
     margin-bottom: 0px;
     img {
-      height: 305px;
+      height: 485px;
       width: 100%;
     }
     .content {
@@ -210,7 +210,7 @@
   flex-direction: column;
   align-items: flex-start;
 }
-@media (max-width: 500px) {
+@media (max-width: 770px) {
   .Content {
     margin-top: 60px;
   }
@@ -232,7 +232,7 @@
 .icon::before {
   content: "";
   position: absolute;
-  top: 23%;
+  top: 21%;
   left: 50%;
   width: 56px;
   height: 56px;
@@ -280,7 +280,6 @@
     }
   }
 }
-
 .contact-info {
   text-transform: uppercase;
   h3 {
@@ -405,7 +404,7 @@ mat-card {
   text-align: center;
   margin-top: 61px;
 }
-@media (max-width: 500px) {
+@media (max-width: 770px) {
   .meet-our-team-container {
     padding: 16px;
     p {
@@ -418,7 +417,7 @@ mat-card {
   margin-top: 65px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 770px) {
   .company-info {
     margin-bottom: 20px;
     margin-top: 25px;
@@ -443,12 +442,21 @@ mat-card {
     }
   }
 }
+.main-container {
+  justify-content: center;
+  margin-bottom: 50px;
+  .sub-heading{
+    display: flex;
+    justify-content: center;
+
+  }
+}
 .process-content {
   text-align: center;
   line-height: 1.875em;
   color: #000000;
   font-size: 18px;
-  p{
+  p {
     text-align: center;
     line-height: 1.875em;
   }
@@ -458,9 +466,7 @@ mat-card {
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
-  // max-width: 900px;
 }
-
 .slider {
   display: flex;
   justify-content: center;
@@ -477,9 +483,9 @@ mat-card-title {
   padding-left: 20px;
 }
 .slider-img {
-  margin-top: 20px;
-  padding-left:20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  padding-left: 20px;
+  margin-bottom: 10px;
 }
 .slider-card {
   width: 300px;
@@ -539,63 +545,12 @@ mat-card-content {
     opacity: 1;
   }
 }
-@media(max-width:500px){
-  // .slider {
-  //   height: 300px;
-  // }
-  .slider-card {
-    width: 200px;
-    height: 250px;
-  }
-  mat-card-title {
-    color: #bb3624;
-    font-size: 15px;
-    font-weight: 600;
-    // line-height: 1.4em;
-    text-align: justify;
-    // padding-left: 20px;
-  }
-  .slider-img {
-    margin-top: 0px;
-    padding-left:0px;
-    margin-bottom: 0px;
-    height:30px;
-    width:30px;
-    text-align: center;
-  }
-  .slider-card {
-    width: 350px;
-    height: 450px;
-    margin: 0 0px;
-    opacity: 1;
-    animation-duration: 0.6s;
-    animation-timing-function: ease-in-out;
-    border-radius: 25px 25px 25px 0px;
-    padding: 0px 0px;
-
-}
-mat-card-content {
-  font-family: Gilory;
-  font-size: 15px;
-  text-transform: none;
-  font-style: normal;
-  font-weight: 400;
-}
-.sub-heading{
-  font-size: 23px;
-}
-// main-containerprocess{
-//   justify-content: center;
-//    margin-bottom: 0px;
-// } 
-}
 .indicators {
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
 }
-
 .indicators button {
   width: 12px;
   height: 12px;
@@ -607,7 +562,59 @@ mat-card-content {
   outline: none;
   transition: background-color 0.3s;
 }
-
 .indicators button.active {
   background-color: #1a214d;
+}
+@media (max-width: 770px) {
+  .main-container{
+    .heading{
+      margin-top:10px;
+    }
+  }
+  .sub-heading {
+    font-size: 23px;
+  }
+  .slider {
+    justify-content: center;
+    overflow: hidden;
+    height: 450px;
+  }
+  .slider-card {
+    width: 80%;
+    height: 400px;
+    margin: 0 0px;
+    // opacity: 1;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    border-radius: 25px 25px 25px 0px;
+    padding: 20px 7px;
+  }
+  .slider-img {
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+  }
+  mat-card-content {
+    margin-top: 20px;
+    font-family: Gilory;
+    font-size: 15px;
+    text-transform: none;
+    font-style: normal;
+    font-weight: 400;
+  }
+  mat-card-title {
+    color: #bb3624;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: justify;
+  }
+  .main-container {
+    margin-bottom: 13px;
+  }
+  .indicators button {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
 }
