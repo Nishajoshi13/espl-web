@@ -45,37 +45,39 @@ section {
   }
 }
 .transparent-btn {
-  border: 1px solid !important;
-  background: linear-gradient(2845deg, #1a214d, #bb3624);
-  height: 50px;
-  width: 200px;
   position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  height: 62px;
+  width: 200px;
+  text-transform: uppercase;
+  background-color: #bb3624;
+  border: none !important;
+  cursor: pointer;
   overflow: hidden;
-  transition: transform 0.3s; /* Added to ensure smooth transition */
-}
-.transparent-btn:hover {
-  transform: scale(1.1);
-  transition-property: transform;
-  transition-duration: 0.3s;
+  border-radius: 10px 10px 10px 0px;
 }
 
 .transparent-btn::before {
   content: "";
-  background: rgba(255, 255, 255, 0.4);
-  width: 60%;
-  height: 100%;
   position: absolute;
+  width: 260%;
+  height: 100%;
+  left: -145%;
   top: 0;
-  left: -100%;
-  transform: skew(45deg);
-  transition: left 0.5s ease-in-out;
-}
-.transparent-btn:hover::before {
-  left: 113%;
+  background-color: #1a214d;
+  -webkit-transform: skew(30deg);
+  transform: skew(30deg);
+  z-index: -1;
+  -webkit-transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
 
-.transparent-btn::before {
-  transition: left 0.5s ease-in-out;
+.transparent-btn:hover::before {
+  -webkit-transform: skew(30deg) translateX(100%);
+  transform: skew(30deg) translateX(100%);
 }
 @keyframes move {
   0% {
@@ -489,9 +491,9 @@ button {
   margin-top: 10px;
 }
 .transparent-btn {
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
-  border-radius: 5px;
+  // border-radius: 5px;
 }
 @media screen and (max-width: 960px) {
   .what-we-do {
@@ -823,12 +825,10 @@ mat-expansion-panel {
 mat-panel-title {
   font-weight: 300;
   font-size: 20px;
-  // line-height: 35px;
-  // padding: 10px 55px 20px 0px;
-  // margin-top: 20px;
   border-bottom: 1px solid #252525;
-  font-family: Gilroy-Medium;
+  font-family: Gilroy;
   position: relative;
+  font-weight:400;
 }
 
 @media (max-width: 960px) {

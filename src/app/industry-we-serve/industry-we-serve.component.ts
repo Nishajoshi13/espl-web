@@ -61,15 +61,16 @@ export class IndustryWeServeComponent {
 }
  industry=[
   this.createindustry(
-    '/assets/icon/industries-we-Serve/health care.svg',
-    ' Healthcare',
-    ['Hospital Management', 'Chiro Practice Solution', 'Telemedicine Solution',],
+    '/assets/icon/industries-we-Serve/ecommerce.svg',
+    'E-commerce',
+    ['Online Stores', 'Customer Management', 'Order Fulfillment'],
   ),
   this.createindustry(
     '/assets/icon/industries-we-Serve/winetrading.svg',
     ' Wine Trading Solutions',
     ['Wine Distribution', 'Sales and Marketing', 'Inventory Management'],
   ),
+  
   this.createindustry(
     '/assets/icon/industries-we-Serve/e-learning.svg',
     'E-learning',
@@ -81,14 +82,14 @@ export class IndustryWeServeComponent {
     ['Banking Solutions', 'Payment Gateways', 'Cryptocurrency Solutions'],
   ),
   this.createindustry(
-    '/assets/icon/industries-we-Serve/realestate.svg',
-    ' Real Estate',
-    ['Property Management', 'Sales and Marketing', 'Virtual Tours'],
+    '/assets/icon/industries-we-Serve/health care.svg',
+    ' Healthcare',
+    ['Hospital Management', 'Chiro Practice Solution', 'Telemedicine Solution',],
   ),
   this.createindustry(
-    '/assets/icon/industries-we-Serve/ecommerce.svg',
-    'E-commerce',
-    ['Online Stores', 'Customer Management', 'Order Fulfillment'],
+    '/assets/icon/industries-we-Serve/construction.svg',
+    ' Construction',
+    ['Project Management', 'Resource Allocation', 'Safety Compliance'],
   ),
   this.createindustry(
     '/assets/icon/industries-we-Serve/manufacturing.svg',
@@ -96,9 +97,9 @@ export class IndustryWeServeComponent {
     ['Inventory Management', 'Supply Chain Solutions', 'Production Monitoring'],
   ),
   this.createindustry(
-    '/assets/icon/industries-we-Serve/construction.svg',
-    ' Construction',
-    ['Project Management', 'Resource Allocation', 'Safety Compliance'],
+    '/assets/icon/industries-we-Serve/realestate.svg',
+    ' Real Estate',
+    ['Property Management', 'Sales and Marketing', 'Virtual Tours'],
   ),
  ]
 

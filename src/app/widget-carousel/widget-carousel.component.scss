@@ -1,11 +1,23 @@
 .carousel-container {
     overflow: hidden;
     // width: 90%; 
+    h1{
+       
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-weight: 400;
+        font-size: 35px;
+    
+    }
   }
   
   .carousel-wrapper {
     display: flex;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
+    gap:287px;
     align-items: center;
     // animation: scroll-left 3s linear infinite;
   }
@@ -29,4 +41,8 @@
     100% {
       transform: translateX(-50%); 
     }
+  }
+  .badges{
+    width:90px;
+    height: 80px;
   }

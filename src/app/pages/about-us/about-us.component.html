@@ -97,7 +97,7 @@
   <!-- our expert team -->
   <section>
     <div class="main-container">
-      <img src="\assets\images\about-us\about-us.png" />
+      <img src="assets\images\about-us\aboutus-img.png" />
       <div class="content">
         <div class="text">
           <h2>
@@ -160,7 +160,7 @@
           <img style="width: 250px" [src]="card.img" />
         </div>
         <div style="background-color: #1a214d">
-          <mat-card-title>{{ card.title }}</mat-card-title>
+          <mat-card-title style="color:white">{{ card.title }}</mat-card-title>
         </div>
       </mat-card>
     </div>
@@ -190,4 +190,51 @@
       </div>
     </div>
   </section>
+<section>
+  <div class="main-container">
+    <div class="text">
+      <h2>
+        <span class="heading" style="font-weight: 500;text-align: center;">Process</span>
+        <span class="sub-heading"
+          >Our Streamlined Process for Success</span
+        >
+      </h2>
+    </div>
+  </div>
+  <div class="process-content">
+  <p>Empowering Your Vision, Crafting Excellence: Entangle Software – Your Premier Mobile & Web App Development Partner in India.</p>
+</div>
+
+<div class="slider-container">
+  <div class="slider">
+    <mat-card *ngFor="let process of getDisplayedCards()" [ngClass]="process.animation" class="slider-card" >
+     
+        <mat-card-title >{{ process.title }}</mat-card-title>
+       <div  class="slider-img">
+        <img  style=" width:64px;
+  height:64px;"[src]="process.img" />
+      </div>
+    
+      <mat-card-content>
+        <p>{{ process.content }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<div class="indicators">
+  <button *ngFor="let i of [0, 1, 2]; let index = index"
+          (click)="goToSlide((currentSlide + index) % totalSlides)" 
+          [class.active]="index === currentSlide % 3"></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+</section>
 </div>

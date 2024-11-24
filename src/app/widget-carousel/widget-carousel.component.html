@@ -1,4 +1,5 @@
-<div class="carousel-container">
+<div class="main-container carousel-container">
+  <h1>Our Hall Of Recognition</h1>
     <div class="carousel-wrapper">
       <div class="carousel-item" *ngFor="let item of items">
         <div *ngIf="item.type === 'clutch'" class="clutch-widget"
@@ -10,12 +11,6 @@
              [attr.data-clutchcompany-id]="item.content.companyId"
             ></div>
   
-        <!-- <div *ngIf="item.type === 'goodfirm'" class="goodfirm-widget"
-             [attr.data-widget-type]="item.content.widgetType"
-             [attr.data-widget-pattern]="item.content.pattern"
-             [attr.data-height]="item.content.height"
-             [attr.data-company-id]="item.content.companyId"></div> -->
-  
         <div *ngIf="item.type === 'topdevelopers'">
           <a [href]="item.content.link" target="_blank">
             <img [src]="item.content.imgSrc"
@@ -25,6 +20,9 @@
           </a>
         </div>
       </div>
+      <div class="badges">
+        <img src="\assets\icon\badges\ISO.svg" alt="iso-badge">
+       </div>
     </div>
   </div>
   
