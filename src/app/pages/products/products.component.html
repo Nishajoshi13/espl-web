@@ -21,17 +21,15 @@
           <div class="button-container" >
             <div *ngIf="item.type=='Visit'">
               <a [href]=item.link target="_blank">
-              <button mat-raised-button
-                      class="button"
-                      color="primary"
+              <button 
+                      class="transparent-btn"
               >{{ item.type }}</button>
               </a>
             </div>
             <div *ngIf="item.type=='Try'">
-                <button mat-raised-button
-                        class="button"
+                <button 
+                        class="transparent-btn"
                         (click)="openInNewTab(item.link)"
-                        color="primary"
                 >{{ item.type }}</button>
             </div>
           </div>

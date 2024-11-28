@@ -16,9 +16,11 @@ export class FooterComponent implements OnInit {
       title: 'Services',
       url: 'services',
       subPoints: [
-        { title: 'Frontend Development', url: 'services' },
-        { title: 'Backend Development', url: 'services' },
-        { title: 'Mobile Apps Development', url: 'services' },
+        { title: 'Web Development', url: 'services' },
+        { title: 'Hybrid App Development', url: 'services' },
+        { title: 'Mobile App Development', url: 'services'},
+        { title: 'Magento Development', url: 'services' },
+        { title: 'API Development', url: 'services' },
         { title: 'DevOps', url: 'services' },
         { title: 'QA Testing', url: 'services' },
       ],
@@ -28,7 +30,7 @@ export class FooterComponent implements OnInit {
       url: '',
       subPoints: [
         { title: 'About', url: 'about-us' },
-        { title: 'Team', url: 'team' },
+        // { title: 'Team', url: 'team' },
       ],
     },
     {

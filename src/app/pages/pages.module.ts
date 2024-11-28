@@ -65,12 +65,12 @@ const routes: Routes = [
           import('./about-us/about-us.module').then((m) => m.AboutUsModule),
         pathMatch: 'full',
       },
-      {
-        path: 'team',
-        loadChildren: () =>
-          import('./team/team.module').then((m) => m.TeamModule),
-        pathMatch: 'full',
-      },
+      // {
+      //   path: 'team',
+      //   loadChildren: () =>
+      //     import('./team/team.module').then((m) => m.TeamModule),
+      //   pathMatch: 'full',
+      // },
       {
         path: 'portfolio/circle-detector',
         loadChildren: () =>
@@ -85,12 +85,6 @@ const routes: Routes = [
           import('./products/visual-algo/visual-algo.module').then(
             (m) => m.VisualAlgoModule
           ),
-        pathMatch: 'full',
-      },
-      {
-        path: 'portfolio/testo',
-        loadChildren: () =>
-          import('./products/testo/testo.module').then((m) => m.TestoModule),
         pathMatch: 'full',
       },
       {
