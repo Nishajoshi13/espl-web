@@ -12,19 +12,34 @@
     </div>
   </div>
 
-  <section class=" main-container who-we-are-main-container">
+  <section class="main-container who-we-are-main-container">
     <div class="info">
-    <div style="margin-bottom:30px">
-      <h1 style="font-weight: 400">Who we are</h1>
-      <p>
-        We are a premier software development and consultancy firm dedicated to
-        delivering robust software solutions that empower businesses like yours.
-        Leveraging our extensive industry knowledge and experience, we help
-        clients integrate cutting-edge technology into their operations,
-        ensuring they stay ahead of the curve. Our commitment is to drive
-        innovation and efficiency, transforming your business challenges into
-        opportunities for growth and success
-      </p>
+      <div style="margin-bottom: 30px">
+        <h1 style="font-weight: 400">Who we are</h1>
+        <p>
+          We are a premier software development and consultancy firm dedicated
+          to delivering robust software solutions that empower businesses like
+          yours. Leveraging our extensive industry knowledge and experience, we
+          help clients integrate cutting-edge technology into their operations,
+          ensuring they stay ahead of the curve. Our commitment is to drive
+          innovation and efficiency, transforming your business challenges into
+          opportunities for growth and success
+        </p>
+      </div>
+      <div class="video-container" (click)="openVideoModal('BMxD6hwMfWk')">
+        <iframe
+          id="video"
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/BMxD6hwMfWk?rel=0&autoplay=1&mute=1&loop=1&playlist=BMxD6hwMfWk"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <div class="mask-youtube video-btn"></div>
+      </div>
     </div>
     <div class="video-container" (click)="openVideoModal('BMxD6hwMfWk')">
       <!-- <iframe
@@ -40,8 +55,9 @@
       ></iframe> -->
       <div class="mask-youtube video-btn"></div>
     </div>
-  </div>
+  <!-- </div> -->
   </section>
+
   <section class="main-container">
     <div class="what-we-do" style="margin-bottom: 20px">
       <div class="wwd-content">
@@ -65,8 +81,8 @@
         </div>
       </div>
     </div>
-    
-     <h1>Our Services</h1>
+
+    <h1>Our Services</h1>
     <div class="card-container">
       <div *ngFor="let item of developPlatforms">
         <mat-card class="card" style="flex: 1">
@@ -79,8 +95,9 @@
           }}</mat-card-content>
         </mat-card>
       </div>
-   
-  </div>
+    </div>
+    <!-- <app-our-services></app-our-services> -->
+    <!-- tech icons -->
     <h1>Our Expertise</h1>
     <div class="tech-icons-wrapper">
       <div class="tech-icons">
@@ -246,7 +263,7 @@
         </mat-card>
       </div>
     </div>
-  </section> 
+  </section>
 
   <!-- why choose us -->
   <section>
@@ -266,7 +283,12 @@
             [ngClass]="{ 'left-side': i % 2 === 0, 'right-side': i % 2 !== 0 }"
             [ngClass]="{ 'row-reverse': (i + 1) % 2 === 0 }"
           >
-            <div [ngClass]="{ 'even-child': i % 2 === 0, 'odd-child': i % 2 !== 0 }">
+            <div
+              [ngClass]="{
+                'even-child': i % 2 === 0,
+                'odd-child': i % 2 !== 0
+              }"
+            >
               <h3 class="title">{{ item.title }}</h3>
               <p class="grid-desc">{{ item.desc }}</p>
             </div>
@@ -279,8 +301,8 @@
     </div>
   </section>
   <!-- Industries we serve -->
-   <app-industry-we-serve></app-industry-we-serve>
-  
+  <app-industry-we-serve></app-industry-we-serve>
+
   <section class="question-main-container">
     <div class="question-container">
       <h2>
@@ -305,5 +327,4 @@
     </div>
     <app-widget-carousel></app-widget-carousel>
   </section>
- 
 </div>

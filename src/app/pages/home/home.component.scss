@@ -221,9 +221,9 @@ mat-card-content {
     background: rgba(0, 0, 0, 0.2);
   }
 }
-.who-we-are-main-container{
+.who-we-are-main-container {
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 .who-we-are-main-container {
   display: flex;
@@ -239,16 +239,16 @@ mat-card-content {
     width: 50%;
   }
 }
-.info{
+.info {
   display: flex;
   justify-content: center;
 }
-.who-we-are{
+.who-we-are {
   display: flex;
   justify-content: space-between;
 }
-.who-we-are-main-container{
-  h1{
+.who-we-are-main-container {
+  h1 {
     font-weight: 400;
     font-size: 35px;
     line-height: 1.1em;
@@ -260,7 +260,7 @@ mat-card-content {
   }
 }
 
-@media (min-width:960px) {                                      
+@media (min-width: 960px) {
   .who-we-are-main-container {
     padding-left: 26px;
     padding-right: 26px;
@@ -271,12 +271,12 @@ mat-card-content {
     flex: none;
   }
 }
-@media (max-width: 960px) {                                  
+@media (max-width: 960px) {
   .who-we-are-main-container {
     padding-left: 26px;
     padding-right: 26px;
   }
-  .info{
+  .info {
     flex-direction: column;
   }
   .video-container {
@@ -284,14 +284,14 @@ mat-card-content {
     height: 386px;
   }
 }
-@media(max-width:500px){
+@media (max-width: 500px) {
   .video-container {
     width: 100%;
     height: 250px;
   }
 }
-.what-we-do{
-  h1{
+.what-we-do {
+  h1 {
     font-weight: 400;
     font-size: 35px;
     line-height: 1.1em;
@@ -301,13 +301,13 @@ mat-card-content {
     margin-bottom: 24px;
     padding-left: 10px;
   }
-  p{
+  p {
     font-size: 17px;
     margin-bottom: 30px;
     font-weight: 100;
     letter-spacing: 1px;
   }
-  }
+}
 .wwd-heading {
   display: flex;
   justify-content: center;
@@ -342,14 +342,14 @@ mat-card-content {
     width: 100%;
   }
 }
-@media(max-width:500px){
+@media (max-width: 500px) {
   .wwd-content-image {
     height: 250px;
     width: 100%;
   }
 }
-.main-container{
-  h1{
+.main-container {
+  h1 {
     display: flex;
     justify-content: center;
   }
@@ -376,7 +376,7 @@ mat-card-content {
 .contact-us-banner {
   padding: 0;
   position: relative;
-  margin-bottom: 250px;
+  margin-bottom: 200px;
   .overlay {
     width: 100%;
     height: 100%;
@@ -406,7 +406,7 @@ mat-card-content {
     margin: 15px;
   }
 }
-@media (min-width:770px) {
+@media (min-width: 770px) {
   .card {
     max-width: 270px;
   }
@@ -532,11 +532,6 @@ button {
   background-color: rgba(2, 18, 41, 0.84);
   background-blend-mode: overlay;
 }
-@media (min-width: 996px) {
-  .wcu-main-container {
-      height: 100vh;
-  }
-}
 .why-choose-us-content {
   color: #ffffff;
   text-align: center;
@@ -642,25 +637,24 @@ button {
   }
 }
 
-@media (max-width:770px) {
+@media (max-width: 770px) {
   .grid-container {
     grid-template-columns: 1fr;
     gap: 15px;
-
   }
   .left-side {
     grid-column: 1;
-    text-align:left;
+    text-align: left;
   }
   .right-side {
     grid-column: 2;
     text-align: right;
   }
-  .even-child{
+  .even-child {
     text-align: right;
   }
-  .odd-child{
-    text-align:left;
+  .odd-child {
+    text-align: left;
   }
   .grid-content {
     text-align: center;
@@ -679,26 +673,26 @@ button {
     gap: 20px;
     column-gap: 83px;
     padding: 20px;
-  .grid-content {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    gap: 20px;
-   
-  .wcu-main-container {
-    height: 100vh;
+    .grid-content {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 20px;
+
+      .wcu-main-container {
+        height: 100vh;
+      }
+      .why-choose-us-container {
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+      .even-child .title,
+      .even-child .grid-desc {
+        text-align: right !important;
+      }
+    }
   }
-  .why-choose-us-container {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-  .even-child .title,
-  .even-child .grid-desc {
-    text-align: right !important;
-  }
-}
-}
 }
 @media (min-width: 770px) {
   .even-child .title,

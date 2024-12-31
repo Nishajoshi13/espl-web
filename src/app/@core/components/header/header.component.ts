@@ -6,7 +6,7 @@ export const navItems = [
   { title: 'Home', url: '' },
   { title: 'Portfolio', url: 'portfolio' },
   { title: 'Blogs', url: 'blogs' },
-  { title: 'Team', url: 'team' },
+  // { title: 'Team', url: 'team' },
   { title: 'About', url: 'about-us' },
   { title: 'Contact', url: 'contact-us' },
 ];

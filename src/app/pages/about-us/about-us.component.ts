@@ -228,19 +228,17 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
       clearInterval(this.autoSlideInterval);
     }
   }
-  updateSlide() {
-    const cardCount = 3;
-    for (let i = 0; i < cardCount; i++) {
-      const cardIndex = (this.currentSlide + i) % this.totalSlides;
-      this.cardAnimationClass[cardIndex] = 'slide-out';
-    }
-    setTimeout(() => {
-      this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
-      for (let i = 0; i < cardCount; i++) {
-        const cardIndex = (this.currentSlide + i) % this.totalSlides;
-        this.cardAnimationClass[cardIndex] = 'slide-in';
-      }
-    }, 500);
+  updateSlide() {    
+    var cardIndex:number = (this.currentSlide) % this.totalSlides;
+    this.cardAnimationClass[cardIndex] = 'slide-left-out';
+      cardIndex = (cardIndex + 1) % this.totalSlides;
+      this.cardAnimationClass[cardIndex] = 'slide-to-left';  
+      cardIndex = (cardIndex + 1) % this.totalSlides;
+      this.cardAnimationClass[cardIndex] = 'slide-to-left';  
+      cardIndex = (cardIndex + 1) % this.totalSlides;
+      this.cardAnimationClass[cardIndex] = 'slide-in-from-right';  
+      this.currentSlide = (this.currentSlide+1) % this.totalSlides
+
   }
   goToSlide(index: number) {
     this.stopAutoSlide(); 

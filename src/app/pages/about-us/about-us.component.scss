@@ -473,12 +473,16 @@ mat-card-title {
   border-radius: 25px 25px 25px 0px;
   padding: 40px 14px;
 
-  &.slide-in {
-    animation-name: slideIn;
+  &.slide-left-out {
+    animation: slideLeftOut 0.6s ease-in-out forwards;
   }
-
-  &.slide-out {
-    animation-name: slideOut;
+    
+  &.slide-to-left {
+    animation: slideToLeft 0.6s ease-in-out forwards;
+  }
+  
+  &.slide-in-from-right {
+    animation: slideInFromRight 0.6s ease-in-out forwards;
   }
 }
 .slider-card:hover {
@@ -500,7 +504,29 @@ mat-card-content {
   font-weight: 400;
 }
 
-@keyframes slideIn {
+@keyframes slideLeftOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
   0% {
     transform: translateX(100%);
     opacity: 0;
@@ -511,16 +537,6 @@ mat-card-content {
   }
 }
 
-@keyframes slideOut {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-100%);
-    opacity: 1;
-  }
-}
 .indicators {
   margin-top: 20px;
   margin-bottom: 20px;
