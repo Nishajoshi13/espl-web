@@ -95,7 +95,6 @@ export class ContactBoxComponent {
   sendEmail(e: Event) {
     e.preventDefault();
     if (!this.isFormValid()) {
-      // this.message = 'Form is invalid, submission prevented.';
       this.firstName.markAllAsTouched();
       this.email.markAllAsTouched();
        this.preference.markAllAsTouched();

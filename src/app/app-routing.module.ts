@@ -8,6 +8,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/pages.module').then((m) => m.PagesModule),
   },
+  { path: 'about-us', loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule) },
 ];
 
 const routerOptions : ExtraOptions = {

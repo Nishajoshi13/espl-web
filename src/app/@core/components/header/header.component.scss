@@ -1,7 +1,6 @@
 .example-spacer {
   flex: 1 1 auto;
 }
-
 .main-items {
   display: flex;
   align-items: center;
@@ -13,7 +12,6 @@
     font-size: 18px;
   }
 }
-
 mat-toolbar {
   padding: 15px 50px;
   flex-flow: row wrap;
@@ -29,11 +27,9 @@ mat-toolbar {
   height: 50px;
   width: 150px;
 }
-
 .menu-bar {
   display: none;
 }
-
 @media screen and (max-width: 770px) {
   .main-items {
     display: none;

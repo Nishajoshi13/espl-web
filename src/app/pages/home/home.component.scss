@@ -23,7 +23,6 @@ section {
     line-height: normal;
   }
 }
-
 .heading::before {
   content: "";
   background: rgba(255, 255, 255, 0.4);
@@ -59,7 +58,6 @@ section {
   overflow: hidden;
   border-radius: 10px 10px 10px 0px;
 }
-
 .transparent-btn::before {
   content: "";
   position: absolute;
@@ -74,7 +72,6 @@ section {
   -webkit-transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
   transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
-
 .transparent-btn:hover::before {
   -webkit-transform: skew(30deg) translateX(100%);
   transform: skew(30deg) translateX(100%);
@@ -94,8 +91,8 @@ section {
   }
   100% {
     left: 100%;
-    opacity: 0; /* Fade out instantly at the end of the movement */
-    visibility: hidden; /* Make it hidden immediately */
+    opacity: 0; 
+    visibility: hidden;
   }
 }
 .main-container {
@@ -103,7 +100,6 @@ section {
     font-weight: 400;
     font-size: 35px;
     display: flex;
-    // justify-content: center;
     align-items: center;
   }
 }
@@ -112,20 +108,13 @@ section {
   min-height: 250px;
   background: none;
   box-shadow: none;
-
-  > div:first-child {
-    // letter-spacing: 1px;
-  }
   > :last-child {
     padding: 0 26px;
   }
-
   .desc {
     font-size: 17px;
     margin-bottom: 30px;
     font-weight: 100;
-    // letter-spacing: 1px;
-
     ~ div {
       margin-top: 50px;
     }
@@ -137,7 +126,6 @@ section {
   box-shadow: none;
   text-align: center;
 }
-
 .tech-icons-wrapper h1 {
   margin-bottom: 25px;
   font-weight: 400;
@@ -406,7 +394,6 @@ mat-card-content {
 .card {
   flex: 1 1 300px;
   margin: 10px;
-  // max-width: 270px;
   padding: 10px;
   text-align: center;
   border-radius: 15px;
@@ -425,7 +412,6 @@ mat-card-content {
   }
 }
 .card:hover {
-  // transform: translateY(-5px) scale(1.005) translateZ(0);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   background-color: #f5f5f5;
@@ -475,7 +461,6 @@ mat-card-content {
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -486,14 +471,12 @@ mat-card-content {
     transform: translateY(0);
   }
 }
-
 button {
   margin-top: 10px;
 }
 .transparent-btn {
   font-size: 15px;
   cursor: pointer;
-  // border-radius: 5px;
 }
 @media screen and (max-width: 960px) {
   .what-we-do {
@@ -723,8 +706,6 @@ button {
     text-align: right;
   }
 }
-
-
 .Industry-we-serve-main-container {
   h2 {
     font-weight: 400;
@@ -739,8 +720,6 @@ button {
   justify-content: center;
   gap: 84px;
   align-items: center;
-  // gap: 75px;
-  // margin-left: 141px;
   img {
     width: 70px;
     display: inline-block;
@@ -837,7 +816,6 @@ mat-panel-title {
   position: relative;
   font-weight:400;
 }
-
 @media (max-width:960px) {
   .question-main-container {
     margin-left: 10px;

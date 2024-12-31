@@ -29,15 +29,15 @@ export class WidgetCarouselComponent implements OnInit {
          
     //    }
     //  },
-     {
-       type: 'topdevelopers',
-       content: {
-         imgSrc: 'https://www.topdevelopers.co/assets/badges/app-2024/Ecommerce/badge-top-ecommerce-developers-2024.png',
-         link: 'https://www.topdevelopers.co/directory/ecommerce-developers',
-         imgAlt: 'eCommerce Development Companies',
-         imgTitle: 'eCommerce Development Companies'
-       }
-     }
+    //  {
+    //    type: 'topdevelopers',
+    //    content: {
+    //      imgSrc: 'https://www.topdevelopers.co/assets/badges/app-2024/Ecommerce/badge-top-ecommerce-developers-2024.png',
+    //      link: 'https://www.topdevelopers.co/directory/ecommerce-developers',
+    //      imgAlt: 'eCommerce Development Companies',
+    //      imgTitle: 'eCommerce Development Companies'
+    //    }
+    //  }
    ];
   //  repeatedItems = [...this.items, ...this.items];
  }

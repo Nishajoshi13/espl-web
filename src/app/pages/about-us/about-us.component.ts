@@ -203,7 +203,6 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
         '"Experience a seamless journey from ideation to deployment. Our team ensures smooth coordination across every stage, aligning with your vision for effortless transitions from design through to final deployment.',
     },
   ];
-
   ngOnInit() {
     this.currentSlide = 0;
     this.totalSlides = this.processes.length;
@@ -211,29 +210,24 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     this.showFirstThreeCards();
     this.startAutoSlide();
   }
-
   initializeAnimations() {
     this.cardAnimationClass = new Array(this.totalSlides).fill('slide-in');
   }
-
   showFirstThreeCards() {
     for (let i = 0; i < 3; i++) {
       this.cardAnimationClass[i]= '';
     }
   }
-
   startAutoSlide() {
     this.autoSlideInterval = setInterval(() => {
       this.updateSlide();
     }, 5000);
   }
-
   stopAutoSlide() {
     if (this.autoSlideInterval) {
       clearInterval(this.autoSlideInterval);
     }
   }
-
   updateSlide() {
     const cardCount = 3;
     for (let i = 0; i < cardCount; i++) {
@@ -254,7 +248,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     this.initializeAnimations();
   }
   getDisplayedCards() {
-    const cardCount = window.innerWidth <= 500 ? 1 : 3; // Show 1 card on mobile, 3 on larger screens
+    const cardCount = window.innerWidth <= 500 ? 1 : 3;
     const displayedCards = [];
   
     for (let i = 0; i < cardCount; i++) {
@@ -267,5 +261,4 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
   
     return displayedCards;
   }
-  
 }

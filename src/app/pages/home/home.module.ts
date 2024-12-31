@@ -6,7 +6,6 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { VideoModalComponent } from 'src/app/video-modal/video-modal.component';
 import { WidgetCarouselComponent } from 'src/app/widget-carousel/widget-carousel.component';
 import { IndustryWeServeComponent } from "../../industry-we-serve/industry-we-serve.component";
-import { OurServicesComponent } from "../../our-services/our-services.component";
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
@@ -29,7 +28,6 @@ const routes: Routes = [
     MatCardModule,
     MatExpansionModule,
     CdkAccordionModule
-    // OurServicesComponent
 ],
   declarations: [HomeComponent,WidgetCarouselComponent],
 })

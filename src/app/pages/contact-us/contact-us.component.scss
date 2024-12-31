@@ -2,11 +2,9 @@
   margin: auto;
   margin-top: -66px;
 }
-
 a{
   color: black;
 }
-
 .card-content {
   display: flex;
   align-items: center;
@@ -21,7 +19,6 @@ a{
     padding-right: 16px;
   }
 }
-
 .material-icons-outlined{
   width: fit-content;
   margin-bottom: 10px !important;
@@ -42,7 +39,6 @@ a{
       margin-bottom: 4px;
     }
   }
-
   mat-icon {
     font-size: 42px;
     height: 42px;
@@ -50,11 +46,9 @@ a{
     margin-bottom: 20px;
   }
 }
-
 .blue-btn {
   width: 100px;
 }
-
 @media screen and (max-width: 850px) {
   .contact-details-wrapper {
     grid-template-columns: 1fr;
@@ -70,7 +64,6 @@ a{
     }
   }
 }
-
 @media screen and (max-width: 850px) {
   .wrap-banner-text {
     > div {
@@ -81,7 +74,6 @@ a{
     }
   }
 }
-
 @media (max-width: 435px) {
   .card-content{
     flex-direction: column;

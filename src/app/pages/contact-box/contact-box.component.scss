@@ -1,17 +1,8 @@
-.background {
-  // background-image: url('/assets/images/general/popup.avif');
-  // background: linear-gradient(105deg, #96a7eb, #ebc0be);
-}
-
-.container {
-  // padding: 60px 100px 60px 100px ;
-}
 @media (max-width: 770px) {
   .container{
     padding: 10px;
   }
 }
-
 .heading {
   padding: 0 20px 0 20px;
   font-weight: 550;
@@ -19,14 +10,11 @@
   text-align: center;
   padding-top: 10px;
 }
-
 @media (max-width: 770px) {
   .heading {
     font-size:17px;
   }
 }
-
-
 .form {
   width: 100%;
   padding: 20px 30px 0 30px;
@@ -38,7 +26,6 @@ label {
   margin-top: 20px;
   justify-content: center;
 }
-
 button {
   padding: 5px 10px;
   background-color: #007bff;
@@ -52,7 +39,6 @@ button {
   align-items: center;
   width: 100%;
 }
-
 .button-container {
   display: flex;
   justify-content: center;
@@ -60,7 +46,6 @@ button {
   width: fit-content;
   padding: 15px;
 }
-
 .button {
   font-weight: 500;
   font-size:18px;
@@ -70,7 +55,6 @@ button {
   background: linear-gradient(284deg, #1a214d, #bb3624)!important;
   color:white;
 }
-
 .cross {
   display: flex;
   justify-content: flex-end;
@@ -85,7 +69,6 @@ button {
 .top {
   display: flex;
 }
-
 .transparent-btn {
   position: relative;
   z-index: 1;
@@ -101,7 +84,6 @@ button {
   overflow: hidden;
   border-radius: 10px 10px 10px 0px;
 }
-
 .transparent-btn::before {
   content: "";
   position: absolute;
@@ -116,11 +98,14 @@ button {
   -webkit-transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
   transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
-
 .transparent-btn:hover::before {
   -webkit-transform: skew(30deg) translateX(100%);
   transform: skew(30deg) translateX(100%);
 }
-
-
+.contact-us-mail{
+  display:flex;
+  justify-content: center; 
+  height:200px;
+   width:200px;
+}
 
