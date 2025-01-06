@@ -29,47 +29,47 @@ export class HomeComponent implements OnInit {
       'Our DevOps team enable effortless collaboration, deployment, and efficiency.'
     ),
     this.createPlatform(
-      '/assets/icon/icon/our services 48x48/Frontend.png',
+      '/assets/icon/icon/our-services-48x48/Frontend.png',
       'Hybrid App Development',
       'Creating high-performance hybrid apps for seamless user experiences across platforms.'
     ),
     this.createPlatform(
-      '/assets/icon/icon/our services 48x48/Backend.png',
+      '/assets/icon/icon/our-services-48x48/Backend.png',
       'Shopify Development',
       'Empowering eCommerce success with tailored Shopify solutions'
     ),
     this.createPlatform(
-      '/assets/icon/icon/our services 48x48/api.png',
+      '/assets/icon/icon/our-services-48x48/api.png',
       'API Development',
       'Builds seamless interfaces for software communication and data exchange.'
     ),
     this.createPlatform(
-      '/assets/icon/icon/our services original size/mobile.svg',
+      '/assets/icon/icon/our-services-original-size/mobile.svg',
       'Mobile App Development',
       'Our mobile app services excel, helping you stand out and succeed.'
     ),
     this.createPlatform(
-      '/assets/icon/icon/our services 48x48/hire resource from us.png',
+      '/assets/icon/icon/our-services-48x48/hire resource from us.png',
       'Hire a Dedicated Resource',
       'Build a professional offshore team with us to realize your dream project.'
     ),
     this.createPlatform(
-      '/assets/icon/icon/our services 48x48/wordpress.png',
+      '/assets/icon/icon/our-services-48x48/wordpress.png',
       'WordPress Development',
       'Get a WordPress website to showcase your service to the world through effective CMS.'
     ),
     this.createPlatform(
-      '/assets/icon/icon/our services original size/magento.png',
+      '/assets/icon/icon/our-services-original-size/magento.png',
       'Magento Development Services',
       'Customizes eCommerce stores for efficiency and scalability.'
     ),
     this.createPlatform(
-      '/assets/icon/icon/our services 48x48/ai.png',
+      '/assets/icon/icon/our-services-48x48/ai.png',
       'AI/ML',
       'Creates systems to automate tasks and analyze data with AI and Machine Learning.'
     ),
     this.createPlatform(
-      '/assets/icon/icon/our services 48x48/Q-A.png',
+      '/assets/icon/icon/our-services-48x48/Q-A.png',
       'Q/A Testing',
       'Ensures software quality by identifying and fixing bugs through systematic testing.'
     ),
