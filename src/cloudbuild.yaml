@@ -10,5 +10,10 @@ steps:
   - name: gcr.io/cloud-builders/gsutil
     args: ["rsync", "-r", "dist/", "gs://${_BUCKET_NAME}"]
 
-substitutions:
+substitutions:g
   _BUCKET_NAME: "bucket_build" 
+
+  serviceAccount: "cloud-build-service-account@your-project-id.iam.gserviceaccount.com"
+
+  options:
+  logging: CLOUD_LOGGING_ONLY
