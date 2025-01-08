@@ -48,7 +48,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/techweb-hosting/",
+              "baseHref": "/bucket_build/",
               "budgets": [
                 {
                   "type": "initial",
