@@ -9,6 +9,8 @@ import { AngularFireModule } from '@angular/fire/compat'; // Import compatibilit
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
+
 
 @NgModule({
   declarations: [AppComponent,
@@ -19,12 +21,14 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     BrowserAnimationsModule,
     VideoModalComponent,
     MatDialogModule,
+    AngularFireMessagingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig), // Initialize Firebase
     AngularFireDatabaseModule, ServiceWorkerModule.register('ngsw-worker.js', {
   enabled: environment.production,
   // Register the ServiceWorker as soon as the application is stable
   // or after 30 seconds (whichever comes first).
   registrationStrategy: 'registerWhenStable:30000'
+  
 }),
   ],
   providers: [],

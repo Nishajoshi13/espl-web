@@ -15,7 +15,8 @@ export const environment = {
   storageBucket: "espl-website-3b854.appspot.com",
   messagingSenderId: "539993972584",
   appId: "1:539993972584:web:9ac2170c8d9106528580dd",
-  measurementId: "G-HXTJCFDX8K"
+  measurementId: "G-HXTJCFDX8K",
+  vapidKey:"BFYohIpUF5x1EuOfWBTEUhjMJo1EI6iM9d7BFWPhuXEtUZIEUuRlT2jRHGxwUlxdYI7xJkIUw--dxIWuN-oiVVo"
 }
 };
 /*
