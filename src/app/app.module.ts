@@ -10,6 +10,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
     VideoModalComponent,
     MatDialogModule,
     AngularFireMessagingModule,
+    HttpClientModule ,
     AngularFireModule.initializeApp(environment.firebaseConfig), // Initialize Firebase
     AngularFireDatabaseModule, ServiceWorkerModule.register('ngsw-worker.js', {
   enabled: environment.production,

@@ -8,11 +8,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DeviceTokenService {
-    private apiUrl = `http://localhost:3000/api`;
+    private apiUrl = `http://localhost:3000/api/customer/token/create`;
 
   constructor(private http: HttpClient) {}
 
-  saveDeviceToken(token: string): Observable<any> {
-    return this.http.post(this.apiUrl, { token });
+  saveDeviceToken(customerId: number, token: string, platform: string): Observable<any> {
+    const payload = { customer_id: customerId, token: token, platform: platform };
+
+    return this.http.post(this.apiUrl, payload);
+
   }
 }
